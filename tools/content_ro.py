@@ -330,7 +330,7 @@ def pages(P):
     <h2>Ce date colectăm</h2>
     <p>Doar ce ne trimiteți prin formularul de contact sau pe email: numele, firma, emailul de serviciu, țara și conținutul mesajului. Dacă sunteți de acord, înregistrăm și acordul pentru informări ocazionale.</p>
     <h2>Cum le folosim</h2>
-    <p>Ca să răspundem solicitării și să pregătim o propunere, ca demersuri făcute la cererea dumneavoastră (art. 6 alin. (1) lit. b) GDPR). Doar cu acordul dumneavoastră, ca să trimitem informări ocazionale despre NIS2, digitalizare și granturi (art. 6 alin. (1) lit. a) GDPR). Nu vindem datele și nu le transmitem în scop de marketing terților.</p>
+    <p>Ca să răspundem solicitării și să pregătim o propunere, ca demersuri făcute la cererea dumneavoastră (art. 6 alin. (1) lit. b) GDPR). Doar cu acordul dumneavoastră, ca să trimitem informări ocazionale despre creștere, digitalizare, conformitate și granturi (art. 6 alin. (1) lit. a) GDPR). Nu vindem datele și nu le transmitem în scop de marketing terților.</p>
     <h2>Cookie-uri și urmărire</h2>
     <p>Site-ul nu folosește cookie-uri de analiză, de publicitate sau de urmărire.</p>
     <h2>Furnizori de servicii</h2>
@@ -370,11 +370,11 @@ def pages(P):
         "nis2": ("Conformitate NIS2 pentru firme mijlocii",
                  "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni.", nis2, True),
         "packages": ("Pachete",
-                     "Pachete cu perimetru fix: NIS2 Conform, Gestiune & e-Factura, ERP, Automatizare & AI, Integrare e-commerce și diagnosticul strategic.", packages, True),
+                     "Pachete cu perimetru fix: diagnostic strategic, Gestiune & e-Factura, Automatizare & AI, Integrare e-commerce, ERP și NIS2 Conform.", packages, True),
         "aws": ("AWS Marketplace",
                 "Cumpărați consultanța și software-ul LAMS ca ofertă privată pe AWS Marketplace, facturată firmei de Amazon Web Services.", aws, True),
         "funding": ("Granturi pentru digitalizare",
-                    "Cum ajută LAMS firmele mijlocii să folosească fondurile europene pentru digitalizare: eligibilitate, pregătire tehnică și implementare.", funding, True),
+                    "Cum ajută LAMS firmele mici și mijlocii să folosească fondurile europene pentru digitalizare: eligibilitate, pregătire tehnică și implementare.", funding, True),
         "privacy": ("Politica de confidențialitate", "Cum prelucrează LAMS Capital Invest LLC datele personale colectate prin lamscapital.com.", privacy, False),
         "terms": ("Termeni de utilizare", "Termenii de utilizare ai lamscapital.com.", terms, False),
     }

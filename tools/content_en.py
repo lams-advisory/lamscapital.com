@@ -39,7 +39,7 @@ def pages(P):
     <div><b>5 weeks</b><span>from your numbers to a 12-month plan</span></div>
     <div><b>One contract</b><span>for strategy, software and support</span></div>
     <div><b>Every month</b><span>a written report, timesheet and sign-off</span></div>
-    <div><b>2 business days</b><span>to answer any enquiry, under NDA</span></div>
+    <div><b>2 business days</b><span>to answer any enquiry, in confidence</span></div>
   </div>
 </section>
 
@@ -126,7 +126,7 @@ def pages(P):
     <div class="cols3">
       <div><h3>Transparent</h3><p>We sell advisory and software, and say so upfront. The diagnostic also tells you what is not worth buying, including from us.</p></div>
       <div><h3>Confidential</h3><p>A non-disclosure agreement is signed before any information is shared, and each client's data is kept separate and used only for that client's work.</p></div>
-      <div><h3>Accountable</h3><p>One team, one plan and one set of measures, from diagnosis to delivery, with written sign-off at every stage.</p></div>
+      <div><h3>Accountable</h3><p>One team, one plan and one set of indicators, from diagnosis to delivery, with written sign-off at every stage.</p></div>
     </div>
   </div>
 </section>"""
@@ -222,7 +222,7 @@ def pages(P):
 <section class="section">
   <div class="wrap">
     {pkd("Advisory", "Strategic diagnostic", "Owner-led companies at the point where growth needs structure.",
-         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
+         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, key indicators and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
          "5 weeks", "", "", "", "")}
     {pkd("Package A", "Operations &amp; e-invoicing", "Distributors and manufacturers, 10–49 employees.",
          ["Digital audit, included in the package", "Stock, sales and purchasing on Odoo Community (open source, no licence fees)", "Integration with your accounting software", "Connection to national e-invoicing (in Romania: e-Factura)"],
@@ -322,7 +322,7 @@ def pages(P):
     <h2>Data we collect</h2>
     <p>Only what you send us through the contact form or by email: your name, company, work email, country and the content of your message. If you agree, we also record your consent to receive occasional updates.</p>
     <h2>How we use it</h2>
-    <p>To answer your enquiry and prepare a proposal, as steps taken at your request (Article 6(1)(b) GDPR). Only with your consent, to send occasional updates on NIS2, digitalisation and funding (Article 6(1)(a) GDPR). We never sell your data or share it for third-party marketing.</p>
+    <p>To answer your enquiry and prepare a proposal, as steps taken at your request (Article 6(1)(b) GDPR). Only with your consent, to send occasional updates on growth, digitalisation, compliance and funding (Article 6(1)(a) GDPR). We never sell your data or share it for third-party marketing.</p>
     <h2>Cookies and tracking</h2>
     <p>This website uses no analytics, advertising or tracking cookies.</p>
     <h2>Service providers</h2>
@@ -362,11 +362,11 @@ def pages(P):
         "nis2": ("NIS2 compliance for mid-sized companies",
                  "Does NIS2 apply to your company? Scoping, risk analysis, policies, incident procedure and audit preparation in 6–8 weeks.", nis2, True),
         "packages": ("Packages",
-                     "Fixed-scope packages: NIS2 Compliant, Operations & e-invoicing, ERP transformation, Automation & AI, E-commerce integration and the strategic diagnostic.", packages, True),
+                     "Fixed-scope packages: strategic diagnostic, Operations & e-invoicing, Automation & AI, E-commerce integration, ERP transformation and NIS2 Compliant.", packages, True),
         "aws": ("AWS Marketplace",
                 "Buy LAMS advisory and software as a private offer on AWS Marketplace, invoiced by Amazon Web Services to your company.", aws, True),
         "funding": ("EU funding for digitalisation",
-                    "How LAMS helps mid-sized companies use EU cohesion funds for digitalisation: eligibility, technical preparation and implementation.", funding, True),
+                    "How LAMS helps small and mid-sized companies use EU cohesion funds for digitalisation: eligibility, technical preparation and implementation.", funding, True),
         "privacy": ("Privacy notice", "How LAMS Capital Invest LLC processes personal data collected through lamscapital.com.", privacy, False),
         "terms": ("Terms of use", "Terms of use of lamscapital.com.", terms, False),
     }

@@ -6,7 +6,7 @@ NAV = {
     "menu": "Meniu", "aria": "Principal", "foot_aria": "Site", "skip": "Sari la conținut",
 }
 
-FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC. Prețurile nu includ TVA."
+FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC."
 
 FORM = {
     "title": "Să vorbim.",
@@ -29,7 +29,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Pentru producători și distribuitori mijlocii</p>
     <h1>Conformitate NIS2, digitalizare și software, cu <span class="accent">un singur partener responsabil</span>.</h1>
-    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan, cu preț fix. Lucrăm întâi în România și ne extindem în Uniunea Europeană.</p>
+    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan. Lucrăm întâi în România și ne extindem în Uniunea Europeană.</p>
     <div class="btn-row"><a class="btn primary" href="{P['nis2']['ro']}">Verificați dacă intrați sub NIS2</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
   </div>
 </section>
@@ -62,15 +62,15 @@ def pages(P):
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pachete cu rezultat clar și preț stabilit dinainte.</h2>
+      <h2>Pachete cu perimetru și rezultat clar.</h2>
       <p>Conformitatea deschide ușa; economiile vin din partea operațională. Fiecare pachet poate fi cumpărat separat sau ca parte a unui singur plan.</p>
     </div>
     <div class="pk-grid">
-      <div class="pk feature"><span class="tag">Pachetul C</span><h3>NIS2 Conform</h3><p>Încadrare, analiză de risc, politici scrise, procedură de incident și pregătirea auditului, cu urmărire lunară.</p><p class="price">De la 6.000 EUR + 149 EUR/lună</p></div>
-      <div class="pk"><span class="tag">Pachetul A</span><h3>Gestiune &amp; e-Factura</h3><p>Stocuri, vânzări și achiziții pe Odoo, legate de programul de contabilitate și de e-Factura (ANAF).</p><p class="price">Preț la cerere</p></div>
-      <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price">Preț la cerere</p></div>
-      <div class="pk"><span class="tag">Pachetul D</span><h3>Automatizare &amp; AI</h3><p>Un atelier de identificare, apoi o automatizare sau un asistent AI livrat în aproximativ patru săptămâni.</p><p class="price">De la 7.900 EUR</p></div>
-      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru magazinele online.</p><p class="price">De la 6.900 EUR</p></div>
+      <div class="pk feature"><span class="tag">Pachetul C</span><h3>NIS2 Conform</h3><p>Încadrare, analiză de risc, politici scrise, procedură de incident și pregătirea auditului, cu urmărire lunară.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul A</span><h3>Gestiune &amp; e-Factura</h3><p>Stocuri, vânzări și achiziții pe Odoo, legate de programul de contabilitate și de e-Factura (ANAF).</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul D</span><h3>Automatizare &amp; AI</h3><p>Un atelier de identificare, apoi o automatizare sau un asistent AI livrat în aproximativ patru săptămâni.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru magazinele online.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Consultanță</span><h3>Diagnostic strategic</h3><p>Cinci săptămâni, șapte livrabile: marje, piețe, canale și un plan pe 12 luni, construit pe cifrele firmei.</p><p class="price"><a class="more" href="{P['packages']['ro']}">Toate pachetele și detaliile →</a></p></div>
     </div>
   </div>
@@ -95,7 +95,7 @@ def pages(P):
   <div class="wrap">
     <div>
       <p class="label">Cum lucrăm</p>
-      <h2>Întâi diagnosticul. Apoi un plan, o echipă, un preț.</h2>
+      <h2>Întâi diagnosticul. Apoi un plan, o echipă.</h2>
     </div>
     <div>
       <p>Strategia, conformitatea și software-ul sunt livrate de aceeași echipă, sub un singur contract. O echipă dedicată de dezvoltatori din Europa, coordonată de noi, construiește și întreține software-ul; răspunderea față de dumneavoastră rămâne a noastră.</p>
@@ -114,7 +114,7 @@ def pages(P):
   <div class="wrap">
     <p class="label">Principii</p>
     <div class="cols3">
-      <div><h3>Transparenți</h3><p>Vindem consultanță și software, la prețuri fixe, și o spunem de la început. Diagnosticul vă arată și ce nu merită cumpărat, inclusiv de la noi.</p></div>
+      <div><h3>Transparenți</h3><p>Vindem consultanță și software și o spunem de la început. Diagnosticul vă arată și ce nu merită cumpărat, inclusiv de la noi.</p></div>
       <div><h3>Confidențiali</h3><p>Acordul de confidențialitate se semnează înainte de orice informație. Datele fiecărui client sunt ținute separat și folosite doar pentru lucrarea lui.</p></div>
       <div><h3>Responsabili</h3><p>O echipă, un plan și un set de indicatori, de la diagnostic la livrare, cu proces-verbal semnat la fiecare etapă.</p></div>
     </div>
@@ -178,7 +178,7 @@ def pages(P):
         <div><b>Procedura de incident</b><span>Cine decide, cine notifică DNSC și șabloanele pentru 24 de ore, 72 de ore și o lună.</span></div>
         <div><b>Pregătirea auditului</b><span>Plan de remediere pe 3, 6 și 12 luni și dosarul complet pentru auditor.</span></div>
       </div>
-      <p style="margin-top:28px"><b style="color:var(--paper);font-weight:500">De la 6.000 EUR, plus 149 EUR pe lună</b> pentru instrumentul de conformitate în limba română, revizuirea trimestrială a riscurilor, actualizarea politicilor la schimbări legislative și sprijin la raportarea incidentelor.</p>
+      <p style="margin-top:28px"><b style="color:var(--paper);font-weight:500">Apoi un abonament lunar</b> pentru instrumentul de conformitate în limba română, revizuirea trimestrială a riscurilor, actualizarea politicilor la schimbări legislative și sprijin la raportarea incidentelor.</p>
     </div>
   </div>
 </section>
@@ -190,7 +190,7 @@ def pages(P):
       <p>Ca să nu existe surprize în ofertă.</p>
     </div>
     <ul class="ticks">
-      <li>Nu suntem auditor de securitate cibernetică atestat de DNSC. Acolo unde legea cere audit extern, îl face un auditor atestat, ales împreună cu dumneavoastră și ofertat separat.</li>
+      <li>Nu suntem auditor de securitate cibernetică atestat de DNSC. Acolo unde legea cere audit extern, îl face un auditor atestat, ales împreună cu dumneavoastră și contractat separat.</li>
       <li>Lucrăm pe dovezi și cu acces doar de citire. Nu cerem acces de administrator la sistemele firmei.</li>
       <li>Nu depunem nimic la DNSC în numele firmei fără mandat scris.</li>
     </ul>
@@ -202,7 +202,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Pachete</p>
     <h1>Consultanță și software, vândute ca <span class="accent">pachete cu perimetru fix</span>.</h1>
-    <p class="lead">Fiecare pachet are un rezultat definit, un calendar și un preț stabilit înainte de începerea lucrului. Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune.</p>
+    <p class="lead">Fiecare pachet are un rezultat definit, și un calendar stabilite înainte de începerea lucrului. Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune.</p>
   </div>
 </section>
 
@@ -210,23 +210,23 @@ def pages(P):
   <div class="wrap">
     {pkd("Pachetul C", "NIS2 Conform", "Firme sub incidența NIS2, de regulă cu 50–249 de angajați.",
          ["Încadrarea față de lege și ordinele DNSC", "Registrul activelor și registrul riscurilor", "Autoevaluarea, pregătită pe dovezi", "Politici scrise, aprobate de conducere", "Procedura de incident și șabloanele", "Planul de remediere și dosarul de audit"],
-         "6–8 săptămâni", "De la 6.000 EUR + 149 EUR/lună", "Auditul extern, făcut de un auditor atestat DNSC, se ofertează separat.", P['nis2']['ro'], "Detalii NIS2")}
+         "6–8 săptămâni", "De la 6.000 EUR + 149 EUR/lună", "Auditul extern, făcut de un auditor atestat DNSC, se contractează separat.", P['nis2']['ro'], "Detalii NIS2")}
     {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Distribuitori și producători cu 10–49 de angajați.",
-         ["Audit digital, creditat integral în prețul pachetului", "Stocuri, vânzări și achiziții pe Odoo Community (open-source, fără licențe)", "Integrare cu programul de contabilitate", "Conectare la e-Factura (ANAF)"],
+         ["Audit digital, inclus în pachet", "Stocuri, vânzări și achiziții pe Odoo Community (open-source, fără licențe)", "Integrare cu programul de contabilitate", "Conectare la e-Factura (ANAF)"],
          "Stabilită după audit", "Preț la cerere + suport lunar", "", "", "")}
     {pkd("Pachetul B", "ERP &amp; transformare operațională", "Firme cu 50–249 de angajați, inclusiv proiecte cofinanțate din fonduri europene.",
          ["Diagnostic strategic complet: șapte livrabile, de la marje la planul pe 12 luni", "ERP și automatizări pentru vânzări, depozit, producție și financiar", "Livrare în etape, cu proces-verbal la fiecare etapă", "Suport lunar după punerea în funcțiune"],
          "Stabilită după diagnostic", "Preț la cerere + suport lunar", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
     {pkd("Pachetul D", "Automatizare &amp; AI", "Orice firmă cu muncă repetitivă: comenzi, documente, rapoarte, cereri de la clienți.",
          ["Atelier de identificare a procesului cu cel mai bun randament", "O automatizare sau un asistent AI, construit și pus în funcțiune", "Măsurare înainte și după, ca economia să se vadă"],
-         "Aproximativ 4 săptămâni", "De la 7.900 EUR + 190 EUR/lună", "Abonamentul include costurile de utilizare a AI.", "", "")}
+         "Aproximativ 4 săptămâni", "De la 7.900 EUR + 190 EUR/lună", "Suportul lunar include costurile de utilizare a AI.", "", "")}
     {pkd("Pachetul E", "Integrare e-commerce", "Magazine online cu o cifră de afaceri anuală de 1–20 mil. lei.",
          ["Feed-uri de produse către marketplace-uri", "Sincronizarea stocului între magazin, marketplace-uri și depozit", "e-Factura automată"],
          "Aproximativ 4 săptămâni", "De la 6.900 EUR + 150 EUR/lună", "", "", "")}
     {pkd("Consultanță", "Diagnostic strategic", "Firme conduse de proprietar, în momentul în care creșterea are nevoie de structură.",
-         ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate", "30% din preț se creditează dacă începeți implementarea în 90 de zile"],
+         ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate"],
          "5 săptămâni", "Preț la cerere", "", "", "")}
-    <p class="note"><b>Despre prețuri.</b> Prețurile nu includ TVA și se aplică achiziției prin AWS Marketplace. La un contract direct se poate adăuga impozitul reținut la sursă în România; oferta arată întotdeauna suma completă. Odoo este marcă a Odoo S.A.; LAMS nu este afiliată cu Odoo S.A.</p>
+    <p class="note"><b>Oferte.</b> Fiecare ofertă se personalizează după o discuție de 30 de minute și arată complet perimetrul, calendarul și condițiile. Odoo este marcă a Odoo S.A.; LAMS nu este afiliată cu Odoo S.A.</p>
   </div>
 </section>"""
 
@@ -243,7 +243,7 @@ def pages(P):
   <div class="wrap">
     <div class="section-head">
       <h2>De ce aleg firmele această variantă</h2>
-      <p>Oferta privată este o ofertă pe AWS Marketplace făcută doar pentru firma dumneavoastră, la prețul convenit.</p>
+      <p>Oferta privată este o ofertă pe AWS Marketplace făcută doar pentru firma dumneavoastră, în condițiile convenite.</p>
     </div>
     <div class="cols3">
       <div><h3>Un furnizor cunoscut</h3><p>Factura vine de la Amazon Web Services, un furnizor pe care contabilitatea și achizițiile îl pot verifica ușor.</p></div>
@@ -257,7 +257,7 @@ def pages(P):
   <div class="wrap">
     <p class="label">Pașii</p>
     <div class="steps light">
-      <div><b>1. Stabilim lucrarea</b><span>Semnăm acordul de confidențialitate și stabilim descrierea lucrării: perimetru, livrabile, calendar și preț.</span></div>
+      <div><b>1. Stabilim lucrarea</b><span>Semnăm acordul de confidențialitate și stabilim descrierea lucrării: perimetru, livrabile, calendar și condiții.</span></div>
       <div><b>2. Deschidem contul</b><span>Dacă firma nu are cont AWS, îl creăm împreună într-o ședință online de 30–45 de minute, pe numele firmei și cu autentificare în doi pași.</span></div>
       <div><b>3. Acceptați oferta</b><span>Vă trimitem oferta privată. O acceptați din contul AWS; descrierea lucrării este atașată ofertei.</span></div>
       <div><b>4. Livrare</b><span>Livrăm în etape. Lunar primiți raportul, fișa de ore și procesul-verbal de semnat.</span></div>
@@ -348,8 +348,8 @@ def pages(P):
     <p>Site-ul este operat de LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, SUA, <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
     <h2>Doar informare</h2>
     <p>Conținutul site-ului are caracter general. Nu este consultanță juridică, fiscală sau de securitate pentru situația dumneavoastră și nu face din LAMS consultantul dumneavoastră. Rezumatele legilor și regulilor de finanțare reflectă interpretarea noastră la data afișată și se pot schimba.</p>
-    <h2>Prețuri și oferte</h2>
-    <p>Prețurile de pe site sunt orientative, nu includ TVA și se pot modifica. Un angajament ferm există doar printr-un contract semnat sau printr-o ofertă privată acceptată pe AWS Marketplace, împreună cu descrierea lucrării.</p>
+    <h2>Oferte</h2>
+    <p>Site-ul nu conține oferte. Un angajament ferm există doar printr-un contract semnat sau printr-o ofertă privată acceptată pe AWS Marketplace, împreună cu descrierea lucrării.</p>
     <h2>Proprietate intelectuală</h2>
     <p>Textele, numele și logo-ul LAMS și designul site-ului aparțin LAMS Capital Invest LLC. Celelalte nume și mărci aparțin proprietarilor lor; menționarea lor nu înseamnă parteneriat sau susținere.</p>
     <h2>Răspundere</h2>
@@ -359,10 +359,10 @@ def pages(P):
 
     return {
         "home": ("LAMS · Conformitate NIS2, digitalizare și software",
-                 "Conformitate NIS2, ERP, e-Factura, automatizare și AI pentru producători și distribuitori cu 50–249 de angajați. Pachete cu preț fix, un singur partener responsabil.", home, True),
+                 "Conformitate NIS2, ERP, e-Factura, automatizare și AI pentru producători și distribuitori cu 50–249 de angajați. Pachete cu perimetru fix, un singur partener responsabil.", home, True),
         "nis2": ("Conformitate NIS2 pentru firme mijlocii",
-                 "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni, de la 6.000 EUR.", nis2, True),
-        "packages": ("Pachete și prețuri",
+                 "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni.", nis2, True),
+        "packages": ("Pachete",
                      "Pachete cu perimetru fix: NIS2 Conform, Gestiune & e-Factura, ERP, Automatizare & AI, Integrare e-commerce și diagnosticul strategic.", packages, True),
         "aws": ("Cumpărare prin AWS Marketplace",
                 "Cumpărați consultanța și software-ul LAMS ca ofertă privată pe AWS Marketplace, facturată firmei de Amazon Web Services.", aws, True),
@@ -379,5 +379,5 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
     more = f'<dt>Detalii</dt><dd><a href="{link}">{link_label} →</a></dd>' if link else ""
     return f"""<div class="pkd">
       <div><p class="tag">{tag}</p><h2>{title}</h2><p class="for">{who}</p></div>
-      <dl><dt>Include</dt><dd><ul>{lis}</ul></dd><dt>Durată</dt><dd>{duration}</dd><dt>Preț</dt><dd><b style="font-weight:500">{price}</b></dd>{extra}{more}</dl>
+      <dl><dt>Include</dt><dd><ul>{lis}</ul></dd><dt>Durată</dt><dd>{duration}</dd>{extra}{more}</dl>
     </div>"""

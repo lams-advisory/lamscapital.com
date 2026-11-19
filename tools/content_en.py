@@ -6,7 +6,7 @@ NAV = {
     "menu": "Menu", "aria": "Main", "foot_aria": "Site", "skip": "Skip to content",
 }
 
-FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC. Prices exclude VAT."
+FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC."
 
 FORM = {
     "title": "Start a conversation.",
@@ -29,7 +29,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">For mid-sized manufacturers and distributors in Europe</p>
     <h1>NIS2 compliance, digital operations and software, from <span class="accent">one accountable partner</span>.</h1>
-    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan, at a fixed price. We are delivering in Romania first and expanding across the EU.</p>
+    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan. We are delivering in Romania first and expanding across the EU.</p>
     <div class="btn-row"><a class="btn primary" href="{P['nis2']['en']}">Check if NIS2 applies to you</a><a class="btn" href="{P['packages']['en']}">See the packages</a></div>
   </div>
 </section>
@@ -62,15 +62,15 @@ def pages(P):
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Fixed-scope packages, each with a clear price and result.</h2>
+      <h2>Fixed-scope packages, each with a clear scope and result.</h2>
       <p>Compliance opens the door; the operational work is where the savings come from. Every package can run on its own or as part of one plan.</p>
     </div>
     <div class="pk-grid">
-      <div class="pk feature"><span class="tag">Package C</span><h3>NIS2 Compliant</h3><p>Scoping, risk analysis, written policies, incident procedure and audit preparation, with monthly follow-up.</p><p class="price">From €6,000 + €149/month</p></div>
-      <div class="pk"><span class="tag">Package A</span><h3>Operations &amp; e-invoicing</h3><p>Stock, sales and purchasing on Odoo, connected to accounting and to national e-invoicing.</p><p class="price">Price on request</p></div>
-      <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price">Price on request</p></div>
-      <div class="pk"><span class="tag">Package D</span><h3>Automation &amp; AI</h3><p>A discovery workshop, then one automation or AI assistant delivered in about four weeks.</p><p class="price">From €7,900</p></div>
-      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for online sellers.</p><p class="price">From €6,900</p></div>
+      <div class="pk feature"><span class="tag">Package C</span><h3>NIS2 Compliant</h3><p>Scoping, risk analysis, written policies, incident procedure and audit preparation, with monthly follow-up.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package A</span><h3>Operations &amp; e-invoicing</h3><p>Stock, sales and purchasing on Odoo, connected to accounting and to national e-invoicing.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package D</span><h3>Automation &amp; AI</h3><p>A discovery workshop, then one automation or AI assistant delivered in about four weeks.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for online sellers.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Advisory</span><h3>Strategic diagnostic</h3><p>Five weeks, seven deliverables: margins, markets, channels and a 12-month plan, built on your own numbers.</p><p class="price"><a class="more" href="{P['packages']['en']}">All packages and details →</a></p></div>
     </div>
   </div>
@@ -95,7 +95,7 @@ def pages(P):
   <div class="wrap">
     <div>
       <p class="label">How we work</p>
-      <h2>Diagnose first. Then one plan, one team, one price.</h2>
+      <h2>Diagnose first. Then one plan, one team.</h2>
     </div>
     <div>
       <p>Strategy, compliance and software are delivered by one team under one contract. A dedicated development team in Europe, coordinated by us, builds and maintains the software; we stay accountable to you for the result.</p>
@@ -114,7 +114,7 @@ def pages(P):
   <div class="wrap">
     <p class="label">Principles</p>
     <div class="cols3">
-      <div><h3>Transparent</h3><p>We sell advisory and software at fixed prices, and say so upfront. The diagnostic also tells you what is not worth buying, including from us.</p></div>
+      <div><h3>Transparent</h3><p>We sell advisory and software, and say so upfront. The diagnostic also tells you what is not worth buying, including from us.</p></div>
       <div><h3>Confidential</h3><p>A non-disclosure agreement is signed before any information is shared, and each client's data is kept separate and used only for that client's work.</p></div>
       <div><h3>Accountable</h3><p>One team, one plan and one set of measures, from diagnosis to delivery, with written sign-off at every stage.</p></div>
     </div>
@@ -176,7 +176,7 @@ def pages(P):
         <div><b>Incident procedure</b><span>Who decides, who notifies the authority, and pre-filled templates for 24 hours, 72 hours and one month.</span></div>
         <div><b>Audit preparation</b><span>A remediation plan for 3, 6 and 12 months and a complete file for the external auditor.</span></div>
       </div>
-      <p style="margin-top:28px"><b style="color:var(--paper);font-weight:500">From €6,000, plus €149 per month</b> for the compliance tool, quarterly risk review, policy updates when the law changes and support when you report an incident.</p>
+      <p style="margin-top:28px"><b style="color:var(--paper);font-weight:500">Then a monthly subscription</b> for the compliance tool, quarterly risk review, policy updates when the law changes and support when you report an incident.</p>
     </div>
   </div>
 </section>
@@ -188,7 +188,7 @@ def pages(P):
       <p>So there are no surprises in the offer.</p>
     </div>
     <ul class="ticks">
-      <li>We are not a certified security auditor. Where the law requires an external audit, it is carried out by an auditor accredited by the national authority, chosen with you and priced separately.</li>
+      <li>We are not a certified security auditor. Where the law requires an external audit, it is carried out by an auditor accredited by the national authority, chosen with you and contracted separately.</li>
       <li>We work on evidence and read-only access. We do not ask for administrator access to your systems.</li>
       <li>We do not file with the authority in your name without a written mandate.</li>
     </ul>
@@ -203,7 +203,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Packages</p>
     <h1>Advisory and software, sold as <span class="accent">fixed-scope packages</span>.</h1>
-    <p class="lead">Each package has a defined result, a schedule and a price agreed before work starts. Advisory opens the project; software and automation deliver the savings; a monthly subscription keeps it running.</p>
+    <p class="lead">Each package has a defined result, and a schedule agreed before work starts. Advisory opens the project; software and automation deliver the savings; a monthly subscription keeps it running.</p>
   </div>
 </section>
 
@@ -211,23 +211,23 @@ def pages(P):
   <div class="wrap">
     {pkd("Package C", "NIS2 Compliant", "Companies covered by NIS2, typically 50–249 employees.",
          ["Scoping against the law and the national rules", "Asset and risk registers", "Self-assessment prepared on evidence", "Written policies approved by management", "Incident procedure and templates", "Remediation plan and audit file"],
-         "6–8 weeks", "From €6,000 + €149/month", "External audit by an accredited auditor is priced separately.", P['nis2']['en'], "NIS2 details")}
+         "6–8 weeks", "From €6,000 + €149/month", "External audit by an accredited auditor is contracted separately.", P['nis2']['en'], "NIS2 details")}
     {pkd("Package A", "Operations &amp; e-invoicing", "Distributors and manufacturers, 10–49 employees.",
-         ["Digital audit, fully credited against the package price", "Stock, sales and purchasing on Odoo Community (open source, no licence fees)", "Integration with your accounting software", "Connection to national e-invoicing (in Romania: e-Factura)"],
+         ["Digital audit, included in the package", "Stock, sales and purchasing on Odoo Community (open source, no licence fees)", "Integration with your accounting software", "Connection to national e-invoicing (in Romania: e-Factura)"],
          "Agreed after the audit", "Price on request + monthly support", "", "", "")}
     {pkd("Package B", "ERP &amp; operational transformation", "Companies with 50–249 employees, including projects co-financed by EU funds.",
          ["Full strategic diagnostic: seven deliverables, from margins to a 12-month plan", "ERP and automation across sales, warehouse, production and finance", "Staged delivery with sign-off at each stage", "Monthly support after go-live"],
          "Agreed after the diagnostic", "Price on request + monthly support", "", P['funding']['en'], "How EU funding works")}
     {pkd("Package D", "Automation &amp; AI", "Any company with repetitive work: orders, documents, reporting, customer requests.",
          ["Discovery workshop to pick the process with the best return", "One automation or AI assistant, built and deployed", "Measured before and after, so the saving is visible"],
-         "About 4 weeks", "From €7,900 + €190/month", "The monthly fee includes the AI usage costs.", "", "")}
+         "About 4 weeks", "From €7,900 + €190/month", "Monthly support includes the AI usage costs.", "", "")}
     {pkd("Package E", "E-commerce integration", "Online sellers with annual turnover of roughly €0.2–4 million.",
          ["Product feeds to marketplaces", "Stock synchronisation between shop, marketplaces and warehouse", "Automatic e-invoicing"],
          "About 4 weeks", "From €6,900 + €150/month", "", "", "")}
     {pkd("Advisory", "Strategic diagnostic", "Owner-led companies at the point where growth needs structure.",
-         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement", "30% of the fee is credited if you start implementation within 90 days"],
+         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
          "5 weeks", "Price on request", "", "", "")}
-    <p class="note"><b>About the prices.</b> Prices exclude VAT and apply to purchases through AWS Marketplace. For a direct contract, taxes withheld at source in your country may be added; the offer always states the full amount. Odoo is a trademark of Odoo S.A.; LAMS is not affiliated with Odoo S.A.</p>
+    <p class="note"><b>Offers.</b> Every offer is personalised after a 30-minute call and states the full scope, schedule and terms. Odoo is a trademark of Odoo S.A.; LAMS is not affiliated with Odoo S.A.</p>
   </div>
 </section>"""
 
@@ -244,7 +244,7 @@ def pages(P):
   <div class="wrap">
     <div class="section-head">
       <h2>Why companies choose it</h2>
-      <p>A private offer is an offer on AWS Marketplace made only for your company, at the price we agreed.</p>
+      <p>A private offer is an offer on AWS Marketplace made only for your company, on the terms we agreed.</p>
     </div>
     <div class="cols3">
       <div><h3>A familiar supplier</h3><p>The invoice comes from Amazon Web Services, a supplier your accounting and procurement teams can verify easily.</p></div>
@@ -258,7 +258,7 @@ def pages(P):
   <div class="wrap">
     <p class="label">How it works</p>
     <div class="steps light">
-      <div><b>1. Agree the work</b><span>We sign a non-disclosure agreement and agree the statement of work: scope, deliverables, schedule and price.</span></div>
+      <div><b>1. Agree the work</b><span>We sign a non-disclosure agreement and agree the statement of work: scope, deliverables, schedule and terms.</span></div>
       <div><b>2. Open the account</b><span>If your company has no AWS account, we set it up together in a 30–45 minute online session, in the company's name and with two-step sign-in.</span></div>
       <div><b>3. Accept the offer</b><span>We send the private offer. You accept it in your AWS account; the statement of work is attached to it.</span></div>
       <div><b>4. Delivery</b><span>We deliver in stages. Each month you receive the report, timesheet and handover document to sign.</span></div>
@@ -341,8 +341,8 @@ def pages(P):
     <p>This website is operated by LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, USA, <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
     <h2>Information only</h2>
     <p>The content of this site is general information. It is not legal, tax or security advice for your situation, and it does not make LAMS your adviser. Summaries of laws and funding rules reflect our reading on the date shown and may change.</p>
-    <h2>Prices and offers</h2>
-    <p>Prices on this site are indicative, exclude VAT and may change. A binding commitment exists only in a signed contract or an accepted private offer on AWS Marketplace, together with its statement of work.</p>
+    <h2>Offers</h2>
+    <p>This site does not make offers. A binding commitment exists only in a signed contract or an accepted private offer on AWS Marketplace, together with its statement of work.</p>
     <h2>Intellectual property</h2>
     <p>Texts, the LAMS name and logo and the design of this site belong to LAMS Capital Invest LLC. Other names and marks belong to their owners; mentioning them does not imply a partnership or endorsement.</p>
     <h2>Liability</h2>
@@ -354,8 +354,8 @@ def pages(P):
         "home": ("LAMS · NIS2 compliance, digital operations and software",
                  "NIS2 compliance, ERP, e-invoicing, automation and AI for mid-sized manufacturers and distributors in Europe. Fixed-scope packages, one accountable partner.", home, True),
         "nis2": ("NIS2 compliance for mid-sized companies",
-                 "Does NIS2 apply to your company? Scoping, risk analysis, policies, incident procedure and audit preparation in 6–8 weeks, from €6,000.", nis2, True),
-        "packages": ("Packages and prices",
+                 "Does NIS2 apply to your company? Scoping, risk analysis, policies, incident procedure and audit preparation in 6–8 weeks.", nis2, True),
+        "packages": ("Packages",
                      "Fixed-scope packages: NIS2 Compliant, Operations & e-invoicing, ERP transformation, Automation & AI, E-commerce integration and the strategic diagnostic.", packages, True),
         "aws": ("Buy through AWS Marketplace",
                 "Buy LAMS advisory and software as a private offer on AWS Marketplace, invoiced by Amazon Web Services to your company.", aws, True),
@@ -372,5 +372,5 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
     more = f'<dt>More</dt><dd><a href="{link}">{link_label} →</a></dd>' if link else ""
     return f"""<div class="pkd">
       <div><p class="tag">{tag}</p><h2>{title}</h2><p class="for">{who}</p></div>
-      <dl><dt>Includes</dt><dd><ul>{lis}</ul></dd><dt>Duration</dt><dd>{duration}</dd><dt>Price</dt><dd><b style="font-weight:500">{price}</b></dd>{extra}{more}</dl>
+      <dl><dt>Includes</dt><dd><ul>{lis}</ul></dd><dt>Duration</dt><dd>{duration}</dd>{extra}{more}</dl>
     </div>"""

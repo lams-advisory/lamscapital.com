@@ -13,8 +13,8 @@ FORM = {
     "intro": "Spuneți-ne pe scurt despre firmă și despre decizia pe care o aveți de luat. Răspundem în cel mult două zile lucrătoare, iar orice discuție rămâne confidențială.",
     "subject": "Mesaj nou de pe lamscapital.com (RO)",
     "name": "Nume", "company": "Firmă (și CUI, dacă doriți verificarea NIS2)", "email": "Email de serviciu", "country": "Țară",
-    "size": "Număr de angajați", "size_opts": ["50–249", "10–49", "250 sau mai mulți", "Sub 10"],
-    "topic": "Ce vă interesează", "topic_opts": ["Conformitate NIS2", "Gestiune și e-Factura", "Automatizare și AI", "Integrare e-commerce", "Diagnostic strategic", "Granturi", "Altceva"],
+    "size": "Număr de angajați", "size_opts": ["10–49", "50–249", "Sub 10", "250 sau mai mulți"],
+    "topic": "Ce vă interesează", "topic_opts": ["Diagnostic strategic", "Gestiune și e-Factura", "Automatizare și AI", "Integrare e-commerce", "Conformitate NIS2", "Granturi", "Altceva"],
     "message": "Despre ce doriți să discutăm?",
     "consent": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre NIS2, digitalizare și granturi. Pot retrage acordul oricând.",
     "privacy": 'Folosim datele doar ca să vă răspundem. Detalii în <a href="/ro/confidentialitate/">politica de confidențialitate</a>.',
@@ -27,17 +27,17 @@ def pages(P):
     home = f"""
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">Pentru producători și distribuitori mijlocii</p>
-    <h1>Conformitate NIS2, digitalizare și software, cu <span class="accent">un singur partener responsabil</span>.</h1>
-    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan. Lucrăm cu firme din România și din Uniunea Europeană.</p>
-    <div class="btn-row"><a class="btn primary" href="{P['nis2']['ro']}#check">Verificați dacă intrați sub NIS2</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
+    <p class="kicker">Pentru firme mici și mijlocii</p>
+    <h1>Strategie și software pentru firmele în creștere, de la <span class="accent">un singur partener responsabil</span>.</h1>
+    <p class="lead">Găsim unde pierde firma marjă și timp, apoi construim software-ul și automatizările care rezolvă problema și le ținem în funcțiune. Lucrăm cu firme din România și din Uniunea Europeană.</p>
+    <div class="btn-row"><a class="btn primary" href="#contact">Să vorbim</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
   </div>
 </section>
 
 <section class="band" aria-label="Angajamentele noastre">
   <div class="wrap band-grid">
-    <div><b>6–8 săptămâni</b><span>de la încadrarea NIS2 la dosarul pentru audit</span></div>
-    <div><b>Un singur contract</b><span>pentru conformitate, software și suport</span></div>
+    <div><b>5 săptămâni</b><span>de la cifrele firmei la un plan pe 12 luni</span></div>
+    <div><b>Un singur contract</b><span>pentru strategie, software și suport</span></div>
     <div><b>Lunar</b><span>raport scris, fișă de ore și proces-verbal</span></div>
     <div><b>2 zile lucrătoare</b><span>pentru răspuns la orice solicitare, sub confidențialitate</span></div>
   </div>
@@ -45,13 +45,12 @@ def pages(P):
 
 <section class="section">
   <div class="wrap">
-    <p class="label">De ce acum</p>
-    <div class="facts">
-      <div><b>Amenzi aplicate</b><span>Directoratul Național de Securitate Cibernetică (DNSC) a început să amendeze în septembrie 2026, întâi firmele neînregistrate.</span></div>
-      <div><b>Până la 10 mil. EUR</b><span>sau 2% din cifra de afaceri mondială: plafonul amenzilor pentru entitățile esențiale. Pentru cele importante: 7 mil. EUR sau 1,4%.</span></div>
-      <div><b>Conducerea răspunde</b><span>Administratorii aprobă măsurile de securitate, le supraveghează și asigură resursele. Nu se pot delega doar către IT.</span></div>
+    <p class="label">Ce facem</p>
+    <div class="cols3">
+      <div><h3>Creștere și strategie</h3><p>Un diagnostic strategic construit pe cifrele firmei: marje, piețe, canale, operațiuni și un plan pe 12 luni, cu responsabili și buget.</p><p><a class="more" href="{P['packages']['ro']}">Diagnostic strategic →</a></p></div>
+      <div><h3>Software și automatizare</h3><p>Stocuri, vânzări și achiziții într-un singur sistem, e-Factura, integrare e-commerce și automatizări sau asistenți AI pentru munca repetitivă.</p><p><a class="more" href="{P['packages']['ro']}">Pachete software →</a></p></div>
+      <div><h3>Conformitate și finanțare</h3><p>Conformitate NIS2 pentru firmele vizate de lege și pregătirea proiectelor de digitalizare pentru fonduri europene.</p><p><a class="more" href="{P['nis2']['ro']}">NIS2 →</a> &nbsp; <a class="more" href="{P['funding']['ro']}">Granturi →</a></p></div>
     </div>
-    <p class="source">Surse: Directiva (UE) 2022/2555; OUG 155/2024, aprobată prin Legea 124/2025.</p>
   </div>
 </section>
 
@@ -59,11 +58,11 @@ def pages(P):
   <div class="wrap">
     <p class="label">Întrebări la care vă ajutăm să răspundeți</p>
     <ol class="q-list">
-      <li><span>01</span>Intră firma noastră sub NIS2, ce trebuie să depunem la DNSC și până când?</li>
-      <li><span>02</span>Dacă vine un control mâine, ce trebuie să arate conducerea?</li>
-      <li><span>03</span>Cum scăpăm de tastarea comenzilor și facturilor de două ori, între Excel, depozit și contabilitate?</li>
-      <li><span>04</span>Ce merită automatizat întâi și cât economisim pe lună?</li>
-      <li><span>05</span>Cel mai mare client ne-a trimis un chestionar de securitate. Ce răspundem și cum dovedim?</li>
+      <li><span>01</span>Unde pierdem marjă și ce reparăm întâi?</li>
+      <li><span>02</span>Cum scăpăm de tastarea comenzilor și facturilor de două ori, între Excel, depozit și contabilitate?</li>
+      <li><span>03</span>Ce merită automatizat întâi și cât economisim pe lună?</li>
+      <li><span>04</span>Cum vindem pe marketplace-uri fără erori de stoc și facturare manuală?</li>
+      <li><span>05</span>Intră firma sub NIS2 sau ne-a trimis cel mai mare client un chestionar de securitate la care trebuie să răspundem?</li>
       <li><span>06</span>Putem acoperi o parte din investiție cu un grant, fără să punem proiectul în pericol?</li>
     </ol>
   </div>
@@ -73,16 +72,17 @@ def pages(P):
   <div class="wrap">
     <div class="section-head">
       <h2>Pachete cu perimetru și rezultat clar.</h2>
-      <p>Conformitatea deschide ușa; economiile vin din partea operațională. Fiecare pachet poate fi cumpărat separat sau ca parte a unui singur plan.</p>
+      <p>Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune. Fiecare pachet poate fi cumpărat separat sau ca parte a unui singur plan.</p>
     </div>
     <div class="pk-grid">
-      <div class="pk feature"><span class="tag">Pachetul C</span><h3>NIS2 Conform</h3><p>Încadrare, analiză de risc, politici scrise, procedură de incident și pregătirea auditului, cu urmărire lunară.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk feature"><span class="tag">Consultanță</span><h3>Diagnostic strategic</h3><p>Cinci săptămâni, șapte livrabile: marje, piețe, canale și un plan pe 12 luni, construit pe cifrele firmei.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Pachetul A</span><h3>Gestiune &amp; e-Factura</h3><p>Stocuri, vânzări și achiziții pe Odoo, legate de programul de contabilitate și de e-Factura (ANAF).</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
-      <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Pachetul D</span><h3>Automatizare &amp; AI</h3><p>Un atelier de identificare, apoi o automatizare sau un asistent AI livrat în aproximativ patru săptămâni.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
-      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru producătorii și distribuitorii care vând online.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
-      <div class="pk"><span class="tag">Consultanță</span><h3>Diagnostic strategic</h3><p>Cinci săptămâni, șapte livrabile: marje, piețe, canale și un plan pe 12 luni, construit pe cifrele firmei.</p><p class="price"><a class="more" href="{P['packages']['ro']}">Toate pachetele și detaliile →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru magazinele online.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul C</span><h3>NIS2 Conform</h3><p>Încadrare, analiză de risc, politici scrise, procedură de incident și pregătirea auditului, cu urmărire lunară.</p><p class="price"><a class="more" href="{P['nis2']['ro']}">Detalii NIS2 →</a></p></div>
     </div>
+    <p style="margin-top:28px"><a href="{P['packages']['ro']}">Toate pachetele și detaliile →</a></p>
   </div>
 </section>
 
@@ -90,12 +90,12 @@ def pages(P):
   <div class="wrap">
     <p class="label">Cu cine lucrăm</p>
     <div class="cl-grid">
-      <h3>Producători și distribuitori cu 50–249 de angajați, din sectoarele vizate de NIS2.</h3>
+      <h3>Firme conduse de proprietar și firme mijlocii, de la 10 la 249 de angajați, în momentul în care creșterea are nevoie de structură.</h3>
       <div class="sectors">
-        <div><b>Alimentar și băuturi</b><span>Producție, procesare și distribuție</span></div>
-        <div><b>Industria prelucrătoare</b><span>Utilaje, echipamente electrice, auto și componente, electronice</span></div>
-        <div><b>Transport și curierat</b><span>Transport rutier, logistică și servicii poștale</span></div>
-        <div><b>Chimice și comerț en-gros</b><span>Producția și distribuția de substanțe chimice, comerț cu ridicata</span></div>
+        <div><b>Producție</b><span>Alimentar, utilaje, echipamente, componente și bunuri de consum</span></div>
+        <div><b>Distribuție și comerț en-gros</b><span>Importatori, distribuitori și comerț cu ridicata</span></div>
+        <div><b>Comerț online</b><span>Magazine proprii și vânzători pe marketplace-uri</span></div>
+        <div><b>Transport și logistică</b><span>Transport rutier, depozitare și curierat</span></div>
       </div>
     </div>
   </div>
@@ -108,9 +108,9 @@ def pages(P):
       <h2>Întâi diagnosticul. Apoi un plan, o echipă.</h2>
     </div>
     <div>
-      <p>Strategia, conformitatea și software-ul sunt livrate de aceeași echipă, sub un singur contract. O echipă dedicată de dezvoltatori din Europa, coordonată de noi, construiește și întreține software-ul; răspunderea față de dumneavoastră rămâne a noastră.</p>
+      <p>Strategia, software-ul și conformitatea sunt livrate de aceeași echipă, sub un singur contract. O echipă dedicată de dezvoltatori din Europa, coordonată de noi, construiește și întreține software-ul; răspunderea față de dumneavoastră rămâne a noastră.</p>
       <div class="steps">
-        <div><b>Diagnostic</b><span>Analiză cu perimetru fix a obligațiilor, operațiunilor și cifrelor.</span></div>
+        <div><b>Diagnostic</b><span>Analiză cu perimetru fix a cifrelor, operațiunilor și obligațiilor.</span></div>
         <div><b>Plan</b><span>Măsuri prioritizate, cu responsabili, termene și buget.</span></div>
         <div><b>Implementare</b><span>Politici, software și integrări, livrate în etape scurte, cu proces-verbal de predare.</span></div>
         <div><b>Suport</b><span>Un abonament lunar ține la zi conformitatea și sistemele.</span></div>
@@ -220,24 +220,24 @@ def pages(P):
 
 <section class="section">
   <div class="wrap">
-    {pkd("Pachetul C", "NIS2 Conform", "Firme sub incidența NIS2, de regulă cu 50–249 de angajați.",
-         ["Încadrarea față de lege și ordinele DNSC", "Registrul activelor și registrul riscurilor", "Autoevaluarea, pregătită pe dovezi", "Politici scrise, aprobate de conducere", "Procedura de incident și șabloanele", "Planul de remediere și dosarul de audit"],
-         "6–8 săptămâni", "", "Auditul extern, făcut de un auditor atestat DNSC, se contractează separat.", P['nis2']['ro'], "Detalii NIS2")}
-    {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Producători și distribuitori cu 50–249 de angajați care au nevoie de un sistem de gestiune unitar.",
+    {pkd("Consultanță", "Diagnostic strategic", "Firme conduse de proprietar, în momentul în care creșterea are nevoie de structură.",
+         ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate"],
+         "5 săptămâni", "", "", "", "")}
+    {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Distribuitori și producători cu 10–49 de angajați.",
          ["Audit digital, inclus în pachet", "Stocuri, vânzări și achiziții pe Odoo Community (open-source, fără licențe)", "Integrare cu programul de contabilitate", "Conectare la e-Factura (ANAF)"],
          "Stabilită după audit", "", "", "", "")}
-    {pkd("Pachetul B", "ERP &amp; transformare operațională", "Firme cu 50–249 de angajați, inclusiv proiecte cofinanțate din fonduri europene.",
-         ["Diagnostic strategic complet: șapte livrabile, de la marje la planul pe 12 luni", "ERP și automatizări pentru vânzări, depozit, producție și financiar", "Livrare în etape, cu proces-verbal la fiecare etapă", "Suport lunar după punerea în funcțiune"],
-         "Stabilită după diagnostic", "", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
     {pkd("Pachetul D", "Automatizare &amp; AI", "Orice firmă cu muncă repetitivă: comenzi, documente, rapoarte, cereri de la clienți.",
          ["Atelier de identificare a procesului cu cel mai bun randament", "O automatizare sau un asistent AI, construit și pus în funcțiune", "Măsurare înainte și după, ca economia să se vadă"],
          "Aproximativ 4 săptămâni", "", "Suportul lunar include costurile de utilizare a AI.", "", "")}
-    {pkd("Pachetul E", "Integrare e-commerce", "Producători și distribuitori care vând și online, prin magazin propriu sau marketplace-uri.",
+    {pkd("Pachetul E", "Integrare e-commerce", "Magazine online cu o cifră de afaceri anuală de 1–20 mil. lei.",
          ["Feed-uri de produse către marketplace-uri", "Sincronizarea stocului între magazin, marketplace-uri și depozit", "e-Factura automată"],
          "Aproximativ 4 săptămâni", "", "", "", "")}
-    {pkd("Consultanță", "Diagnostic strategic", "Conducerea firmelor cu 50–249 de angajați, înaintea unei investiții sau a unei etape de creștere.",
-         ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate"],
-         "5 săptămâni", "", "", "", "")}
+    {pkd("Pachetul B", "ERP &amp; transformare operațională", "Firme cu 50–249 de angajați, inclusiv proiecte cofinanțate din fonduri europene.",
+         ["Diagnostic strategic complet: șapte livrabile, de la marje la planul pe 12 luni", "ERP și automatizări pentru vânzări, depozit, producție și financiar", "Livrare în etape, cu proces-verbal la fiecare etapă", "Suport lunar după punerea în funcțiune"],
+         "Stabilită după diagnostic", "", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
+    {pkd("Pachetul C", "NIS2 Conform", "Firme sub incidența NIS2, de regulă cu 50–249 de angajați.",
+         ["Încadrarea față de lege și ordinele DNSC", "Registrul activelor și registrul riscurilor", "Autoevaluarea, pregătită pe dovezi", "Politici scrise, aprobate de conducere", "Procedura de incident și șabloanele", "Planul de remediere și dosarul de audit"],
+         "6–8 săptămâni", "", "Auditul extern, făcut de un auditor atestat DNSC, se contractează separat.", P['nis2']['ro'], "Detalii NIS2")}
     <p class="note"><b>Oferte.</b> Fiecare ofertă se personalizează după o discuție de 30 de minute și arată complet perimetrul, calendarul și condițiile. Odoo este marcă a Odoo S.A.; LAMS nu este afiliată cu Odoo S.A.</p>
   </div>
 </section>"""
@@ -365,8 +365,8 @@ def pages(P):
 </section>"""
 
     return {
-        "home": ("LAMS · Conformitate NIS2, digitalizare și software",
-                 "Conformitate NIS2, ERP, e-Factura, automatizare și AI pentru producători și distribuitori cu 50–249 de angajați. Pachete cu perimetru fix, un singur partener responsabil.", home, True),
+        "home": ("LAMS · Strategie, software și automatizare pentru firme în creștere",
+                 "Diagnostic strategic, ERP, e-Factura, e-commerce, automatizare și AI pentru firme mici și mijlocii, plus conformitate NIS2 și granturi. Pachete cu perimetru fix, un singur partener responsabil.", home, True),
         "nis2": ("Conformitate NIS2 pentru firme mijlocii",
                  "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni.", nis2, True),
         "packages": ("Pachete",

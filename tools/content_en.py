@@ -13,8 +13,8 @@ FORM = {
     "intro": "Tell us briefly about your company and the decision ahead. We reply within two business days, and every conversation is treated as confidential.",
     "subject": "New enquiry from lamscapital.com (EN)",
     "name": "Name", "company": "Company", "email": "Work email", "country": "Country",
-    "size": "Employees", "size_opts": ["50–249", "10–49", "250 or more", "Fewer than 10"],
-    "topic": "Main interest", "topic_opts": ["NIS2 compliance", "ERP and e-invoicing", "Automation and AI", "E-commerce integration", "Strategic diagnostic", "EU funding", "Something else"],
+    "size": "Employees", "size_opts": ["10–49", "50–249", "Fewer than 10", "250 or more"],
+    "topic": "Main interest", "topic_opts": ["Strategic diagnostic", "ERP and e-invoicing", "Automation and AI", "E-commerce integration", "NIS2 compliance", "EU funding", "Something else"],
     "message": "What would you like to discuss?",
     "consent": "I agree to receive occasional emails from LAMS about NIS2, digitalisation and funding. I can withdraw this consent at any time.",
     "privacy": 'We use your details only to answer this enquiry. See our <a href="/privacy/">privacy notice</a>.',
@@ -27,17 +27,17 @@ def pages(P):
     home = f"""
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">For mid-sized manufacturers and distributors in Europe</p>
-    <h1>NIS2 compliance, digital operations and software, from <span class="accent">one accountable partner</span>.</h1>
-    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan. For companies across the European Union, with local delivery in Romania.</p>
-    <div class="btn-row"><a class="btn primary" href="{P['nis2']['en']}#check">Check if NIS2 applies to you</a><a class="btn" href="{P['packages']['en']}">See the packages</a></div>
+    <p class="kicker">For small and mid-sized companies in Europe</p>
+    <h1>Strategy and software for growing companies, from <span class="accent">one accountable partner</span>.</h1>
+    <p class="lead">We find where your company loses margin and time, then build the software and automation that fix it, and keep it running. For companies across the European Union, with local delivery in Romania.</p>
+    <div class="btn-row"><a class="btn primary" href="#contact">Start a conversation</a><a class="btn" href="{P['packages']['en']}">See the packages</a></div>
   </div>
 </section>
 
 <section class="band" aria-label="How we commit">
   <div class="wrap band-grid">
-    <div><b>6–8 weeks</b><span>from NIS2 scoping to an audit-ready file</span></div>
-    <div><b>One contract</b><span>for compliance, software and support</span></div>
+    <div><b>5 weeks</b><span>from your numbers to a 12-month plan</span></div>
+    <div><b>One contract</b><span>for strategy, software and support</span></div>
     <div><b>Every month</b><span>a written report, timesheet and sign-off</span></div>
     <div><b>2 business days</b><span>to answer any enquiry, under NDA</span></div>
   </div>
@@ -45,13 +45,12 @@ def pages(P):
 
 <section class="section">
   <div class="wrap">
-    <p class="label">Why now</p>
-    <div class="facts">
-      <div><b>Up to €10 million</b><span>or 2% of worldwide turnover: the ceiling for fines on essential entities under the NIS2 Directive. For important entities: €7 million or 1.4%.</span></div>
-      <div><b>Management is accountable</b><span>Boards must approve cybersecurity measures, oversee them and take training. Responsibility cannot be delegated to IT alone.</span></div>
-      <div><b>24 hours</b><span>to send an early warning to the authority after a significant incident, 72 hours for the notification and one month for the final report.</span></div>
+    <p class="label">What we do</p>
+    <div class="cols3">
+      <div><h3>Growth and strategy</h3><p>A strategic diagnostic built on your own numbers: margins, markets, channels, operations and a 12-month plan with owners and a budget.</p><p><a class="more" href="{P['packages']['en']}">Strategic diagnostic →</a></p></div>
+      <div><h3>Software and automation</h3><p>Stock, sales and purchasing on one system, e-invoicing, e-commerce integration, and automation or AI assistants for repetitive work.</p><p><a class="more" href="{P['packages']['en']}">Software packages →</a></p></div>
+      <div><h3>Compliance and funding</h3><p>NIS2 cybersecurity compliance for companies covered by the law, and preparation of digitalisation projects for EU funding.</p><p><a class="more" href="{P['nis2']['en']}">NIS2 →</a> &nbsp; <a class="more" href="{P['funding']['en']}">EU funding →</a></p></div>
     </div>
-    <p class="source">Source: Directive (EU) 2022/2555 (NIS2), Articles 20, 23 and 34. National laws set the details; in Romania, fines have been applied since September 2026.</p>
   </div>
 </section>
 
@@ -59,11 +58,11 @@ def pages(P):
   <div class="wrap">
     <p class="label">Questions we help answer</p>
     <ol class="q-list">
-      <li><span>01</span>Does NIS2 apply to our company, and what do we have to file, and by when?</li>
-      <li><span>02</span>If the authority audited us tomorrow, what would management have to show?</li>
-      <li><span>03</span>How do we stop re-typing orders and invoices between spreadsheets, the warehouse and accounting?</li>
-      <li><span>04</span>What should we automate first, and what does it save us each month?</li>
-      <li><span>05</span>Our largest client sent us a security questionnaire. What do we answer, and what do we need to prove it?</li>
+      <li><span>01</span>Where are we losing margin, and what do we fix first?</li>
+      <li><span>02</span>How do we stop re-typing orders and invoices between spreadsheets, the warehouse and accounting?</li>
+      <li><span>03</span>What should we automate first, and what does it save us each month?</li>
+      <li><span>04</span>How do we sell on marketplaces without stock errors and manual invoicing?</li>
+      <li><span>05</span>Does NIS2 apply to us, or has our largest client sent us a security questionnaire we must answer?</li>
       <li><span>06</span>Can EU funding cover part of the investment without putting the project at risk?</li>
     </ol>
   </div>
@@ -73,16 +72,17 @@ def pages(P):
   <div class="wrap">
     <div class="section-head">
       <h2>Fixed-scope packages with a defined result.</h2>
-      <p>Compliance opens the door; the operational work is where the savings come from. Every package can run on its own or as part of one plan.</p>
+      <p>Advisory opens the project; software and automation deliver the savings; a monthly subscription keeps it running. Every package can run on its own or as part of one plan.</p>
     </div>
     <div class="pk-grid">
-      <div class="pk feature"><span class="tag">Package C</span><h3>NIS2 Compliant</h3><p>Scoping, risk analysis, written policies, incident procedure and audit preparation, with monthly follow-up.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk feature"><span class="tag">Advisory</span><h3>Strategic diagnostic</h3><p>Five weeks, seven deliverables: margins, markets, channels and a 12-month plan, built on your own numbers.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Package A</span><h3>Operations &amp; e-invoicing</h3><p>Stock, sales and purchasing on Odoo, connected to accounting and to national e-invoicing.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
-      <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Package D</span><h3>Automation &amp; AI</h3><p>A discovery workshop, then one automation or AI assistant delivered in about four weeks.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
-      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for manufacturers and distributors that sell online.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
-      <div class="pk"><span class="tag">Advisory</span><h3>Strategic diagnostic</h3><p>Five weeks, seven deliverables: margins, markets, channels and a 12-month plan, built on your own numbers.</p><p class="price"><a class="more" href="{P['packages']['en']}">All packages and details →</a></p></div>
+      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for online sellers.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package C</span><h3>NIS2 Compliant</h3><p>Scoping, risk analysis, written policies, incident procedure and audit preparation, with monthly follow-up.</p><p class="price"><a class="more" href="{P['nis2']['en']}">NIS2 details →</a></p></div>
     </div>
+    <p style="margin-top:28px"><a href="{P['packages']['en']}">All packages and details →</a></p>
   </div>
 </section>
 
@@ -90,12 +90,12 @@ def pages(P):
   <div class="wrap">
     <p class="label">Who we work with</p>
     <div class="cl-grid">
-      <h3>Manufacturers and distributors with 50–249 employees, in the sectors covered by NIS2.</h3>
+      <h3>Owner-led and mid-sized companies, from 10 to 249 employees, at the point where growth needs structure.</h3>
       <div class="sectors">
-        <div><b>Food and beverage</b><span>Production, processing and distribution</span></div>
-        <div><b>Manufacturing</b><span>Machinery, electrical equipment, vehicles and parts, electronics</span></div>
-        <div><b>Transport and courier</b><span>Road transport, logistics and postal services</span></div>
-        <div><b>Chemicals and wholesale</b><span>Production and distribution of chemicals, wholesale trade</span></div>
+        <div><b>Manufacturing</b><span>Food, machinery, equipment, components and consumer goods</span></div>
+        <div><b>Distribution and wholesale</b><span>Importers, distributors and wholesale trade</span></div>
+        <div><b>Online retail</b><span>Own shops and marketplace sellers</span></div>
+        <div><b>Transport and logistics</b><span>Road transport, warehousing and courier services</span></div>
       </div>
     </div>
   </div>
@@ -108,9 +108,9 @@ def pages(P):
       <h2>Diagnose first. Then one plan, one team.</h2>
     </div>
     <div>
-      <p>Strategy, compliance and software are delivered by one team under one contract. A dedicated development team in Europe, coordinated by us, builds and maintains the software; we stay accountable to you for the result.</p>
+      <p>Strategy, software and compliance are delivered by one team under one contract. A dedicated development team in Europe, coordinated by us, builds and maintains the software; we stay accountable to you for the result.</p>
       <div class="steps">
-        <div><b>Diagnose</b><span>Fixed-scope review of obligations, operations and numbers.</span></div>
+        <div><b>Diagnose</b><span>Fixed-scope review of numbers, operations and obligations.</span></div>
         <div><b>Plan</b><span>Prioritised measures with owners, deadlines and a budget.</span></div>
         <div><b>Implement</b><span>Policies, software and integrations, delivered in short stages with sign-off.</span></div>
         <div><b>Support</b><span>A monthly subscription keeps compliance and systems up to date.</span></div>
@@ -221,24 +221,24 @@ def pages(P):
 
 <section class="section">
   <div class="wrap">
-    {pkd("Package C", "NIS2 Compliant", "Companies covered by NIS2, typically 50–249 employees.",
-         ["Scoping against the law and the national rules", "Asset and risk registers", "Self-assessment prepared on evidence", "Written policies approved by management", "Incident procedure and templates", "Remediation plan and audit file"],
-         "6–8 weeks", "", "External audit by an accredited auditor is contracted separately.", P['nis2']['en'], "NIS2 details")}
-    {pkd("Package A", "Operations &amp; e-invoicing", "Manufacturers and distributors with 50–249 employees that need one management system.",
+    {pkd("Advisory", "Strategic diagnostic", "Owner-led companies at the point where growth needs structure.",
+         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
+         "5 weeks", "", "", "", "")}
+    {pkd("Package A", "Operations &amp; e-invoicing", "Distributors and manufacturers, 10–49 employees.",
          ["Digital audit, included in the package", "Stock, sales and purchasing on Odoo Community (open source, no licence fees)", "Integration with your accounting software", "Connection to national e-invoicing (in Romania: e-Factura)"],
          "Agreed after the audit", "", "", "", "")}
-    {pkd("Package B", "ERP &amp; operational transformation", "Companies with 50–249 employees, including projects co-financed by EU funds.",
-         ["Full strategic diagnostic: seven deliverables, from margins to a 12-month plan", "ERP and automation across sales, warehouse, production and finance", "Staged delivery with sign-off at each stage", "Monthly support after go-live"],
-         "Agreed after the diagnostic", "", "", P['funding']['en'], "How EU funding works")}
     {pkd("Package D", "Automation &amp; AI", "Any company with repetitive work: orders, documents, reporting, customer requests.",
          ["Discovery workshop to pick the process with the best return", "One automation or AI assistant, built and deployed", "Measured before and after, so the saving is visible"],
          "About 4 weeks", "", "Monthly support includes the AI usage costs.", "", "")}
-    {pkd("Package E", "E-commerce integration", "Manufacturers and distributors that also sell online, through their own shop or marketplaces.",
+    {pkd("Package E", "E-commerce integration", "Online sellers with annual turnover of roughly €0.2–4 million.",
          ["Product feeds to marketplaces", "Stock synchronisation between shop, marketplaces and warehouse", "Automatic e-invoicing"],
          "About 4 weeks", "", "", "", "")}
-    {pkd("Advisory", "Strategic diagnostic", "Management of companies with 50–249 employees, ahead of an investment or a growth stage.",
-         ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
-         "5 weeks", "", "", "", "")}
+    {pkd("Package B", "ERP &amp; operational transformation", "Companies with 50–249 employees, including projects co-financed by EU funds.",
+         ["Full strategic diagnostic: seven deliverables, from margins to a 12-month plan", "ERP and automation across sales, warehouse, production and finance", "Staged delivery with sign-off at each stage", "Monthly support after go-live"],
+         "Agreed after the diagnostic", "", "", P['funding']['en'], "How EU funding works")}
+    {pkd("Package C", "NIS2 Compliant", "Companies covered by NIS2, typically 50–249 employees.",
+         ["Scoping against the law and the national rules", "Asset and risk registers", "Self-assessment prepared on evidence", "Written policies approved by management", "Incident procedure and templates", "Remediation plan and audit file"],
+         "6–8 weeks", "", "External audit by an accredited auditor is contracted separately.", P['nis2']['en'], "NIS2 details")}
     <p class="note"><b>Offers.</b> Every offer is personalised after a 30-minute call and states the full scope, schedule and terms. Odoo is a trademark of Odoo S.A.; LAMS is not affiliated with Odoo S.A.</p>
   </div>
 </section>"""
@@ -357,8 +357,8 @@ def pages(P):
 </section>"""
 
     return {
-        "home": ("LAMS · NIS2 compliance, digital operations and software",
-                 "NIS2 compliance, ERP, e-invoicing, automation and AI for mid-sized manufacturers and distributors in Europe. Fixed-scope packages, one accountable partner.", home, True),
+        "home": ("LAMS · Strategy, software and automation for growing companies",
+                 "Strategic diagnostic, ERP, e-invoicing, e-commerce, automation and AI for small and mid-sized companies in Europe, plus NIS2 compliance and EU funding. Fixed-scope packages, one accountable partner.", home, True),
         "nis2": ("NIS2 compliance for mid-sized companies",
                  "Does NIS2 apply to your company? Scoping, risk analysis, policies, incident procedure and audit preparation in 6–8 weeks.", nis2, True),
         "packages": ("Packages",

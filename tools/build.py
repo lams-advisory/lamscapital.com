@@ -36,13 +36,13 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
 def page(lang, key, title, description, body, C):
     other = "ro" if lang == "en" else "en"
     here = PATHS[key][lang]
-    nav_items = [("nis2", C.NAV["nis2"]), ("packages", C.NAV["packages"]), ("aws", C.NAV["aws"]), ("funding", C.NAV["funding"])]
+    nav_items = [("packages", C.NAV["packages"]), ("nis2", C.NAV["nis2"]), ("funding", C.NAV["funding"]), ("aws", C.NAV["aws"])]
     nav = "".join(
         f'<a href="{PATHS[k][lang]}"{" aria-current=\"page\"" if k == key else ""}>{label}</a>' for k, label in nav_items
     )
     nav += f'<a href="{PATHS["home"][lang]}#contact">{C.NAV["contact"]}</a>'
     nav += f'<a class="lang" href="{PATHS[key][other]}" hreflang="{other}" lang="{other}">{C.NAV["switch"]}</a>'
-    foot_links = "".join(f'<a href="{PATHS[k][lang]}">{C.NAV[k]}</a>' for k in ("nis2", "packages", "aws", "funding", "privacy", "terms"))
+    foot_links = "".join(f'<a href="{PATHS[k][lang]}">{C.NAV[k]}</a>' for k in ("packages", "nis2", "funding", "aws", "privacy", "terms"))
     full_title = title if key == "home" else f"{title} | LAMS"
     return f"""<!DOCTYPE html>
 <html lang="{lang}">

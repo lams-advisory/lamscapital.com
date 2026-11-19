@@ -1,4 +1,4 @@
-# English text of lamscapital.com (root of the site). European positioning; Romania is the first market.
+# English text of lamscapital.com (root of the site). European positioning.
 
 NAV = {
     "nis2": "NIS2 compliance", "packages": "Packages", "aws": "Buy via AWS", "funding": "EU funding",
@@ -29,8 +29,17 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">For mid-sized manufacturers and distributors in Europe</p>
     <h1>NIS2 compliance, digital operations and software, from <span class="accent">one accountable partner</span>.</h1>
-    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan. We are delivering in Romania first and expanding across the EU.</p>
-    <div class="btn-row"><a class="btn primary" href="{P['nis2']['en']}">Check if NIS2 applies to you</a><a class="btn" href="{P['packages']['en']}">See the packages</a></div>
+    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan. For companies across the European Union, with local delivery in Romania.</p>
+    <div class="btn-row"><a class="btn primary" href="{P['nis2']['en']}#check">Check if NIS2 applies to you</a><a class="btn" href="{P['packages']['en']}">See the packages</a></div>
+  </div>
+</section>
+
+<section class="band" aria-label="How we commit">
+  <div class="wrap band-grid">
+    <div><b>6–8 weeks</b><span>from NIS2 scoping to an audit-ready file</span></div>
+    <div><b>One contract</b><span>for compliance, software and support</span></div>
+    <div><b>Every month</b><span>a written report, timesheet and sign-off</span></div>
+    <div><b>2 business days</b><span>to answer any enquiry, under NDA</span></div>
   </div>
 </section>
 
@@ -54,7 +63,8 @@ def pages(P):
       <li><span>02</span>If the authority audited us tomorrow, what would management have to show?</li>
       <li><span>03</span>How do we stop re-typing orders and invoices between spreadsheets, the warehouse and accounting?</li>
       <li><span>04</span>What should we automate first, and what does it save us each month?</li>
-      <li><span>05</span>Can EU funding cover part of the investment without putting the project at risk?</li>
+      <li><span>05</span>Our largest client sent us a security questionnaire. What do we answer, and what do we need to prove it?</li>
+      <li><span>06</span>Can EU funding cover part of the investment without putting the project at risk?</li>
     </ol>
   </div>
 </section>
@@ -127,7 +137,7 @@ def pages(P):
     <p class="kicker">Package C · NIS2 Compliant</p>
     <h1>Know where you stand under NIS2, and be <span class="accent">ready for an audit</span>.</h1>
     <p class="lead">The EU NIS2 Directive brings thousands of mid-sized companies under cybersecurity law for the first time. We establish whether it applies to you, prepare what the authority requires, and keep it current every month.</p>
-    <div class="btn-row"><a class="btn primary" href="#contact">Request a free scoping check</a><a class="btn" href="{P['packages']['en']}">All packages</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Check in 1 minute</a><a class="btn" href="{P['packages']['en']}">All packages</a></div>
   </div>
 </section>
 
@@ -141,10 +151,12 @@ def pages(P):
       <li><b>Size:</b> at least 50 employees, or annual turnover above €10 million (medium-sized and larger companies).</li>
       <li><b>Sector:</b> you operate in a sector listed by the directive, for example food production and distribution, manufacturing of machinery, electrical equipment, electronics, vehicles or medical devices, chemicals, transport, postal and courier services, or waste management.</li>
       <li><b>Some smaller companies</b> are also covered, regardless of size, when a member state designates them as critical.</li>
+      <li><b>Through your clients:</b> companies covered by NIS2 must manage the security of their supply chain. Even if the law does not cover you directly, expect security questionnaires, audits and contract clauses from your largest clients. Without answers, contracts are at risk.</li>
     </ul>
-    <p class="note"><b>Free scoping check.</b> Send us your company name and registration number. Within two business days we tell you whether NIS2 is likely to apply, whether you would be an essential or an important entity, and which deadlines you face.</p>
+    <p class="note"><b>Full scoping check, free of charge.</b> Send us your company name and registration number. Within two business days we tell you whether NIS2 applies, whether you would be an essential or an important entity, and which deadlines you face.</p>
   </div>
 </section>
+<!--CHECKER-->
 
 <section class="section">
   <div class="wrap">
@@ -188,7 +200,7 @@ def pages(P):
       <p>So there are no surprises in the offer.</p>
     </div>
     <ul class="ticks">
-      <li>We are not a certified security auditor. Where the law requires an external audit, it is carried out by an auditor accredited by the national authority, chosen with you and contracted separately.</li>
+      <li>Where the law requires an external audit, it is carried out by an auditor accredited by the national authority. We prepare the audit file and coordinate the audit with you; the auditor is contracted separately, so the audit stays independent.</li>
       <li>We work on evidence and read-only access. We do not ask for administrator access to your systems.</li>
       <li>We do not file with the authority in your name without a written mandate.</li>
     </ul>
@@ -280,7 +292,7 @@ def pages(P):
   <div class="wrap">
     <div class="section-head">
       <h2>What we do</h2>
-      <p>Currently in Romania, through the regional programmes for SME digitalisation. Other countries as we expand.</p>
+      <p>In Romania, through the regional programmes for SME digitalisation; in other member states, through their national and regional programmes.</p>
     </div>
     <div class="cols3">
       <div><h3>Eligibility</h3><p>We check your activity codes, size and region against the applicant guide, including excluded sectors.</p></div>
@@ -373,3 +385,40 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
       <div><p class="tag">{tag}</p><h2>{title}</h2><p class="for">{who}</p></div>
       <dl><dt>Includes</dt><dd><ul>{lis}</ul></dd><dt>Duration</dt><dd>{duration}</dd>{extra}{more}</dl>
     </div>"""
+
+CHECK = {
+    "label": "NIS2 self-check",
+    "title": "Does NIS2 apply to you? Five questions, one minute.",
+    "intro": "An indicative answer based on the directive's size and sector rules. Nothing you select is sent or stored.",
+    "q": [
+        ("sector", "Which best describes your main activity?", [
+            ("a1", "Energy, transport, banking, health, water or digital infrastructure"),
+            ("a2", "Food, manufacturing, chemicals, postal and courier, waste, or digital services"),
+            ("a3", "None of these"),
+        ]),
+        ("size", "How large is the company, including its group?", [
+            ("s1", "Fewer than 50 employees and under €10 million turnover"),
+            ("s2", "50–249 employees, or €10–50 million turnover"),
+            ("s3", "250 or more employees, or over €50 million turnover"),
+        ]),
+        ("chain", "Do large clients send you security questionnaires or contract clauses?", [("yes", "Yes"), ("no", "No")]),
+        ("reg", "Is the company registered with the national cybersecurity authority?", [("yes", "Yes"), ("no", "No"), ("unsure", "Not sure")]),
+        ("inc", "Do you have a written incident procedure that has been tested?", [("yes", "Yes"), ("no", "No")]),
+    ],
+    "submit": "See the result",
+    "missing": "Answer all five questions to see the result.",
+    "out_t": "NIS2 probably does not apply to you directly.",
+    "out_b": "The exception is a company the authority designates as critical, regardless of size.",
+    "ess_t": "You are probably an essential entity.",
+    "ess_b": "The strictest regime: proactive supervision and fines of up to €10 million or 2% of worldwide turnover.",
+    "imp_t": "You are probably an important entity.",
+    "imp_b": "The same security measures apply, with supervision after incidents or complaints and fines of up to €7 million or 1.4% of worldwide turnover.",
+    "gap_reg_no": "Registration with the authority appears to be overdue. It is the first thing an inspection checks.",
+    "gap_reg_unsure": "Check whether the company is registered with the authority; the deadline usually runs from when the law first applies to you.",
+    "gap_inc": "An untested incident procedure is a gap: the 24-hour early warning runs from when the incident is detected.",
+    "gap_chain": "Your clients already apply NIS2 to their suppliers. Clear answers to their questionnaires protect those contracts.",
+    "gaps": "What to look at first",
+    "cta": "Request the full check",
+    "note": "Indicative result, not legal advice. The exact answer depends on activity codes, group structure and national law.",
+    "msg": "NIS2 self-check result: ",
+}

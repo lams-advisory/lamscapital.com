@@ -29,8 +29,17 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Pentru producători și distribuitori mijlocii</p>
     <h1>Conformitate NIS2, digitalizare și software, cu <span class="accent">un singur partener responsabil</span>.</h1>
-    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan. Lucrăm întâi în România și ne extindem în Uniunea Europeană.</p>
-    <div class="btn-row"><a class="btn primary" href="{P['nis2']['ro']}">Verificați dacă intrați sub NIS2</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
+    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan. Lucrăm cu firme din România și din Uniunea Europeană.</p>
+    <div class="btn-row"><a class="btn primary" href="{P['nis2']['ro']}#check">Verificați dacă intrați sub NIS2</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
+  </div>
+</section>
+
+<section class="band" aria-label="Angajamentele noastre">
+  <div class="wrap band-grid">
+    <div><b>6–8 săptămâni</b><span>de la încadrarea NIS2 la dosarul pentru audit</span></div>
+    <div><b>Un singur contract</b><span>pentru conformitate, software și suport</span></div>
+    <div><b>Lunar</b><span>raport scris, fișă de ore și proces-verbal</span></div>
+    <div><b>2 zile lucrătoare</b><span>pentru răspuns la orice solicitare, sub confidențialitate</span></div>
   </div>
 </section>
 
@@ -54,7 +63,8 @@ def pages(P):
       <li><span>02</span>Dacă vine un control mâine, ce trebuie să arate conducerea?</li>
       <li><span>03</span>Cum scăpăm de tastarea comenzilor și facturilor de două ori, între Excel, depozit și contabilitate?</li>
       <li><span>04</span>Ce merită automatizat întâi și cât economisim pe lună?</li>
-      <li><span>05</span>Putem acoperi o parte din investiție cu un grant, fără să punem proiectul în pericol?</li>
+      <li><span>05</span>Cel mai mare client ne-a trimis un chestionar de securitate. Ce răspundem și cum dovedim?</li>
+      <li><span>06</span>Putem acoperi o parte din investiție cu un grant, fără să punem proiectul în pericol?</li>
     </ol>
   </div>
 </section>
@@ -127,7 +137,7 @@ def pages(P):
     <p class="kicker">Pachetul C · NIS2 Conform</p>
     <h1>Aflați unde sunteți față de NIS2 și fiți <span class="accent">pregătiți pentru control</span>.</h1>
     <p class="lead">NIS2 este directiva europeană de securitate cibernetică. Prin ea, mii de firme mijlocii din România au intrat pentru prima dată sub lege. Stabilim dacă vi se aplică, pregătim ce cere DNSC și vă ajutăm să țineți totul la zi, lunar.</p>
-    <div class="btn-row"><a class="btn primary" href="#contact">Cereți verificarea gratuită</a><a class="btn" href="{P['packages']['ro']}">Toate pachetele</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Verificați în 1 minut</a><a class="btn" href="{P['packages']['ro']}">Toate pachetele</a></div>
   </div>
 </section>
 
@@ -141,10 +151,12 @@ def pages(P):
       <li><b>Mărime:</b> cel puțin 50 de angajați sau o cifră de afaceri anuală peste 10 mil. EUR (firme mijlocii și mari).</li>
       <li><b>Sector:</b> activați într-un sector din anexele legii, de exemplu producția și distribuția de alimente, fabricarea de utilaje, echipamente electrice, electronice, autovehicule sau dispozitive medicale, industria chimică, transporturile, serviciile poștale și de curierat sau gestionarea deșeurilor.</li>
       <li><b>Unele firme mai mici</b> intră și ele, indiferent de mărime, dacă autoritatea le desemnează drept critice.</li>
+      <li><b>Prin clienții dumneavoastră:</b> firmele aflate sub NIS2 trebuie să gestioneze securitatea furnizorilor. Chiar dacă legea nu vă vizează direct, clienții mari vă vor trimite chestionare de securitate, audituri și clauze contractuale. Fără răspunsuri, contractele sunt în risc.</li>
     </ul>
-    <p class="note"><b>Verificare gratuită de încadrare.</b> Trimiteți-ne numele firmei și codul unic de înregistrare (CUI). În două zile lucrătoare vă spunem dacă NIS2 vi se aplică probabil, dacă ați fi entitate esențială sau importantă și ce termene aveți.</p>
+    <p class="note"><b>Verificare completă de încadrare, gratuită.</b> Trimiteți-ne numele firmei și codul unic de înregistrare (CUI). În două zile lucrătoare vă spunem dacă NIS2 vi se aplică, dacă ați fi entitate esențială sau importantă și ce termene aveți.</p>
   </div>
 </section>
+<!--CHECKER-->
 
 <section class="section">
   <div class="wrap">
@@ -190,7 +202,7 @@ def pages(P):
       <p>Ca să nu existe surprize în ofertă.</p>
     </div>
     <ul class="ticks">
-      <li>Nu suntem auditor de securitate cibernetică atestat de DNSC. Acolo unde legea cere audit extern, îl face un auditor atestat, ales împreună cu dumneavoastră și contractat separat.</li>
+      <li>Acolo unde legea cere audit extern, îl face un auditor atestat de DNSC. Noi pregătim dosarul și coordonăm auditul împreună cu dumneavoastră; auditorul se contractează separat, ca auditul să rămână independent.</li>
       <li>Lucrăm pe dovezi și cu acces doar de citire. Nu cerem acces de administrator la sistemele firmei.</li>
       <li>Nu depunem nimic la DNSC în numele firmei fără mandat scris.</li>
     </ul>
@@ -380,3 +392,40 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
       <div><p class="tag">{tag}</p><h2>{title}</h2><p class="for">{who}</p></div>
       <dl><dt>Include</dt><dd><ul>{lis}</ul></dd><dt>Durată</dt><dd>{duration}</dd>{extra}{more}</dl>
     </div>"""
+
+CHECK = {
+    "label": "Autoverificare NIS2",
+    "title": "Intrați sub NIS2? Cinci întrebări, un minut.",
+    "intro": "Un răspuns orientativ, după regulile de mărime și sector ale legii. Nimic din ce bifați nu este trimis sau salvat.",
+    "q": [
+        ("sector", "Ce descrie cel mai bine activitatea principală?", [
+            ("a1", "Energie, transport, bănci, sănătate, apă sau infrastructură digitală"),
+            ("a2", "Alimentar, industria prelucrătoare, chimice, poștă și curierat, deșeuri sau servicii digitale"),
+            ("a3", "Niciuna dintre acestea"),
+        ]),
+        ("size", "Cât de mare este firma, inclusiv grupul din care face parte?", [
+            ("s1", "Sub 50 de angajați și sub 10 mil. EUR cifră de afaceri"),
+            ("s2", "50–249 de angajați sau 10–50 mil. EUR cifră de afaceri"),
+            ("s3", "250 de angajați sau mai mulți, sau peste 50 mil. EUR cifră de afaceri"),
+        ]),
+        ("chain", "Vă trimit clienții mari chestionare de securitate sau clauze contractuale?", [("yes", "Da"), ("no", "Nu")]),
+        ("reg", "Este firma înregistrată la DNSC?", [("yes", "Da"), ("no", "Nu"), ("unsure", "Nu știu")]),
+        ("inc", "Aveți o procedură scrisă de incident, testată?", [("yes", "Da"), ("no", "Nu")]),
+    ],
+    "submit": "Vedeți rezultatul",
+    "missing": "Răspundeți la toate cele cinci întrebări ca să vedeți rezultatul.",
+    "out_t": "Probabil NIS2 nu vi se aplică direct.",
+    "out_b": "Excepția: firmele desemnate de DNSC drept critice, indiferent de mărime.",
+    "ess_t": "Probabil sunteți entitate esențială.",
+    "ess_b": "Regimul cel mai strict: control proactiv al DNSC și amenzi de până la 10 mil. EUR sau 2% din cifra de afaceri mondială.",
+    "imp_t": "Probabil sunteți entitate importantă.",
+    "imp_b": "Aceleași măsuri de securitate, control după incidente sau sesizări și amenzi de până la 7 mil. EUR sau 1,4% din cifra de afaceri mondială.",
+    "gap_reg_no": "Înregistrarea la DNSC pare restantă. Este primul lucru pe care îl verifică un control; DNSC amendează întâi firmele neînregistrate.",
+    "gap_reg_unsure": "Verificați dacă firma este înregistrată la DNSC; termenul este de 30 de zile de la intrarea sub incidența legii.",
+    "gap_inc": "Procedura de incident netestată este o lipsă: avertizarea timpurie de 24 de ore curge de la descoperirea incidentului.",
+    "gap_chain": "Clienții dumneavoastră aplică deja NIS2 furnizorilor. Răspunsuri clare la chestionare protejează aceste contracte.",
+    "gaps": "Ce verificați întâi",
+    "cta": "Cereți verificarea completă",
+    "note": "Rezultat orientativ, nu opinie juridică. Răspunsul exact depinde de codurile CAEN, de grupul de firme și de lege.",
+    "msg": "Rezultatul autoverificării NIS2: ",
+}

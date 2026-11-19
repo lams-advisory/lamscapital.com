@@ -141,6 +141,33 @@ def contact(lang, C):
 </section>"""
 
 
+def checker(C):
+    import json
+    K = C.CHECK
+    qs = ""
+    for i, (name, text, opts) in enumerate(K["q"], 1):
+        radios = "".join(
+            f'<label class="opt"><input type="radio" name="{name}" value="{v}"><span>{t}</span></label>' for v, t in opts
+        )
+        qs += f'<fieldset class="q"><legend><span>{i:02d}</span>{text}</legend><div class="opts">{radios}</div></fieldset>'
+    texts = {k: v for k, v in K.items() if k not in ("q",)}
+    data = json.dumps(texts, ensure_ascii=False).replace("</", "<\\/")
+    return f"""
+<section class="section checker-sec" id="check" aria-labelledby="check-h">
+  <div class="wrap">
+    <p class="label">{K['label']}</p>
+    <div class="section-head"><h2 id="check-h">{K['title']}</h2><p>{K['intro']}</p></div>
+    <form class="checker" id="nis2-check" novalidate>
+      {qs}
+      <p class="err" id="check-err" aria-live="polite"></p>
+      <button class="btn primary" type="submit">{K['submit']}</button>
+    </form>
+    <div class="result" id="nis2-result" hidden tabindex="-1" aria-live="polite"></div>
+    <script type="application/json" id="nis2-texts">{data}</script>
+  </div>
+</section>"""
+
+
 def write(path, html):
     out = os.path.join(ROOT, path.strip("/"), "index.html") if path != "/" else os.path.join(ROOT, "index.html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -152,6 +179,7 @@ def write(path, html):
 def build():
     for lang, C in (("en", content_en), ("ro", content_ro)):
         for key, (title, desc, body, with_contact) in C.pages(PATHS).items():
+            body = body.replace("<!--CHECKER-->", checker(C))
             if with_contact:
                 body += contact(lang, C)
             write(PATHS[key][lang], page(lang, key, title, desc, body, C))

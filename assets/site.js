@@ -26,3 +26,41 @@
     var s=document.getElementById('contact'); if(s) s.scrollIntoView();
   }
 })();
+
+// NIS2 self-check (runs in the browser only; nothing is sent)
+(function(){
+  var f=document.getElementById('nis2-check'); if(!f) return;
+  var T=JSON.parse(document.getElementById('nis2-texts').textContent);
+  var out=document.getElementById('nis2-result'), err=document.getElementById('check-err');
+  function val(n){var r=f.querySelector('input[name="'+n+'"]:checked');return r?r.value:'';}
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e;}
+  f.addEventListener('change',function(){err.textContent='';});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var a={sector:val('sector'),size:val('size'),chain:val('chain'),reg:val('reg'),inc:val('inc')};
+    for(var k in a){if(!a[k]){err.textContent=T.missing;return;}}
+    var inScope=!(a.sector==='a3'||a.size==='s1');
+    var key=!inScope?'out':(a.sector==='a1'&&a.size==='s3'?'ess':'imp');
+    var gaps=[];
+    if(inScope&&a.reg==='no')gaps.push(T.gap_reg_no);
+    if(inScope&&a.reg==='unsure')gaps.push(T.gap_reg_unsure);
+    if(inScope&&a.inc==='no')gaps.push(T.gap_inc);
+    if(a.chain==='yes')gaps.push(T.gap_chain);
+    out.innerHTML='';
+    out.className='result '+key;
+    out.appendChild(el('h3',null,T[key+'_t']));
+    out.appendChild(el('p',null,T[key+'_b']));
+    if(gaps.length){
+      out.appendChild(el('p','gaps-h',T.gaps));
+      var ul=el('ul','ticks');gaps.forEach(function(g){ul.appendChild(el('li',null,g));});out.appendChild(ul);
+    }
+    var cta=el('a','btn primary',T.cta);cta.href='#contact';out.appendChild(cta);
+    out.appendChild(el('p','source',T.note));
+    out.hidden=false;out.focus({preventScroll:true});out.scrollIntoView({behavior:'smooth',block:'start'});
+    cta.addEventListener('click',function(){
+      var m=document.getElementById('f-msg'), t=document.getElementById('f-topic');
+      if(m&&!m.value){m.value=T.msg+T[key+'_t']+(gaps.length?' '+gaps.join(' '):'');}
+      if(t&&t.options.length){t.selectedIndex=0;}
+    });
+  });
+})();

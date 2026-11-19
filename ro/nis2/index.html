@@ -37,7 +37,7 @@
     <p class="kicker">Pachetul C · NIS2 Conform</p>
     <h1>Aflați unde sunteți față de NIS2 și fiți <span class="accent">pregătiți pentru control</span>.</h1>
     <p class="lead">NIS2 este directiva europeană de securitate cibernetică. Prin ea, mii de firme mijlocii din România au intrat pentru prima dată sub lege. Stabilim dacă vi se aplică, pregătim ce cere DNSC și vă ajutăm să țineți totul la zi, lunar.</p>
-    <div class="btn-row"><a class="btn primary" href="#contact">Cereți verificarea gratuită</a><a class="btn" href="/ro/pachete/">Toate pachetele</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Verificați în 1 minut</a><a class="btn" href="/ro/pachete/">Toate pachetele</a></div>
   </div>
 </section>
 
@@ -51,8 +51,23 @@
       <li><b>Mărime:</b> cel puțin 50 de angajați sau o cifră de afaceri anuală peste 10 mil. EUR (firme mijlocii și mari).</li>
       <li><b>Sector:</b> activați într-un sector din anexele legii, de exemplu producția și distribuția de alimente, fabricarea de utilaje, echipamente electrice, electronice, autovehicule sau dispozitive medicale, industria chimică, transporturile, serviciile poștale și de curierat sau gestionarea deșeurilor.</li>
       <li><b>Unele firme mai mici</b> intră și ele, indiferent de mărime, dacă autoritatea le desemnează drept critice.</li>
+      <li><b>Prin clienții dumneavoastră:</b> firmele aflate sub NIS2 trebuie să gestioneze securitatea furnizorilor. Chiar dacă legea nu vă vizează direct, clienții mari vă vor trimite chestionare de securitate, audituri și clauze contractuale. Fără răspunsuri, contractele sunt în risc.</li>
     </ul>
-    <p class="note"><b>Verificare gratuită de încadrare.</b> Trimiteți-ne numele firmei și codul unic de înregistrare (CUI). În două zile lucrătoare vă spunem dacă NIS2 vi se aplică probabil, dacă ați fi entitate esențială sau importantă și ce termene aveți.</p>
+    <p class="note"><b>Verificare completă de încadrare, gratuită.</b> Trimiteți-ne numele firmei și codul unic de înregistrare (CUI). În două zile lucrătoare vă spunem dacă NIS2 vi se aplică, dacă ați fi entitate esențială sau importantă și ce termene aveți.</p>
+  </div>
+</section>
+
+<section class="section checker-sec" id="check" aria-labelledby="check-h">
+  <div class="wrap">
+    <p class="label">Autoverificare NIS2</p>
+    <div class="section-head"><h2 id="check-h">Intrați sub NIS2? Cinci întrebări, un minut.</h2><p>Un răspuns orientativ, după regulile de mărime și sector ale legii. Nimic din ce bifați nu este trimis sau salvat.</p></div>
+    <form class="checker" id="nis2-check" novalidate>
+      <fieldset class="q"><legend><span>01</span>Ce descrie cel mai bine activitatea principală?</legend><div class="opts"><label class="opt"><input type="radio" name="sector" value="a1"><span>Energie, transport, bănci, sănătate, apă sau infrastructură digitală</span></label><label class="opt"><input type="radio" name="sector" value="a2"><span>Alimentar, industria prelucrătoare, chimice, poștă și curierat, deșeuri sau servicii digitale</span></label><label class="opt"><input type="radio" name="sector" value="a3"><span>Niciuna dintre acestea</span></label></div></fieldset><fieldset class="q"><legend><span>02</span>Cât de mare este firma, inclusiv grupul din care face parte?</legend><div class="opts"><label class="opt"><input type="radio" name="size" value="s1"><span>Sub 50 de angajați și sub 10 mil. EUR cifră de afaceri</span></label><label class="opt"><input type="radio" name="size" value="s2"><span>50–249 de angajați sau 10–50 mil. EUR cifră de afaceri</span></label><label class="opt"><input type="radio" name="size" value="s3"><span>250 de angajați sau mai mulți, sau peste 50 mil. EUR cifră de afaceri</span></label></div></fieldset><fieldset class="q"><legend><span>03</span>Vă trimit clienții mari chestionare de securitate sau clauze contractuale?</legend><div class="opts"><label class="opt"><input type="radio" name="chain" value="yes"><span>Da</span></label><label class="opt"><input type="radio" name="chain" value="no"><span>Nu</span></label></div></fieldset><fieldset class="q"><legend><span>04</span>Este firma înregistrată la DNSC?</legend><div class="opts"><label class="opt"><input type="radio" name="reg" value="yes"><span>Da</span></label><label class="opt"><input type="radio" name="reg" value="no"><span>Nu</span></label><label class="opt"><input type="radio" name="reg" value="unsure"><span>Nu știu</span></label></div></fieldset><fieldset class="q"><legend><span>05</span>Aveți o procedură scrisă de incident, testată?</legend><div class="opts"><label class="opt"><input type="radio" name="inc" value="yes"><span>Da</span></label><label class="opt"><input type="radio" name="inc" value="no"><span>Nu</span></label></div></fieldset>
+      <p class="err" id="check-err" aria-live="polite"></p>
+      <button class="btn primary" type="submit">Vedeți rezultatul</button>
+    </form>
+    <div class="result" id="nis2-result" hidden tabindex="-1" aria-live="polite"></div>
+    <script type="application/json" id="nis2-texts">{"label": "Autoverificare NIS2", "title": "Intrați sub NIS2? Cinci întrebări, un minut.", "intro": "Un răspuns orientativ, după regulile de mărime și sector ale legii. Nimic din ce bifați nu este trimis sau salvat.", "submit": "Vedeți rezultatul", "missing": "Răspundeți la toate cele cinci întrebări ca să vedeți rezultatul.", "out_t": "Probabil NIS2 nu vi se aplică direct.", "out_b": "Excepția: firmele desemnate de DNSC drept critice, indiferent de mărime.", "ess_t": "Probabil sunteți entitate esențială.", "ess_b": "Regimul cel mai strict: control proactiv al DNSC și amenzi de până la 10 mil. EUR sau 2% din cifra de afaceri mondială.", "imp_t": "Probabil sunteți entitate importantă.", "imp_b": "Aceleași măsuri de securitate, control după incidente sau sesizări și amenzi de până la 7 mil. EUR sau 1,4% din cifra de afaceri mondială.", "gap_reg_no": "Înregistrarea la DNSC pare restantă. Este primul lucru pe care îl verifică un control; DNSC amendează întâi firmele neînregistrate.", "gap_reg_unsure": "Verificați dacă firma este înregistrată la DNSC; termenul este de 30 de zile de la intrarea sub incidența legii.", "gap_inc": "Procedura de incident netestată este o lipsă: avertizarea timpurie de 24 de ore curge de la descoperirea incidentului.", "gap_chain": "Clienții dumneavoastră aplică deja NIS2 furnizorilor. Răspunsuri clare la chestionare protejează aceste contracte.", "gaps": "Ce verificați întâi", "cta": "Cereți verificarea completă", "note": "Rezultat orientativ, nu opinie juridică. Răspunsul exact depinde de codurile CAEN, de grupul de firme și de lege.", "msg": "Rezultatul autoverificării NIS2: "}</script>
   </div>
 </section>
 
@@ -100,7 +115,7 @@
       <p>Ca să nu existe surprize în ofertă.</p>
     </div>
     <ul class="ticks">
-      <li>Nu suntem auditor de securitate cibernetică atestat de DNSC. Acolo unde legea cere audit extern, îl face un auditor atestat, ales împreună cu dumneavoastră și contractat separat.</li>
+      <li>Acolo unde legea cere audit extern, îl face un auditor atestat de DNSC. Noi pregătim dosarul și coordonăm auditul împreună cu dumneavoastră; auditorul se contractează separat, ca auditul să rămână independent.</li>
       <li>Lucrăm pe dovezi și cu acces doar de citire. Nu cerem acces de administrator la sistemele firmei.</li>
       <li>Nu depunem nimic la DNSC în numele firmei fără mandat scris.</li>
     </ul>

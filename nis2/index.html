@@ -37,7 +37,7 @@
     <p class="kicker">Package C · NIS2 Compliant</p>
     <h1>Know where you stand under NIS2, and be <span class="accent">ready for an audit</span>.</h1>
     <p class="lead">The EU NIS2 Directive brings thousands of mid-sized companies under cybersecurity law for the first time. We establish whether it applies to you, prepare what the authority requires, and keep it current every month.</p>
-    <div class="btn-row"><a class="btn primary" href="#contact">Request a free scoping check</a><a class="btn" href="/packages/">All packages</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Check in 1 minute</a><a class="btn" href="/packages/">All packages</a></div>
   </div>
 </section>
 
@@ -51,8 +51,23 @@
       <li><b>Size:</b> at least 50 employees, or annual turnover above €10 million (medium-sized and larger companies).</li>
       <li><b>Sector:</b> you operate in a sector listed by the directive, for example food production and distribution, manufacturing of machinery, electrical equipment, electronics, vehicles or medical devices, chemicals, transport, postal and courier services, or waste management.</li>
       <li><b>Some smaller companies</b> are also covered, regardless of size, when a member state designates them as critical.</li>
+      <li><b>Through your clients:</b> companies covered by NIS2 must manage the security of their supply chain. Even if the law does not cover you directly, expect security questionnaires, audits and contract clauses from your largest clients. Without answers, contracts are at risk.</li>
     </ul>
-    <p class="note"><b>Free scoping check.</b> Send us your company name and registration number. Within two business days we tell you whether NIS2 is likely to apply, whether you would be an essential or an important entity, and which deadlines you face.</p>
+    <p class="note"><b>Full scoping check, free of charge.</b> Send us your company name and registration number. Within two business days we tell you whether NIS2 applies, whether you would be an essential or an important entity, and which deadlines you face.</p>
+  </div>
+</section>
+
+<section class="section checker-sec" id="check" aria-labelledby="check-h">
+  <div class="wrap">
+    <p class="label">NIS2 self-check</p>
+    <div class="section-head"><h2 id="check-h">Does NIS2 apply to you? Five questions, one minute.</h2><p>An indicative answer based on the directive's size and sector rules. Nothing you select is sent or stored.</p></div>
+    <form class="checker" id="nis2-check" novalidate>
+      <fieldset class="q"><legend><span>01</span>Which best describes your main activity?</legend><div class="opts"><label class="opt"><input type="radio" name="sector" value="a1"><span>Energy, transport, banking, health, water or digital infrastructure</span></label><label class="opt"><input type="radio" name="sector" value="a2"><span>Food, manufacturing, chemicals, postal and courier, waste, or digital services</span></label><label class="opt"><input type="radio" name="sector" value="a3"><span>None of these</span></label></div></fieldset><fieldset class="q"><legend><span>02</span>How large is the company, including its group?</legend><div class="opts"><label class="opt"><input type="radio" name="size" value="s1"><span>Fewer than 50 employees and under €10 million turnover</span></label><label class="opt"><input type="radio" name="size" value="s2"><span>50–249 employees, or €10–50 million turnover</span></label><label class="opt"><input type="radio" name="size" value="s3"><span>250 or more employees, or over €50 million turnover</span></label></div></fieldset><fieldset class="q"><legend><span>03</span>Do large clients send you security questionnaires or contract clauses?</legend><div class="opts"><label class="opt"><input type="radio" name="chain" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="chain" value="no"><span>No</span></label></div></fieldset><fieldset class="q"><legend><span>04</span>Is the company registered with the national cybersecurity authority?</legend><div class="opts"><label class="opt"><input type="radio" name="reg" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="reg" value="no"><span>No</span></label><label class="opt"><input type="radio" name="reg" value="unsure"><span>Not sure</span></label></div></fieldset><fieldset class="q"><legend><span>05</span>Do you have a written incident procedure that has been tested?</legend><div class="opts"><label class="opt"><input type="radio" name="inc" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="inc" value="no"><span>No</span></label></div></fieldset>
+      <p class="err" id="check-err" aria-live="polite"></p>
+      <button class="btn primary" type="submit">See the result</button>
+    </form>
+    <div class="result" id="nis2-result" hidden tabindex="-1" aria-live="polite"></div>
+    <script type="application/json" id="nis2-texts">{"label": "NIS2 self-check", "title": "Does NIS2 apply to you? Five questions, one minute.", "intro": "An indicative answer based on the directive's size and sector rules. Nothing you select is sent or stored.", "submit": "See the result", "missing": "Answer all five questions to see the result.", "out_t": "NIS2 probably does not apply to you directly.", "out_b": "The exception is a company the authority designates as critical, regardless of size.", "ess_t": "You are probably an essential entity.", "ess_b": "The strictest regime: proactive supervision and fines of up to €10 million or 2% of worldwide turnover.", "imp_t": "You are probably an important entity.", "imp_b": "The same security measures apply, with supervision after incidents or complaints and fines of up to €7 million or 1.4% of worldwide turnover.", "gap_reg_no": "Registration with the authority appears to be overdue. It is the first thing an inspection checks.", "gap_reg_unsure": "Check whether the company is registered with the authority; the deadline usually runs from when the law first applies to you.", "gap_inc": "An untested incident procedure is a gap: the 24-hour early warning runs from when the incident is detected.", "gap_chain": "Your clients already apply NIS2 to their suppliers. Clear answers to their questionnaires protect those contracts.", "gaps": "What to look at first", "cta": "Request the full check", "note": "Indicative result, not legal advice. The exact answer depends on activity codes, group structure and national law.", "msg": "NIS2 self-check result: "}</script>
   </div>
 </section>
 
@@ -98,7 +113,7 @@
       <p>So there are no surprises in the offer.</p>
     </div>
     <ul class="ticks">
-      <li>We are not a certified security auditor. Where the law requires an external audit, it is carried out by an auditor accredited by the national authority, chosen with you and contracted separately.</li>
+      <li>Where the law requires an external audit, it is carried out by an auditor accredited by the national authority. We prepare the audit file and coordinate the audit with you; the auditor is contracted separately, so the audit stays independent.</li>
       <li>We work on evidence and read-only access. We do not ask for administrator access to your systems.</li>
       <li>We do not file with the authority in your name without a written mandate.</li>
     </ul>

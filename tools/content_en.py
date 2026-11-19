@@ -72,7 +72,7 @@ def pages(P):
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Fixed-scope packages, each with a clear scope and result.</h2>
+      <h2>Fixed-scope packages with a defined result.</h2>
       <p>Compliance opens the door; the operational work is where the savings come from. Every package can run on its own or as part of one plan.</p>
     </div>
     <div class="pk-grid">
@@ -80,7 +80,7 @@ def pages(P):
       <div class="pk"><span class="tag">Package A</span><h3>Operations &amp; e-invoicing</h3><p>Stock, sales and purchasing on Odoo, connected to accounting and to national e-invoicing.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Package D</span><h3>Automation &amp; AI</h3><p>A discovery workshop, then one automation or AI assistant delivered in about four weeks.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
-      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for online sellers.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
+      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for manufacturers and distributors that sell online.</p><p class="price"><a class="more" href="#contact">Request an offer →</a></p></div>
       <div class="pk"><span class="tag">Advisory</span><h3>Strategic diagnostic</h3><p>Five weeks, seven deliverables: margins, markets, channels and a 12-month plan, built on your own numbers.</p><p class="price"><a class="more" href="{P['packages']['en']}">All packages and details →</a></p></div>
     </div>
   </div>
@@ -206,7 +206,7 @@ def pages(P):
     </ul>
     <h2 style="font-size:28px;margin:56px 0 16px">In Romania</h2>
     <p style="color:var(--ink-soft);max-width:46em;margin:0">NIS2 is transposed by Government Emergency Ordinance 155/2024, approved by Law 124/2025, and enforced by the National Cybersecurity Directorate (DNSC). Companies must register within 30 days of falling under the law, and the DNSC began applying fines in September 2026. <a href="{P['nis2']['ro']}" hreflang="ro">Read the Romanian page</a>.</p>
-    <p class="source">Sources: Directive (EU) 2022/2555; for Romania, CMS legal updates of 17 July and 26 August 2025 and StartupCafe, 9 September 2026. Checked November 2026; national rules change, so we re-check them for every client.</p>
+    <p class="source">Sources: Directive (EU) 2022/2555; for Romania, Government Emergency Ordinance 155/2024, approved by Law 124/2025. National rules change, so we re-check them for every client.</p>
   </div>
 </section>"""
 
@@ -215,7 +215,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Packages</p>
     <h1>Advisory and software, sold as <span class="accent">fixed-scope packages</span>.</h1>
-    <p class="lead">Each package has a defined result, and a schedule agreed before work starts. Advisory opens the project; software and automation deliver the savings; a monthly subscription keeps it running.</p>
+    <p class="lead">Each package has a defined result and a schedule, agreed before work starts. Advisory opens the project; software and automation deliver the savings; a monthly subscription keeps it running.</p>
   </div>
 </section>
 
@@ -223,22 +223,22 @@ def pages(P):
   <div class="wrap">
     {pkd("Package C", "NIS2 Compliant", "Companies covered by NIS2, typically 50–249 employees.",
          ["Scoping against the law and the national rules", "Asset and risk registers", "Self-assessment prepared on evidence", "Written policies approved by management", "Incident procedure and templates", "Remediation plan and audit file"],
-         "6–8 weeks", "From €6,000 + €149/month", "External audit by an accredited auditor is contracted separately.", P['nis2']['en'], "NIS2 details")}
-    {pkd("Package A", "Operations &amp; e-invoicing", "Distributors and manufacturers, 10–49 employees.",
+         "6–8 weeks", "", "External audit by an accredited auditor is contracted separately.", P['nis2']['en'], "NIS2 details")}
+    {pkd("Package A", "Operations &amp; e-invoicing", "Manufacturers and distributors with 50–249 employees that need one management system.",
          ["Digital audit, included in the package", "Stock, sales and purchasing on Odoo Community (open source, no licence fees)", "Integration with your accounting software", "Connection to national e-invoicing (in Romania: e-Factura)"],
-         "Agreed after the audit", "Price on request + monthly support", "", "", "")}
+         "Agreed after the audit", "", "", "", "")}
     {pkd("Package B", "ERP &amp; operational transformation", "Companies with 50–249 employees, including projects co-financed by EU funds.",
          ["Full strategic diagnostic: seven deliverables, from margins to a 12-month plan", "ERP and automation across sales, warehouse, production and finance", "Staged delivery with sign-off at each stage", "Monthly support after go-live"],
-         "Agreed after the diagnostic", "Price on request + monthly support", "", P['funding']['en'], "How EU funding works")}
+         "Agreed after the diagnostic", "", "", P['funding']['en'], "How EU funding works")}
     {pkd("Package D", "Automation &amp; AI", "Any company with repetitive work: orders, documents, reporting, customer requests.",
          ["Discovery workshop to pick the process with the best return", "One automation or AI assistant, built and deployed", "Measured before and after, so the saving is visible"],
-         "About 4 weeks", "From €7,900 + €190/month", "Monthly support includes the AI usage costs.", "", "")}
-    {pkd("Package E", "E-commerce integration", "Online sellers with annual turnover of roughly €0.2–4 million.",
+         "About 4 weeks", "", "Monthly support includes the AI usage costs.", "", "")}
+    {pkd("Package E", "E-commerce integration", "Manufacturers and distributors that also sell online, through their own shop or marketplaces.",
          ["Product feeds to marketplaces", "Stock synchronisation between shop, marketplaces and warehouse", "Automatic e-invoicing"],
-         "About 4 weeks", "From €6,900 + €150/month", "", "", "")}
-    {pkd("Advisory", "Strategic diagnostic", "Owner-led companies at the point where growth needs structure.",
+         "About 4 weeks", "", "", "", "")}
+    {pkd("Advisory", "Strategic diagnostic", "Management of companies with 50–249 employees, ahead of an investment or a growth stage.",
          ["Five weeks, seven deliverables: performance, market, channels, operations, opportunities, KPIs and a 12-month plan", "Built on your own numbers, under a non-disclosure agreement"],
-         "5 weeks", "Price on request", "", "", "")}
+         "5 weeks", "", "", "", "")}
     <p class="note"><b>Offers.</b> Every offer is personalised after a 30-minute call and states the full scope, schedule and terms. Odoo is a trademark of Odoo S.A.; LAMS is not affiliated with Odoo S.A.</p>
   </div>
 </section>"""
@@ -247,7 +247,7 @@ def pages(P):
 <section class="hero">
   <div class="wrap">
     <p class="kicker">AWS Marketplace</p>
-    <h1>Buy our services through <span class="accent">your company's AWS account</span>.</h1>
+    <h1>Contracting and billing through <span class="accent">AWS Marketplace</span>.</h1>
     <p class="lead">Besides a direct contract, you can buy any LAMS package as a private offer on AWS Marketplace, the Amazon Web Services catalogue for software and services. Amazon Web Services invoices your company and pays us.</p>
   </div>
 </section>
@@ -310,7 +310,7 @@ def pages(P):
       <li><b>No promises of funding.</b> The decision belongs to the managing authority. We tell you honestly whether an application has a chance.</li>
       <li><b>The schedule comes first.</b> Funding calls have fixed windows. We tell you upfront whether the timing works, and what to do if it does not.</li>
     </ul>
-    <p style="margin-top:32px"><a href="{P['funding']['ro']}" hreflang="ro">Current calls in Romania (Romanian page) →</a></p>
+    <p style="margin-top:32px"><a href="{P['funding']['ro']}" hreflang="ro">EU funding in Romania (Romanian page) →</a></p>
   </div>
 </section>"""
 

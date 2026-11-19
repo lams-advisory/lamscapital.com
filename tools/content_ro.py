@@ -51,7 +51,7 @@ def pages(P):
       <div><b>Până la 10 mil. EUR</b><span>sau 2% din cifra de afaceri mondială: plafonul amenzilor pentru entitățile esențiale. Pentru cele importante: 7 mil. EUR sau 1,4%.</span></div>
       <div><b>Conducerea răspunde</b><span>Administratorii aprobă măsurile de securitate, le supraveghează și asigură resursele. Nu se pot delega doar către IT.</span></div>
     </div>
-    <p class="source">Surse: OUG 155/2024, aprobată prin Legea 124/2025; StartupCafe, 9 septembrie 2026; CMS, iulie 2025. Verificat în noiembrie 2026.</p>
+    <p class="source">Surse: Directiva (UE) 2022/2555; OUG 155/2024, aprobată prin Legea 124/2025.</p>
   </div>
 </section>
 
@@ -80,7 +80,7 @@ def pages(P):
       <div class="pk"><span class="tag">Pachetul A</span><h3>Gestiune &amp; e-Factura</h3><p>Stocuri, vânzări și achiziții pe Odoo, legate de programul de contabilitate și de e-Factura (ANAF).</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Pachetul D</span><h3>Automatizare &amp; AI</h3><p>Un atelier de identificare, apoi o automatizare sau un asistent AI livrat în aproximativ patru săptămâni.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
-      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru magazinele online.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
+      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru producătorii și distribuitorii care vând online.</p><p class="price"><a class="more" href="#contact">Cereți o ofertă →</a></p></div>
       <div class="pk"><span class="tag">Consultanță</span><h3>Diagnostic strategic</h3><p>Cinci săptămâni, șapte livrabile: marje, piețe, canale și un plan pe 12 luni, construit pe cifrele firmei.</p><p class="price"><a class="more" href="{P['packages']['ro']}">Toate pachetele și detaliile →</a></p></div>
     </div>
   </div>
@@ -171,7 +171,7 @@ def pages(P):
       <div><b>30 de zile</b><span>Planul de remediere, pentru entitățile esențiale, după autoevaluare.</span></div>
       <div><b>24 h · 72 h · o lună</b><span>Raportarea unui incident semnificativ: avertizare timpurie, notificare și raport final.</span></div>
     </div>
-    <p class="source">Amenzi: pentru entitățile esențiale de la 10.000 lei până la 10 mil. EUR sau 2% din cifra de afaceri; pentru cele importante de la 5.000 lei până la 7 mil. EUR sau 1,4%; la repetare, majorare cu 50%. Surse: CMS, 17 iulie și 26 august 2025; StartupCafe, 9 septembrie 2026; Directiva (UE) 2022/2555, art. 23. Verificat în noiembrie 2026; reverificăm la fiecare client.</p>
+    <p class="source">Amenzi: pentru entitățile esențiale de la 10.000 lei până la 10 mil. EUR sau 2% din cifra de afaceri; pentru cele importante de la 5.000 lei până la 7 mil. EUR sau 1,4%; la repetare, majorare cu 50%. Surse: OUG 155/2024, aprobată prin Legea 124/2025; Directiva (UE) 2022/2555, art. 23. Reverificăm cadrul legal la fiecare client.</p>
   </div>
 </section>
 
@@ -214,7 +214,7 @@ def pages(P):
   <div class="wrap">
     <p class="kicker">Pachete</p>
     <h1>Consultanță și software, vândute ca <span class="accent">pachete cu perimetru fix</span>.</h1>
-    <p class="lead">Fiecare pachet are un rezultat definit, și un calendar stabilite înainte de începerea lucrului. Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune.</p>
+    <p class="lead">Fiecare pachet are un rezultat definit și un calendar, stabilite înainte de începerea lucrului. Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune.</p>
   </div>
 </section>
 
@@ -222,22 +222,22 @@ def pages(P):
   <div class="wrap">
     {pkd("Pachetul C", "NIS2 Conform", "Firme sub incidența NIS2, de regulă cu 50–249 de angajați.",
          ["Încadrarea față de lege și ordinele DNSC", "Registrul activelor și registrul riscurilor", "Autoevaluarea, pregătită pe dovezi", "Politici scrise, aprobate de conducere", "Procedura de incident și șabloanele", "Planul de remediere și dosarul de audit"],
-         "6–8 săptămâni", "De la 6.000 EUR + 149 EUR/lună", "Auditul extern, făcut de un auditor atestat DNSC, se contractează separat.", P['nis2']['ro'], "Detalii NIS2")}
-    {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Distribuitori și producători cu 10–49 de angajați.",
+         "6–8 săptămâni", "", "Auditul extern, făcut de un auditor atestat DNSC, se contractează separat.", P['nis2']['ro'], "Detalii NIS2")}
+    {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Producători și distribuitori cu 50–249 de angajați care au nevoie de un sistem de gestiune unitar.",
          ["Audit digital, inclus în pachet", "Stocuri, vânzări și achiziții pe Odoo Community (open-source, fără licențe)", "Integrare cu programul de contabilitate", "Conectare la e-Factura (ANAF)"],
-         "Stabilită după audit", "Preț la cerere + suport lunar", "", "", "")}
+         "Stabilită după audit", "", "", "", "")}
     {pkd("Pachetul B", "ERP &amp; transformare operațională", "Firme cu 50–249 de angajați, inclusiv proiecte cofinanțate din fonduri europene.",
          ["Diagnostic strategic complet: șapte livrabile, de la marje la planul pe 12 luni", "ERP și automatizări pentru vânzări, depozit, producție și financiar", "Livrare în etape, cu proces-verbal la fiecare etapă", "Suport lunar după punerea în funcțiune"],
-         "Stabilită după diagnostic", "Preț la cerere + suport lunar", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
+         "Stabilită după diagnostic", "", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
     {pkd("Pachetul D", "Automatizare &amp; AI", "Orice firmă cu muncă repetitivă: comenzi, documente, rapoarte, cereri de la clienți.",
          ["Atelier de identificare a procesului cu cel mai bun randament", "O automatizare sau un asistent AI, construit și pus în funcțiune", "Măsurare înainte și după, ca economia să se vadă"],
-         "Aproximativ 4 săptămâni", "De la 7.900 EUR + 190 EUR/lună", "Suportul lunar include costurile de utilizare a AI.", "", "")}
-    {pkd("Pachetul E", "Integrare e-commerce", "Magazine online cu o cifră de afaceri anuală de 1–20 mil. lei.",
+         "Aproximativ 4 săptămâni", "", "Suportul lunar include costurile de utilizare a AI.", "", "")}
+    {pkd("Pachetul E", "Integrare e-commerce", "Producători și distribuitori care vând și online, prin magazin propriu sau marketplace-uri.",
          ["Feed-uri de produse către marketplace-uri", "Sincronizarea stocului între magazin, marketplace-uri și depozit", "e-Factura automată"],
-         "Aproximativ 4 săptămâni", "De la 6.900 EUR + 150 EUR/lună", "", "", "")}
-    {pkd("Consultanță", "Diagnostic strategic", "Firme conduse de proprietar, în momentul în care creșterea are nevoie de structură.",
+         "Aproximativ 4 săptămâni", "", "", "", "")}
+    {pkd("Consultanță", "Diagnostic strategic", "Conducerea firmelor cu 50–249 de angajați, înaintea unei investiții sau a unei etape de creștere.",
          ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate"],
-         "5 săptămâni", "Preț la cerere", "", "", "")}
+         "5 săptămâni", "", "", "", "")}
     <p class="note"><b>Oferte.</b> Fiecare ofertă se personalizează după o discuție de 30 de minute și arată complet perimetrul, calendarul și condițiile. Odoo este marcă a Odoo S.A.; LAMS nu este afiliată cu Odoo S.A.</p>
   </div>
 </section>"""
@@ -246,7 +246,7 @@ def pages(P):
 <section class="hero">
   <div class="wrap">
     <p class="kicker">AWS Marketplace</p>
-    <h1>Cumpărați serviciile noastre prin <span class="accent">contul AWS al firmei</span>.</h1>
+    <h1>Contractare și facturare prin <span class="accent">AWS Marketplace</span>.</h1>
     <p class="lead">Pe lângă contractul direct, orice pachet LAMS se poate cumpăra ca ofertă privată pe AWS Marketplace, catalogul de software și servicii al Amazon Web Services. Amazon Web Services facturează firma dumneavoastră și ne plătește pe noi.</p>
   </div>
 </section>
@@ -290,12 +290,13 @@ def pages(P):
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Apeluri urmărite acum</h2>
-      <p>Situație la 19 noiembrie 2026. Verificăm ghidul oficial înainte de orice discuție cu un client.</p>
+      <h2>Apelurile pe care le urmărim</h2>
+      <p>Urmărim apelurile pentru digitalizarea întreprinderilor mici și mijlocii din programele regionale 2021–2027, în toate regiunile de dezvoltare.</p>
     </div>
     <ul class="ticks">
-      <li><b>Regiunea Centru, Acțiunea 2.2, digitalizarea IMM:</b> depunere între 2 decembrie 2026 și 2 februarie 2027; grant de 15.000–200.000 EUR, până la 90%; auditul de maturitate digitală este obligatoriu înainte de depunere. Excluse: industria alimentară, comerțul cu alimente, agricultura și IT.</li>
-      <li><b>București-Ilfov și Sud-Est:</b> apeluri anunțate pentru digitalizare, fără ghid publicat la această dată.</li>
+      <li><b>Diferă de la o regiune la alta:</b> calendarul de depunere, valoarea grantului, procentul de cofinanțare și sectoarele excluse.</li>
+      <li><b>Condiții frecvente:</b> auditul de maturitate digitală înainte de depunere și încadrarea codurilor CAEN în lista eligibilă.</li>
+      <li><b>Situația pentru regiunea dumneavoastră:</b> o primiți la cerere, verificată pe ghidul oficial în vigoare. <a href="#contact">Cereți situația actualizată →</a></li>
     </ul>
   </div>
 </section>

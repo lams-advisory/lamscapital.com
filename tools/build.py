@@ -59,6 +59,10 @@ def page(lang, key, title, description, body, C):
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{SITE}{here}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="{SITE}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{FAVICON}">
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -183,6 +187,24 @@ def build():
             if with_contact:
                 body += contact(lang, C)
             write(PATHS[key][lang], page(lang, key, title, desc, body, C))
+    # 404 page (served by GitHub Pages for any missing path)
+    body = """
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">404</p>
+    <h1>This page does not exist.</h1>
+    <p class="lead">The address may have changed. Go to the <a href="/">home page</a> or write to us at <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
+    <p class="lead" lang="ro">Pagina nu există. Mergeți la <a href="/ro/">pagina principală</a> sau scrieți-ne la <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
+  </div>
+</section>"""
+    html = page("en", "home", "Page not found | LAMS", "Page not found.", body, content_en)
+    html = html.replace("<title>Page not found | LAMS</title>", '<title>Page not found | LAMS</title>\n<meta name="robots" content="noindex">')
+    import re
+    html = re.sub(r'<link rel="(canonical|alternate)"[^>]*>\n', "", html)
+    html = re.sub(r'<meta property="og:url"[^>]*>\n', "", html)
+    with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as fh:
+        fh.write(html)
+    print("wrote 404.html")
     # sitemap
     urls = "".join(f"<url><loc>{SITE}{p[l]}</loc></url>" for p in PATHS.values() for l in ("en", "ro"))
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as fh:

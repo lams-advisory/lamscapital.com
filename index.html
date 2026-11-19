@@ -3,269 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LAMS Advisory</title>
-<meta name="description" content="LAMS brings advisory, marketing and technology under one accountable partner. From strategic diagnosis to implementation, aligned around a single plan.">
+<title>LAMS · NIS2 compliance, digital operations and software</title>
+<meta name="description" content="NIS2 compliance, ERP, e-invoicing, automation and AI for mid-sized manufacturers and distributors in Europe. Fixed-scope packages, one accountable partner.">
+<link rel="canonical" href="https://lamscapital.com/">
+<link rel="alternate" hreflang="en" href="https://lamscapital.com/">
+<link rel="alternate" hreflang="ro" href="https://lamscapital.com/ro/">
+<link rel="alternate" hreflang="x-default" href="https://lamscapital.com/">
+<meta property="og:title" content="LAMS · NIS2 compliance, digital operations and software">
+<meta property="og:description" content="NIS2 compliance, ERP, e-invoicing, automation and AI for mid-sized manufacturers and distributors in Europe. Fixed-scope packages, one accountable partner.">
+<meta property="og:url" content="https://lamscapital.com/">
+<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2316275C'/%3E%3Crect x='8' y='40' width='10' height='16' fill='%23F6F6F3'/%3E%3Crect x='21' y='30' width='10' height='26' fill='%23F6F6F3'/%3E%3Crect x='34' y='20' width='10' height='36' fill='%23F6F6F3'/%3E%3Crect x='47' y='8' width='10' height='48' fill='%23E0457B'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  /* Layout idea: a quiet letterhead. One statement, three disciplines on a single rule, principles, one way to get in touch. Pink appears only where the eye should land. */
-  --ink:#16275C; --ink-soft:#4A5878; --paper:#F6F6F3; --white:#FFFFFF; --pink:#E0457B; --pink-deep:#B02A5B; --line:#D9DBE2;
-  --display:"Source Serif 4", Georgia, "Times New Roman", serif;
-  --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
-h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;color:var(--ink)}
-
-.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 0}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-word{display:flex;flex-direction:column;line-height:1}
-.brand-word b{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:.18em}
-.brand-word span{font-size:10px;letter-spacing:.28em;color:var(--ink-soft);margin-top:6px}
-.btn{display:inline-block;padding:12px 22px;font:500 15px var(--body);text-decoration:none;border:1px solid var(--ink);color:var(--ink);transition:background .2s,color .2s,border-color .2s}
-.btn:hover{background:var(--ink);color:var(--white)}
-.btn.primary{background:var(--ink);color:var(--white)}
-.btn.primary:hover{background:var(--pink-deep);border-color:var(--pink-deep)}
-
-.hero{padding:clamp(56px,10vw,120px) 0 clamp(64px,9vw,104px);border-bottom:1px solid var(--line)}
-.hero h1{font-size:clamp(36px,5.2vw,62px);line-height:1.1;letter-spacing:-.018em;max-width:15em}
-.hero h1 .accent{color:var(--pink-deep)}
-.hero p{font-size:clamp(18px,1.6vw,20px);color:var(--ink-soft);max-width:36em;margin:28px 0 40px}
-
-.label{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 36px}
-
-.disciplines{padding:96px 0}
-.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
-.col{padding:32px 32px 8px 0}
-.col + .col{padding-left:32px;border-left:1px solid var(--line)}
-.col .mark{display:block;width:28px;height:3px;background:var(--pink);margin-bottom:22px}
-.col h3{font-size:30px;margin-bottom:12px}
-.col p{margin:0;color:var(--ink-soft);font-size:16.5px}
-
-.engage{background:var(--ink);color:var(--paper)}
-.engage .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;padding-top:88px;padding-bottom:88px;align-items:start}
-.engage h2{font-size:clamp(28px,3.4vw,40px);line-height:1.18;color:var(--paper)}
-.engage p{margin:0;color:#C3CAE0;font-size:17px;max-width:34em}
-.steps{display:grid;gap:0;margin-top:28px;border-top:1px solid #34468A}
-.steps div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #34468A}
-.steps b{font-weight:500;color:var(--paper)}
-.steps span{color:#C3CAE0;font-size:16px}
-
-.principles{padding:96px 0}
-.pr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
-.pr h3{font-size:24px;margin-bottom:10px}
-.pr p{margin:0;color:var(--ink-soft);font-size:16px}
-
-.contact{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.contact .wrap{padding-top:96px;padding-bottom:96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px;align-items:start}
-.contact h2{font-size:clamp(32px,4vw,48px);line-height:1.1}
-.contact p{color:var(--ink-soft);margin:20px 0 0;max-width:30em}
-.mail{font-family:var(--display);font-size:clamp(24px,2.8vw,34px);text-decoration:none;border-bottom:2px solid var(--pink);padding-bottom:4px}
-.mail:hover{color:var(--pink-deep)}
-.row{display:flex;gap:14px;align-items:center;margin-top:20px;flex-wrap:wrap}
-.copy{background:transparent;border:1px solid var(--line);color:var(--ink);font:500 14px var(--body);padding:9px 14px;cursor:pointer}
-.copy:hover{border-color:var(--ink)}
-#copy-note{font-size:14px;color:var(--ink-soft)}
-
-footer{padding:32px 0 40px;font-size:13px;color:var(--ink-soft)}
-footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-footer p{margin:0;max-width:62em}
-
-
-.questions{padding:96px 0 0}
-.q-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-.q-list li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:clamp(20px,2.2vw,26px);line-height:1.35}
-.q-list li span{font-family:var(--body);font-size:13px;letter-spacing:.12em;color:var(--pink-deep);padding-top:8px}
-.clients{padding:0 0 96px}
-.cl-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px;border-top:1px solid var(--ink);padding-top:32px}
-.cl-grid h3{font-size:clamp(24px,2.6vw,32px);line-height:1.25}
-.sectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
-.sectors div{padding:16px 0;border-bottom:1px solid var(--line)}
-.sectors b{display:block;font-weight:500}
-.sectors span{color:var(--ink-soft);font-size:15px}
-form.cf{display:grid;gap:14px;margin-top:28px}
-.cf .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.cf label{display:block;font-size:13px;color:var(--ink-soft);margin-bottom:6px}
-.cf input,.cf textarea{width:100%;font:400 16px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:12px 14px}
-.cf input:focus,.cf textarea:focus{outline:none;border-color:var(--ink)}
-.cf textarea{min-height:120px;resize:vertical}
-.cf .err{font-size:13px;color:#B3261E;min-height:1em}
-.cf button{justify-self:start;cursor:pointer}
-.alt{font-size:14px;color:var(--ink-soft);margin-top:18px}
-@media (max-width:820px){.cl-grid,.cf .two,.sectors{grid-template-columns:minmax(0,1fr)}.cl-grid{gap:20px}.q-list li{grid-template-columns:44px minmax(0,1fr)}}
-@media (max-width:820px){
-  .cols,.pr{grid-template-columns:minmax(0,1fr)}
-  .col,.col + .col{padding:28px 0 8px;border-left:0}
-  .col + .col{border-top:1px solid var(--line)}
-  .engage .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
-  .steps div{grid-template-columns:minmax(0,1fr);gap:4px}
-  .pr{gap:32px}
-  .disciplines,.principles{padding:64px 0}
-}
-@media (prefers-reduced-motion:no-preference){
-  .hero h1,.hero p,.hero .btn{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-  .hero p{animation-delay:.12s}.hero .btn{animation-delay:.22s}
-  @keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
-}
-</style>
+<link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-
+<a class="skip" href="#main">Skip to content</a>
 <header class="wrap">
   <div class="top">
-    <a class="brand" href="#top" aria-label="LAMS home">
+    <a class="brand" href="/" aria-label="LAMS">
       <svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="40" width="10" height="16" fill="#16275C"/><rect x="21" y="30" width="10" height="26" fill="#16275C"/><rect x="34" y="20" width="10" height="36" fill="#16275C"/><rect x="47" y="8" width="10" height="48" fill="#E0457B"/></svg>
       <span class="brand-word"><b>LAMS</b><span>ADVISORY &amp; VENTURES</span></span>
     </a>
-    <a class="btn" href="#contact">Request a conversation</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/nis2/">NIS2 compliance</a><a href="/packages/">Packages</a><a href="/aws/">Buy via AWS</a><a href="/funding/">EU funding</a><a href="/#contact">Contact</a><a class="lang" href="/ro/" hreflang="ro" lang="ro">RO</a></nav>
   </div>
 </header>
+<main id="main">
 
-<main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <h1>Advisory, marketing and technology, under <span class="accent">one accountable partner</span>.</h1>
-      <p>From strategic diagnosis to implementation, LAMS aligns strategy, go-to-market and software around a single plan.</p>
-      <a class="btn primary" href="#contact">Request a conversation</a>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For mid-sized manufacturers and distributors in Europe</p>
+    <h1>NIS2 compliance, digital operations and software, from <span class="accent">one accountable partner</span>.</h1>
+    <p class="lead">We start with the cybersecurity obligations your company now carries under EU law, then bring operations, e-invoicing and automation into a single plan, at a fixed price. We are delivering in Romania first and expanding across the EU.</p>
+    <div class="btn-row"><a class="btn primary" href="/nis2/">Check if NIS2 applies to you</a><a class="btn" href="/packages/">See the packages</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">Why now</p>
+    <div class="facts">
+      <div><b>Up to €10 million</b><span>or 2% of worldwide turnover: the ceiling for fines on essential entities under the NIS2 Directive. For important entities: €7 million or 1.4%.</span></div>
+      <div><b>Management is accountable</b><span>Boards must approve cybersecurity measures, oversee them and take training. Responsibility cannot be delegated to IT alone.</span></div>
+      <div><b>24 hours</b><span>to send an early warning to the authority after a significant incident, 72 hours for the notification and one month for the final report.</span></div>
     </div>
-  </section>
+    <p class="source">Source: Directive (EU) 2022/2555 (NIS2), Articles 20, 23 and 34. National laws set the details; in Romania, fines have been applied since September 2026.</p>
+  </div>
+</section>
 
+<section class="section">
+  <div class="wrap">
+    <p class="label">Questions we help answer</p>
+    <ol class="q-list">
+      <li><span>01</span>Does NIS2 apply to our company, and what do we have to file, and by when?</li>
+      <li><span>02</span>If the authority audited us tomorrow, what would management have to show?</li>
+      <li><span>03</span>How do we stop re-typing orders and invoices between spreadsheets, the warehouse and accounting?</li>
+      <li><span>04</span>What should we automate first, and what does it save us each month?</li>
+      <li><span>05</span>Can EU funding cover part of the investment without putting the project at risk?</li>
+    </ol>
+  </div>
+</section>
 
-  <section class="questions" aria-labelledby="q-h">
-    <div class="wrap">
-      <p class="label" id="q-h">Questions we help answer</p>
-      <ol class="q-list">
-        <li><span>01</span>Where is our margin leaking, and what is it worth to fix?</li>
-        <li><span>02</span>Should we enter a new market, or deepen the one we already serve?</li>
-        <li><span>03</span>Is our e-commerce channel profitable once every cost is counted?</li>
-        <li><span>04</span>How do we build a B2B partner network that sells for us?</li>
-        <li><span>05</span>What should we automate first, and what should we build ourselves?</li>
-      </ol>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fixed-scope packages, each with a clear price and result.</h2>
+      <p>Compliance opens the door; the operational work is where the savings come from. Every package can run on its own or as part of one plan.</p>
     </div>
-  </section>
+    <div class="pk-grid">
+      <div class="pk feature"><span class="tag">Package C</span><h3>NIS2 Compliant</h3><p>Scoping, risk analysis, written policies, incident procedure and audit preparation, with monthly follow-up.</p><p class="price">From €6,000 + €149/month</p></div>
+      <div class="pk"><span class="tag">Package A</span><h3>Operations &amp; e-invoicing</h3><p>Stock, sales and purchasing on Odoo, connected to accounting and to national e-invoicing.</p><p class="price">Price on request</p></div>
+      <div class="pk"><span class="tag">Package B</span><h3>ERP &amp; operational transformation</h3><p>Full strategic diagnostic, then ERP and automation across the business. Suited to funded projects.</p><p class="price">Price on request</p></div>
+      <div class="pk"><span class="tag">Package D</span><h3>Automation &amp; AI</h3><p>A discovery workshop, then one automation or AI assistant delivered in about four weeks.</p><p class="price">From €7,900</p></div>
+      <div class="pk"><span class="tag">Package E</span><h3>E-commerce integration</h3><p>Marketplace feeds, stock synchronisation and automatic e-invoicing for online sellers.</p><p class="price">From €6,900</p></div>
+      <div class="pk"><span class="tag">Advisory</span><h3>Strategic diagnostic</h3><p>Five weeks, seven deliverables: margins, markets, channels and a 12-month plan, built on your own numbers.</p><p class="price"><a class="more" href="/packages/">All packages and details →</a></p></div>
+    </div>
+  </div>
+</section>
 
-  <section class="disciplines" aria-labelledby="what-we-do">
-    <div class="wrap">
-      <p class="label" id="what-we-do">What we do</p>
-      <div class="cols">
-        <div class="col">
-          <span class="mark" aria-hidden="true"></span>
-          <h3>Advisory</h3>
-          <p>Strategic diagnostics, business planning and B2B development, grounded in the company's own numbers.</p>
+<section class="section">
+  <div class="wrap">
+    <p class="label">Who we work with</p>
+    <div class="cl-grid">
+      <h3>Manufacturers and distributors with 50–249 employees, in the sectors covered by NIS2.</h3>
+      <div class="sectors">
+        <div><b>Food and beverage</b><span>Production, processing and distribution</span></div>
+        <div><b>Manufacturing</b><span>Machinery, electrical equipment, vehicles and parts, electronics</span></div>
+        <div><b>Transport and courier</b><span>Road transport, logistics and postal services</span></div>
+        <div><b>Chemicals and wholesale</b><span>Production and distribution of chemicals, wholesale trade</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="night">
+  <div class="wrap">
+    <div>
+      <p class="label">How we work</p>
+      <h2>Diagnose first. Then one plan, one team, one price.</h2>
+    </div>
+    <div>
+      <p>Strategy, compliance and software are delivered by one team under one contract. A dedicated development team in Europe, coordinated by us, builds and maintains the software; we stay accountable to you for the result.</p>
+      <div class="steps">
+        <div><b>Diagnose</b><span>Fixed-scope review of obligations, operations and numbers.</span></div>
+        <div><b>Plan</b><span>Prioritised measures with owners, deadlines and a budget.</span></div>
+        <div><b>Implement</b><span>Policies, software and integrations, delivered in short stages with sign-off.</span></div>
+        <div><b>Support</b><span>A monthly subscription keeps compliance and systems up to date.</span></div>
+      </div>
+      <p style="margin-top:28px"><a href="/aws/">You can also buy through AWS Marketplace →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:88px">
+  <div class="wrap">
+    <p class="label">Principles</p>
+    <div class="cols3">
+      <div><h3>Transparent</h3><p>We sell advisory and software at fixed prices, and say so upfront. The diagnostic also tells you what is not worth buying, including from us.</p></div>
+      <div><h3>Confidential</h3><p>A non-disclosure agreement is signed before any information is shared, and each client's data is kept separate and used only for that client's work.</p></div>
+      <div><h3>Accountable</h3><p>One team, one plan and one set of measures, from diagnosis to delivery, with written sign-off at every stage.</p></div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="contact-h">Start a conversation.</h2>
+      <p>Tell us briefly about your company and the decision ahead. We reply within two business days, and every conversation is treated as confidential.</p>
+    </div>
+    <div class="form-box">
+      <form class="cf" action="https://formsubmit.co/info@lamscapital.com" method="POST" id="cf" novalidate>
+        <input type="hidden" name="_subject" value="New enquiry from lamscapital.com (EN)">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://lamscapital.com/#thanks">
+        <input type="hidden" name="language" value="en">
+        <input type="hidden" name="page" value="">
+        <input type="hidden" name="consent_text" value="I agree to receive occasional emails from LAMS about NIS2, digitalisation and funding. I can withdraw this consent at any time.">
+        <input type="hidden" name="consent_timestamp" value="">
+        <p style="display:none"><label for="hp">Leave empty</label><input id="hp" name="_honey" tabindex="-1" autocomplete="off"></p>
+        <div class="two">
+          <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required></div>
         </div>
-        <div class="col">
-          <span class="mark" aria-hidden="true"></span>
-          <h3>Marketing</h3>
-          <p>Positioning, go-to-market and digital channels that attract customers at a cost the margin can sustain.</p>
-        </div>
-        <div class="col">
-          <span class="mark" aria-hidden="true"></span>
-          <h3>Technology</h3>
-          <p>Custom software, platforms and automation, built around the plan rather than alongside it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="clients" aria-labelledby="who-h">
-    <div class="wrap">
-      <p class="label" id="who-h">Who we work with</p>
-      <div class="cl-grid">
-        <h3>Owner-led companies with €2–50 million in annual revenue, at the point where growth needs structure.</h3>
-        <div class="sectors">
-          <div><b>Distribution and wholesale</b><span>Margins, assortment and dealer networks</span></div>
-          <div><b>Retail and e-commerce</b><span>Channel profitability and online growth</span></div>
-          <div><b>Manufacturing</b><span>B2B sales, pricing and market expansion</span></div>
-          <div><b>B2B services</b><span>Positioning, productisation and digital delivery</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="engage" aria-labelledby="how-we-engage">
-    <div class="wrap">
-      <div>
-        <p class="label" style="color:#C3CAE0">How we engage</p>
-        <h2 id="how-we-engage">Every engagement begins with an independent diagnostic.</h2>
-      </div>
-      <div>
-        <p>Before recommending anything, we establish a clear, evidence-based view of the business. Implementation follows only where it creates measurable value.</p>
-        <div class="steps">
-          <div><b>Diagnose</b><span>A fixed-scope review of performance, market position and operations.</span></div>
-          <div><b>Plan</b><span>Prioritised initiatives with defined owners, timelines and measures.</span></div>
-          <div><b>Implement</b><span>Strategy, marketing and technology delivered as one programme.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="principles" aria-labelledby="principles">
-    <div class="wrap">
-      <p class="label" id="principles">Principles</p>
-      <div class="pr">
-        <div><h3>Independent</h3><p>Our recommendations follow the evidence, not a product we need to sell.</p></div>
-        <div><h3>Confidential</h3><p>Every engagement is covered by a non-disclosure agreement before any information is shared.</p></div>
-        <div><h3>Accountable</h3><p>One team, one plan and one set of measures, from diagnosis to delivery.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact" aria-labelledby="contact-h">
-    <div class="wrap">
-      <div>
-        <h2 id="contact-h">Start a conversation.</h2>
-        <p>Tell us briefly about your company and the decision ahead. We respond within two business days, and every conversation is treated as confidential.</p>
-      </div>
-      <div>
-        <form class="cf" action="https://formsubmit.co/info@lamscapital.com" method="POST" id="cf" novalidate>
-          <input type="hidden" name="_subject" value="New enquiry from lamscapital.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://lamscapital.com/#thanks">
-          <p style="display:none"><label for="hp">Leave empty</label><input id="hp" name="_honey" tabindex="-1" autocomplete="off"></p>
-          <div class="two">
-            <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-            <div><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required></div>
-          </div>
+        <div class="two">
           <div><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          <div><label for="f-msg">What would you like to discuss?</label><textarea id="f-msg" name="message" required></textarea></div>
-          <p class="err" id="f-err" aria-live="polite"></p>
-          <button class="btn primary" type="submit">Send message</button>
-        </form>
-        <p class="alt">Or write to <a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
-      </div>
+          <div><label for="f-country">Country</label><input id="f-country" name="country" autocomplete="country-name"></div>
+        </div>
+        <div class="two">
+          <div><label for="f-size">Employees</label><select id="f-size" name="employees"><option>50–249</option><option>10–49</option><option>250 or more</option><option>Fewer than 10</option></select></div>
+          <div><label for="f-topic">Main interest</label><select id="f-topic" name="topic"><option>NIS2 compliance</option><option>ERP and e-invoicing</option><option>Automation and AI</option><option>E-commerce integration</option><option>Strategic diagnostic</option><option>EU funding</option><option>Something else</option></select></div>
+        </div>
+        <div><label for="f-msg">What would you like to discuss?</label><textarea id="f-msg" name="message" required></textarea></div>
+        <label class="check"><input type="checkbox" name="marketing_consent" value="yes"><span>I agree to receive occasional emails from LAMS about NIS2, digitalisation and funding. I can withdraw this consent at any time.</span></label>
+        <p class="fine">We use your details only to answer this enquiry. See our <a href="/privacy/">privacy notice</a>.</p>
+        <p class="err" id="f-err" aria-live="polite"></p>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+      <p class="alt">Or write to <a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
     </div>
-  </section>
+  </div>
+</section>
 </main>
-
 <footer>
   <div class="wrap">
-    <p>© 2026 LAMS Capital Invest LLC, a Wyoming limited liability company.</p>
+    <div>
+      <p>LAMS Capital Invest LLC · 30 N Gould St, Ste R, Sheridan, WY 82801, USA · <a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
+      <p>© 2026 LAMS Capital Invest LLC. Prices exclude VAT.</p>
+    </div>
+    <nav aria-label="Site"><a href="/nis2/">NIS2 compliance</a><a href="/packages/">Packages</a><a href="/aws/">Buy via AWS</a><a href="/funding/">EU funding</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
   </div>
 </footer>
-
-<script>
-(function(){
-  var f=document.getElementById('cf'), err=document.getElementById('f-err');
-  f.addEventListener('input',function(){err.textContent='';});
-  f.addEventListener('submit',function(e){
-    var n=f.elements['name'].value.trim(), c=f.elements['company'].value.trim(), m=f.elements['email'].value.trim(), t=f.elements['message'].value.trim();
-    if(!n||!c||!m||!t){e.preventDefault();err.textContent='Fill in all four fields to send your message.';return;}
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)){e.preventDefault();err.textContent='Enter a valid email address.';return;}
-    var live=/lamscapital\.com$/.test(location.hostname);
-    if(!live){e.preventDefault();err.textContent='Preview only: the form sends once the site is live at lamscapital.com.';}
-  });
-  if(location.hash==='#thanks'){var c=document.getElementById('contact');c.querySelector('.wrap > div:last-child').innerHTML='<p style="font-size:20px;color:var(--ink)">Thank you. Your message has been received, and we will reply within two business days.</p>';c.scrollIntoView();}
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

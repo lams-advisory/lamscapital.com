@@ -1,0 +1,383 @@
+# Textul în română al lamscapital.com (/ro/). Prima piață: România; detalii locale (DNSC, e-Factura, granturi regionale).
+
+NAV = {
+    "nis2": "Conformitate NIS2", "packages": "Pachete", "aws": "Cumpărare prin AWS", "funding": "Granturi",
+    "privacy": "Confidențialitate", "terms": "Termeni", "contact": "Contact", "switch": "EN",
+    "menu": "Meniu", "aria": "Principal", "foot_aria": "Site", "skip": "Sari la conținut",
+}
+
+FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC. Prețurile nu includ TVA."
+
+FORM = {
+    "title": "Să vorbim.",
+    "intro": "Spuneți-ne pe scurt despre firmă și despre decizia pe care o aveți de luat. Răspundem în cel mult două zile lucrătoare, iar orice discuție rămâne confidențială.",
+    "subject": "Mesaj nou de pe lamscapital.com (RO)",
+    "name": "Nume", "company": "Firmă (și CUI, dacă doriți verificarea NIS2)", "email": "Email de serviciu", "country": "Țară",
+    "size": "Număr de angajați", "size_opts": ["50–249", "10–49", "250 sau mai mulți", "Sub 10"],
+    "topic": "Ce vă interesează", "topic_opts": ["Conformitate NIS2", "Gestiune și e-Factura", "Automatizare și AI", "Integrare e-commerce", "Diagnostic strategic", "Granturi", "Altceva"],
+    "message": "Despre ce doriți să discutăm?",
+    "consent": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre NIS2, digitalizare și granturi. Pot retrage acordul oricând.",
+    "privacy": 'Folosim datele doar ca să vă răspundem. Detalii în <a href="/ro/confidentialitate/">politica de confidențialitate</a>.',
+    "send": "Trimite mesajul",
+    "alt": 'Sau scrieți-ne la <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>',
+}
+
+
+def pages(P):
+    home = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Pentru producători și distribuitori mijlocii</p>
+    <h1>Conformitate NIS2, digitalizare și software, cu <span class="accent">un singur partener responsabil</span>.</h1>
+    <p class="lead">Pornim de la obligațiile de securitate cibernetică pe care firma le are acum prin lege, apoi aducem gestiunea, facturarea electronică și automatizările într-un singur plan, cu preț fix. Lucrăm întâi în România și ne extindem în Uniunea Europeană.</p>
+    <div class="btn-row"><a class="btn primary" href="{P['nis2']['ro']}">Verificați dacă intrați sub NIS2</a><a class="btn" href="{P['packages']['ro']}">Vedeți pachetele</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">De ce acum</p>
+    <div class="facts">
+      <div><b>Amenzi aplicate</b><span>Directoratul Național de Securitate Cibernetică (DNSC) a început să amendeze în septembrie 2026, întâi firmele neînregistrate.</span></div>
+      <div><b>Până la 10 mil. EUR</b><span>sau 2% din cifra de afaceri mondială: plafonul amenzilor pentru entitățile esențiale. Pentru cele importante: 7 mil. EUR sau 1,4%.</span></div>
+      <div><b>Conducerea răspunde</b><span>Administratorii aprobă măsurile de securitate, le supraveghează și asigură resursele. Nu se pot delega doar către IT.</span></div>
+    </div>
+    <p class="source">Surse: OUG 155/2024, aprobată prin Legea 124/2025; StartupCafe, 9 septembrie 2026; CMS, iulie 2025. Verificat în noiembrie 2026.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">Întrebări la care vă ajutăm să răspundeți</p>
+    <ol class="q-list">
+      <li><span>01</span>Intră firma noastră sub NIS2, ce trebuie să depunem la DNSC și până când?</li>
+      <li><span>02</span>Dacă vine un control mâine, ce trebuie să arate conducerea?</li>
+      <li><span>03</span>Cum scăpăm de tastarea comenzilor și facturilor de două ori, între Excel, depozit și contabilitate?</li>
+      <li><span>04</span>Ce merită automatizat întâi și cât economisim pe lună?</li>
+      <li><span>05</span>Putem acoperi o parte din investiție cu un grant, fără să punem proiectul în pericol?</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pachete cu rezultat clar și preț stabilit dinainte.</h2>
+      <p>Conformitatea deschide ușa; economiile vin din partea operațională. Fiecare pachet poate fi cumpărat separat sau ca parte a unui singur plan.</p>
+    </div>
+    <div class="pk-grid">
+      <div class="pk feature"><span class="tag">Pachetul C</span><h3>NIS2 Conform</h3><p>Încadrare, analiză de risc, politici scrise, procedură de incident și pregătirea auditului, cu urmărire lunară.</p><p class="price">De la 6.000 EUR + 149 EUR/lună</p></div>
+      <div class="pk"><span class="tag">Pachetul A</span><h3>Gestiune &amp; e-Factura</h3><p>Stocuri, vânzări și achiziții pe Odoo, legate de programul de contabilitate și de e-Factura (ANAF).</p><p class="price">Preț la cerere</p></div>
+      <div class="pk"><span class="tag">Pachetul B</span><h3>ERP &amp; transformare operațională</h3><p>Diagnostic strategic complet, apoi ERP și automatizări în toată firma. Potrivit pentru proiecte cu grant.</p><p class="price">Preț la cerere</p></div>
+      <div class="pk"><span class="tag">Pachetul D</span><h3>Automatizare &amp; AI</h3><p>Un atelier de identificare, apoi o automatizare sau un asistent AI livrat în aproximativ patru săptămâni.</p><p class="price">De la 7.900 EUR</p></div>
+      <div class="pk"><span class="tag">Pachetul E</span><h3>Integrare e-commerce</h3><p>Feed-uri către marketplace-uri, sincronizare de stoc și e-Factura automată pentru magazinele online.</p><p class="price">De la 6.900 EUR</p></div>
+      <div class="pk"><span class="tag">Consultanță</span><h3>Diagnostic strategic</h3><p>Cinci săptămâni, șapte livrabile: marje, piețe, canale și un plan pe 12 luni, construit pe cifrele firmei.</p><p class="price"><a class="more" href="{P['packages']['ro']}">Toate pachetele și detaliile →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">Cu cine lucrăm</p>
+    <div class="cl-grid">
+      <h3>Producători și distribuitori cu 50–249 de angajați, din sectoarele vizate de NIS2.</h3>
+      <div class="sectors">
+        <div><b>Alimentar și băuturi</b><span>Producție, procesare și distribuție</span></div>
+        <div><b>Industria prelucrătoare</b><span>Utilaje, echipamente electrice, auto și componente, electronice</span></div>
+        <div><b>Transport și curierat</b><span>Transport rutier, logistică și servicii poștale</span></div>
+        <div><b>Chimice și comerț en-gros</b><span>Producția și distribuția de substanțe chimice, comerț cu ridicata</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="night">
+  <div class="wrap">
+    <div>
+      <p class="label">Cum lucrăm</p>
+      <h2>Întâi diagnosticul. Apoi un plan, o echipă, un preț.</h2>
+    </div>
+    <div>
+      <p>Strategia, conformitatea și software-ul sunt livrate de aceeași echipă, sub un singur contract. O echipă dedicată de dezvoltatori din Europa, coordonată de noi, construiește și întreține software-ul; răspunderea față de dumneavoastră rămâne a noastră.</p>
+      <div class="steps">
+        <div><b>Diagnostic</b><span>Analiză cu perimetru fix a obligațiilor, operațiunilor și cifrelor.</span></div>
+        <div><b>Plan</b><span>Măsuri prioritizate, cu responsabili, termene și buget.</span></div>
+        <div><b>Implementare</b><span>Politici, software și integrări, livrate în etape scurte, cu proces-verbal de predare.</span></div>
+        <div><b>Suport</b><span>Un abonament lunar ține la zi conformitatea și sistemele.</span></div>
+      </div>
+      <p style="margin-top:28px"><a href="{P['aws']['ro']}">Puteți cumpăra și prin AWS Marketplace →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:88px">
+  <div class="wrap">
+    <p class="label">Principii</p>
+    <div class="cols3">
+      <div><h3>Transparenți</h3><p>Vindem consultanță și software, la prețuri fixe, și o spunem de la început. Diagnosticul vă arată și ce nu merită cumpărat, inclusiv de la noi.</p></div>
+      <div><h3>Confidențiali</h3><p>Acordul de confidențialitate se semnează înainte de orice informație. Datele fiecărui client sunt ținute separat și folosite doar pentru lucrarea lui.</p></div>
+      <div><h3>Responsabili</h3><p>O echipă, un plan și un set de indicatori, de la diagnostic la livrare, cu proces-verbal semnat la fiecare etapă.</p></div>
+    </div>
+  </div>
+</section>"""
+
+    nis2 = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Pachetul C · NIS2 Conform</p>
+    <h1>Aflați unde sunteți față de NIS2 și fiți <span class="accent">pregătiți pentru control</span>.</h1>
+    <p class="lead">NIS2 este directiva europeană de securitate cibernetică. Prin ea, mii de firme mijlocii din România au intrat pentru prima dată sub lege. Stabilim dacă vi se aplică, pregătim ce cere DNSC și vă ajutăm să țineți totul la zi, lunar.</p>
+    <div class="btn-row"><a class="btn primary" href="#contact">Cereți verificarea gratuită</a><a class="btn" href="{P['packages']['ro']}">Toate pachetele</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Intră firma dumneavoastră sub NIS2?</h2>
+      <p>Probabil da, dacă ambele condiții de mai jos sunt adevărate. Răspunsul exact depinde de codurile CAEN, de grupul de firme și de anexele legii.</p>
+    </div>
+    <ul class="ticks">
+      <li><b>Mărime:</b> cel puțin 50 de angajați sau o cifră de afaceri anuală peste 10 mil. EUR (firme mijlocii și mari).</li>
+      <li><b>Sector:</b> activați într-un sector din anexele legii, de exemplu producția și distribuția de alimente, fabricarea de utilaje, echipamente electrice, electronice, autovehicule sau dispozitive medicale, industria chimică, transporturile, serviciile poștale și de curierat sau gestionarea deșeurilor.</li>
+      <li><b>Unele firme mai mici</b> intră și ele, indiferent de mărime, dacă autoritatea le desemnează drept critice.</li>
+    </ul>
+    <p class="note"><b>Verificare gratuită de încadrare.</b> Trimiteți-ne numele firmei și codul unic de înregistrare (CUI). În două zile lucrătoare vă spunem dacă NIS2 vi se aplică probabil, dacă ați fi entitate esențială sau importantă și ce termene aveți.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ce cere legea în România</h2>
+      <p>Ordonanța de urgență 155/2024, aprobată prin Legea 124/2025, și ordinele DNSC. Termenele curg de la momentul în care firma intră sub incidența legii sau de la decizia DNSC.</p>
+    </div>
+    <div class="steps light">
+      <div><b>30 de zile</b><span>Înregistrarea la DNSC, pe platforma NIS2@RO.</span></div>
+      <div><b>30 de zile</b><span>Desemnarea responsabilului cu securitatea rețelelor și sistemelor informatice, de la decizia de înregistrare.</span></div>
+      <div><b>60 + 60 de zile</b><span>Evaluarea nivelului de risc, apoi autoevaluarea maturității măsurilor de securitate, după metodologia DNSC.</span></div>
+      <div><b>30 de zile</b><span>Planul de remediere, pentru entitățile esențiale, după autoevaluare.</span></div>
+      <div><b>24 h · 72 h · o lună</b><span>Raportarea unui incident semnificativ: avertizare timpurie, notificare și raport final.</span></div>
+    </div>
+    <p class="source">Amenzi: pentru entitățile esențiale de la 10.000 lei până la 10 mil. EUR sau 2% din cifra de afaceri; pentru cele importante de la 5.000 lei până la 7 mil. EUR sau 1,4%; la repetare, majorare cu 50%. Surse: CMS, 17 iulie și 26 august 2025; StartupCafe, 9 septembrie 2026; Directiva (UE) 2022/2555, art. 23. Verificat în noiembrie 2026; reverificăm la fiecare client.</p>
+  </div>
+</section>
+
+<section class="night">
+  <div class="wrap">
+    <div>
+      <p class="label">Ce livrăm</p>
+      <h2>Șase până la opt săptămâni, de la încadrare la dosarul pentru audit.</h2>
+    </div>
+    <div>
+      <div class="steps">
+        <div><b>Încadrare</b><span>Coduri CAEN, mărime și grup, verificate față de lege, cu sursă pentru fiecare cifră.</span></div>
+        <div><b>Inventar și risc</b><span>Registrul sistemelor, datelor și furnizorilor critici; registrul de riscuri cu responsabili și termene.</span></div>
+        <div><b>Autoevaluare</b><span>Pregătită pe dovezi, nu pe declarații, în formatul DNSC.</span></div>
+        <div><b>Politici</b><span>Setul complet de politici scrise, adaptate firmei și aprobate de conducere.</span></div>
+        <div><b>Procedura de incident</b><span>Cine decide, cine notifică DNSC și șabloanele pentru 24 de ore, 72 de ore și o lună.</span></div>
+        <div><b>Pregătirea auditului</b><span>Plan de remediere pe 3, 6 și 12 luni și dosarul complet pentru auditor.</span></div>
+      </div>
+      <p style="margin-top:28px"><b style="color:var(--paper);font-weight:500">De la 6.000 EUR, plus 149 EUR pe lună</b> pentru instrumentul de conformitate în limba română, revizuirea trimestrială a riscurilor, actualizarea politicilor la schimbări legislative și sprijin la raportarea incidentelor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:88px">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Unde ne oprim</h2>
+      <p>Ca să nu existe surprize în ofertă.</p>
+    </div>
+    <ul class="ticks">
+      <li>Nu suntem auditor de securitate cibernetică atestat de DNSC. Acolo unde legea cere audit extern, îl face un auditor atestat, ales împreună cu dumneavoastră și ofertat separat.</li>
+      <li>Lucrăm pe dovezi și cu acces doar de citire. Nu cerem acces de administrator la sistemele firmei.</li>
+      <li>Nu depunem nimic la DNSC în numele firmei fără mandat scris.</li>
+    </ul>
+  </div>
+</section>"""
+
+    packages = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Pachete</p>
+    <h1>Consultanță și software, vândute ca <span class="accent">pachete cu perimetru fix</span>.</h1>
+    <p class="lead">Fiecare pachet are un rezultat definit, un calendar și un preț stabilit înainte de începerea lucrului. Consultanța deschide proiectul, software-ul și automatizările aduc economiile, iar abonamentul lunar le ține în funcțiune.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {pkd("Pachetul C", "NIS2 Conform", "Firme sub incidența NIS2, de regulă cu 50–249 de angajați.",
+         ["Încadrarea față de lege și ordinele DNSC", "Registrul activelor și registrul riscurilor", "Autoevaluarea, pregătită pe dovezi", "Politici scrise, aprobate de conducere", "Procedura de incident și șabloanele", "Planul de remediere și dosarul de audit"],
+         "6–8 săptămâni", "De la 6.000 EUR + 149 EUR/lună", "Auditul extern, făcut de un auditor atestat DNSC, se ofertează separat.", P['nis2']['ro'], "Detalii NIS2")}
+    {pkd("Pachetul A", "Gestiune &amp; e-Factura", "Distribuitori și producători cu 10–49 de angajați.",
+         ["Audit digital, creditat integral în prețul pachetului", "Stocuri, vânzări și achiziții pe Odoo Community (open-source, fără licențe)", "Integrare cu programul de contabilitate", "Conectare la e-Factura (ANAF)"],
+         "Stabilită după audit", "Preț la cerere + suport lunar", "", "", "")}
+    {pkd("Pachetul B", "ERP &amp; transformare operațională", "Firme cu 50–249 de angajați, inclusiv proiecte cofinanțate din fonduri europene.",
+         ["Diagnostic strategic complet: șapte livrabile, de la marje la planul pe 12 luni", "ERP și automatizări pentru vânzări, depozit, producție și financiar", "Livrare în etape, cu proces-verbal la fiecare etapă", "Suport lunar după punerea în funcțiune"],
+         "Stabilită după diagnostic", "Preț la cerere + suport lunar", "", P['funding']['ro'], "Cum lucrăm pe granturi")}
+    {pkd("Pachetul D", "Automatizare &amp; AI", "Orice firmă cu muncă repetitivă: comenzi, documente, rapoarte, cereri de la clienți.",
+         ["Atelier de identificare a procesului cu cel mai bun randament", "O automatizare sau un asistent AI, construit și pus în funcțiune", "Măsurare înainte și după, ca economia să se vadă"],
+         "Aproximativ 4 săptămâni", "De la 7.900 EUR + 190 EUR/lună", "Abonamentul include costurile de utilizare a AI.", "", "")}
+    {pkd("Pachetul E", "Integrare e-commerce", "Magazine online cu o cifră de afaceri anuală de 1–20 mil. lei.",
+         ["Feed-uri de produse către marketplace-uri", "Sincronizarea stocului între magazin, marketplace-uri și depozit", "e-Factura automată"],
+         "Aproximativ 4 săptămâni", "De la 6.900 EUR + 150 EUR/lună", "", "", "")}
+    {pkd("Consultanță", "Diagnostic strategic", "Firme conduse de proprietar, în momentul în care creșterea are nevoie de structură.",
+         ["Cinci săptămâni, șapte livrabile: performanță, piață, canale, operațiuni, oportunități, indicatori și plan pe 12 luni", "Construit pe cifrele firmei, sub acord de confidențialitate", "30% din preț se creditează dacă începeți implementarea în 90 de zile"],
+         "5 săptămâni", "Preț la cerere", "", "", "")}
+    <p class="note"><b>Despre prețuri.</b> Prețurile nu includ TVA și se aplică achiziției prin AWS Marketplace. La un contract direct se poate adăuga impozitul reținut la sursă în România; oferta arată întotdeauna suma completă. Odoo este marcă a Odoo S.A.; LAMS nu este afiliată cu Odoo S.A.</p>
+  </div>
+</section>"""
+
+    aws = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Cumpărare prin AWS Marketplace</p>
+    <h1>Cumpărați serviciile noastre prin <span class="accent">contul AWS al firmei</span>.</h1>
+    <p class="lead">Pe lângă contractul direct, orice pachet LAMS se poate cumpăra ca ofertă privată pe AWS Marketplace, catalogul de software și servicii al Amazon Web Services. Amazon Web Services facturează firma dumneavoastră și ne plătește pe noi.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>De ce aleg firmele această variantă</h2>
+      <p>Oferta privată este o ofertă pe AWS Marketplace făcută doar pentru firma dumneavoastră, la prețul convenit.</p>
+    </div>
+    <div class="cols3">
+      <div><h3>Un furnizor cunoscut</h3><p>Factura vine de la Amazon Web Services, un furnizor pe care contabilitatea și achizițiile îl pot verifica ușor.</p></div>
+      <div><h3>Plata într-un singur loc</h3><p>Plata trece prin contul AWS al firmei, cu card sau prin transfer bancar, unde este disponibil, iar facturile stau într-un singur loc.</p></div>
+      <div><h3>Documente complete</h3><p>Lunar primiți raportul de activitate, fișa de ore și procesul-verbal de predare, cu numărul ofertei și al facturii AWS, utile la controlul fiscal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">Pașii</p>
+    <div class="steps light">
+      <div><b>1. Stabilim lucrarea</b><span>Semnăm acordul de confidențialitate și stabilim descrierea lucrării: perimetru, livrabile, calendar și preț.</span></div>
+      <div><b>2. Deschidem contul</b><span>Dacă firma nu are cont AWS, îl creăm împreună într-o ședință online de 30–45 de minute, pe numele firmei și cu autentificare în doi pași.</span></div>
+      <div><b>3. Acceptați oferta</b><span>Vă trimitem oferta privată. O acceptați din contul AWS; descrierea lucrării este atașată ofertei.</span></div>
+      <div><b>4. Livrare</b><span>Livrăm în etape. Lunar primiți raportul, fișa de ore și procesul-verbal de semnat.</span></div>
+    </div>
+    <p class="note"><b>Stadiu.</b> Listarea noastră pe AWS Marketplace este în pregătire. Până la publicare lucrăm prin contract direct, în aceleași condiții.</p>
+    <p class="source">Amazon Web Services, AWS și AWS Marketplace sunt mărci ale Amazon.com, Inc. sau ale afiliaților săi. LAMS este vânzător independent și nu este susținut de Amazon.</p>
+  </div>
+</section>"""
+
+    funding = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Granturi pentru digitalizare</p>
+    <h1>Folosiți fondurile europene pentru digitalizare, <span class="accent">fără să riscați proiectul</span>.</h1>
+    <p class="lead">Programele regionale 2021–2027 finanțează digitalizarea întreprinderilor mici și mijlocii. Verificăm eligibilitatea, pregătim partea tehnică și putem livra software-ul, dacă suntem aleși furnizor.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Apeluri urmărite acum</h2>
+      <p>Situație la 19 noiembrie 2026. Verificăm ghidul oficial înainte de orice discuție cu un client.</p>
+    </div>
+    <ul class="ticks">
+      <li><b>Regiunea Centru, Acțiunea 2.2, digitalizarea IMM:</b> depunere între 2 decembrie 2026 și 2 februarie 2027; grant de 15.000–200.000 EUR, până la 90%; auditul de maturitate digitală este obligatoriu înainte de depunere. Excluse: industria alimentară, comerțul cu alimente, agricultura și IT.</li>
+      <li><b>București-Ilfov și Sud-Est:</b> apeluri anunțate pentru digitalizare, fără ghid publicat la această dată.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cols3">
+      <div><h3>Eligibilitate</h3><p>Verificăm codurile CAEN, mărimea și regiunea față de ghidul solicitantului, inclusiv sectoarele excluse.</p></div>
+      <div><h3>Pregătire tehnică</h3><p>Auditul de maturitate digitală, specificațiile și un buget realist pentru software, gata pentru cerere.</p></div>
+      <div><h3>Implementare</h3><p>Dacă suntem aleși furnizor, livrăm software-ul și documentele cerute de autoritatea de management.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="label">Regulile noastre</p>
+    <ul class="ticks">
+      <li><b>Un singur rol pe proiect.</b> Într-un proiect cu grant suntem fie consultant, fie furnizor, niciodată amândouă, cum cer regulile privind conflictul de interese.</li>
+      <li><b>Nu promitem finanțarea.</b> Decizia aparține autorității de management. Vă spunem cinstit dacă o cerere are șanse.</li>
+      <li><b>Calendarul contează.</b> Apelurile au ferestre fixe. Vă spunem de la început dacă termenele se potrivesc și ce faceți dacă nu.</li>
+    </ul>
+  </div>
+</section>"""
+
+    privacy = """
+<section class="section" style="padding-top:56px">
+  <div class="wrap legal">
+    <h1>Politica de confidențialitate</h1>
+    <p class="meta">Ultima actualizare: 19 noiembrie 2026</p>
+    <h2>Cine suntem</h2>
+    <p>LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, SUA, este operatorul datelor personale descrise aici. Contact: <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
+    <h2>Ce date colectăm și de ce</h2>
+    <div class="table-scroll"><table>
+      <tr><th>Date</th><th>Scop</th><th>Temei legal (GDPR)</th><th>Cât le păstrăm</th></tr>
+      <tr><td>Nume, firmă, email de serviciu, țară, număr de angajați, interes, mesaj</td><td>Răspunsul la mesaj și pregătirea unei oferte</td><td>Demersuri la cererea dumneavoastră înainte de un contract, art. 6 alin. (1) lit. b)</td><td>24 de luni de la ultimul contact, dacă nu urmează un contract</td></tr>
+      <tr><td>Acordul pentru emailuri, cu data și ora</td><td>Trimiterea ocazională de informări despre NIS2, digitalizare și granturi</td><td>Consimțământ, art. 6 alin. (1) lit. a)</td><td>Până la retragerea acordului, apoi 3 ani, ca dovadă</td></tr>
+      <tr><td>Date tehnice (adresa IP, browserul) din jurnalele furnizorului de găzduire</td><td>Securitatea și funcționarea site-ului</td><td>Interes legitim, art. 6 alin. (1) lit. f)</td><td>Cât stabilește furnizorul de găzduire</td></tr>
+    </table></div>
+    <p>Site-ul nu folosește instrumente de analiză, cookie-uri de publicitate sau urmărire. Fonturile sunt servite de pe site-ul nostru.</p>
+    <h2>Cine prelucrează datele pentru noi</h2>
+    <ul>
+      <li>GitHub, Inc. (găzduirea site-ului, GitHub Pages), SUA.</li>
+      <li>FormSubmit (livrarea formularului de contact în căsuța noastră de email).</li>
+      <li>Zoho Corporation (serviciul nostru de email).</li>
+    </ul>
+    <p>Unii dintre acești furnizori prelucrează date în afara Spațiului Economic European, inclusiv în SUA. Transferurile se bazează pe garanțiile oferite de furnizori, cum ar fi Cadrul UE–SUA privind protecția datelor sau clauzele contractuale standard ale Comisiei Europene.</p>
+    <h2>Drepturile dumneavoastră</h2>
+    <p>Puteți cere accesul la date, rectificarea sau ștergerea lor, restricționarea prelucrării, portabilitatea și vă puteți opune prelucrării bazate pe interes legitim. Puteți retrage oricând acordul pentru emailuri, scriind la <a href="mailto:info@lamscapital.com">info@lamscapital.com</a> sau folosind linkul de dezabonare din orice email; retragerea nu afectează prelucrarea anterioară. Puteți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) sau la autoritatea din țara dumneavoastră.</p>
+    <h2>Datele clienților</h2>
+    <p>Datele primite în timpul unui mandat sunt protejate prin acordul de confidențialitate și, când includ date personale, printr-un acord separat de prelucrare a datelor, conform art. 28 GDPR.</p>
+  </div>
+</section>"""
+
+    terms = """
+<section class="section" style="padding-top:56px">
+  <div class="wrap legal">
+    <h1>Termeni de utilizare</h1>
+    <p class="meta">Ultima actualizare: 19 noiembrie 2026</p>
+    <h2>Operatorul site-ului</h2>
+    <p>Site-ul este operat de LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, SUA, <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
+    <h2>Doar informare</h2>
+    <p>Conținutul site-ului are caracter general. Nu este consultanță juridică, fiscală sau de securitate pentru situația dumneavoastră și nu face din LAMS consultantul dumneavoastră. Rezumatele legilor și regulilor de finanțare reflectă interpretarea noastră la data afișată și se pot schimba.</p>
+    <h2>Prețuri și oferte</h2>
+    <p>Prețurile de pe site sunt orientative, nu includ TVA și se pot modifica. Un angajament ferm există doar printr-un contract semnat sau printr-o ofertă privată acceptată pe AWS Marketplace, împreună cu descrierea lucrării.</p>
+    <h2>Proprietate intelectuală</h2>
+    <p>Textele, numele și logo-ul LAMS și designul site-ului aparțin LAMS Capital Invest LLC. Celelalte nume și mărci aparțin proprietarilor lor; menționarea lor nu înseamnă parteneriat sau susținere.</p>
+    <h2>Răspundere</h2>
+    <p>Avem grijă ca site-ul să fie corect și disponibil, dar nu garantăm că este lipsit de erori sau mereu online. În limita permisă de lege, nu răspundem pentru decizii luate doar pe baza informațiilor de pe site.</p>
+  </div>
+</section>"""
+
+    return {
+        "home": ("LAMS · Conformitate NIS2, digitalizare și software",
+                 "Conformitate NIS2, ERP, e-Factura, automatizare și AI pentru producători și distribuitori cu 50–249 de angajați. Pachete cu preț fix, un singur partener responsabil.", home, True),
+        "nis2": ("Conformitate NIS2 pentru firme mijlocii",
+                 "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni, de la 6.000 EUR.", nis2, True),
+        "packages": ("Pachete și prețuri",
+                     "Pachete cu perimetru fix: NIS2 Conform, Gestiune & e-Factura, ERP, Automatizare & AI, Integrare e-commerce și diagnosticul strategic.", packages, True),
+        "aws": ("Cumpărare prin AWS Marketplace",
+                "Cumpărați consultanța și software-ul LAMS ca ofertă privată pe AWS Marketplace, facturată firmei de Amazon Web Services.", aws, True),
+        "funding": ("Granturi pentru digitalizare",
+                    "Cum ajută LAMS firmele mijlocii să folosească fondurile europene pentru digitalizare: eligibilitate, pregătire tehnică și implementare.", funding, True),
+        "privacy": ("Politica de confidențialitate", "Cum prelucrează LAMS Capital Invest LLC datele personale colectate prin lamscapital.com.", privacy, False),
+        "terms": ("Termeni de utilizare", "Termenii de utilizare ai lamscapital.com.", terms, False),
+    }
+
+
+def pkd(tag, title, who, items, duration, price, note, link, link_label):
+    lis = "".join(f"<li>{i}</li>" for i in items)
+    extra = f'<dt>Notă</dt><dd>{note}</dd>' if note else ""
+    more = f'<dt>Detalii</dt><dd><a href="{link}">{link_label} →</a></dd>' if link else ""
+    return f"""<div class="pkd">
+      <div><p class="tag">{tag}</p><h2>{title}</h2><p class="for">{who}</p></div>
+      <dl><dt>Include</dt><dd><ul>{lis}</ul></dd><dt>Durată</dt><dd>{duration}</dd><dt>Preț</dt><dd><b style="font-weight:500">{price}</b></dd>{extra}{more}</dl>
+    </div>"""

@@ -262,7 +262,6 @@ def pages(P):
       <div><b>3. Acceptați oferta</b><span>Vă trimitem oferta privată. O acceptați din contul AWS; descrierea lucrării este atașată ofertei.</span></div>
       <div><b>4. Livrare</b><span>Livrăm în etape. Lunar primiți raportul, fișa de ore și procesul-verbal de semnat.</span></div>
     </div>
-    <p class="note"><b>Stadiu.</b> Listarea noastră pe AWS Marketplace este în pregătire. Până la publicare lucrăm prin contract direct, în aceleași condiții.</p>
     <p class="source">Amazon Web Services, AWS și AWS Marketplace sunt mărci ale Amazon.com, Inc. sau ale afiliaților săi. LAMS este vânzător independent și nu este susținut de Amazon.</p>
   </div>
 </section>"""

@@ -263,7 +263,6 @@ def pages(P):
       <div><b>3. Accept the offer</b><span>We send the private offer. You accept it in your AWS account; the statement of work is attached to it.</span></div>
       <div><b>4. Delivery</b><span>We deliver in stages. Each month you receive the report, timesheet and handover document to sign.</span></div>
     </div>
-    <p class="note"><b>Status.</b> Our AWS Marketplace listing is being prepared. Until it is published, we work through a direct contract on the same terms.</p>
     <p class="source">Amazon Web Services, AWS and AWS Marketplace are trademarks of Amazon.com, Inc. or its affiliates. LAMS is an independent seller and is not endorsed by Amazon.</p>
   </div>
 </section>"""

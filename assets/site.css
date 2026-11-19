@@ -231,3 +231,11 @@ footer a:hover{color:var(--ink)}
   .checker legend{float:none}
   .result{padding:22px}
 }
+
+.ill{display:inline-block;font-size:13px;letter-spacing:.06em;color:var(--pink-deep);border:1px solid currentColor;padding:6px 10px;margin:0 0 20px}
+.sample-wrap{overflow-x:auto;margin:0 0 36px;-webkit-overflow-scrolling:touch}
+.sample{border-collapse:collapse;width:100%;min-width:620px;background:var(--white,#fff);font-size:15.5px}
+.sample caption{text-align:left;font-family:inherit;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);padding:0 0 10px}
+.sample th,.sample td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+.sample th{font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--ink)}
+@media (max-width:760px){.cols3{grid-template-columns:1fr;gap:32px}}

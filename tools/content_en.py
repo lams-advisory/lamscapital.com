@@ -1,7 +1,7 @@
 # English text of lamscapital.com (root of the site). European positioning.
 
 NAV = {
-    "nis2": "NIS2 compliance", "packages": "Packages", "aws": "AWS", "funding": "EU funding",
+    "nis2": "NIS2 compliance", "packages": "Packages", "approach": "How we work", "aws": "AWS", "funding": "EU funding",
     "privacy": "Privacy", "terms": "Terms", "contact": "Contact", "switch": "RO",
     "menu": "Menu", "aria": "Main", "foot_aria": "Site", "skip": "Skip to content",
 }
@@ -115,7 +115,7 @@ def pages(P):
         <div><b>Implement</b><span>Policies, software and integrations, delivered in short stages with sign-off.</span></div>
         <div><b>Support</b><span>A monthly subscription keeps compliance and systems up to date.</span></div>
       </div>
-      <p style="margin-top:28px"><a href="{P['aws']['en']}">AWS Marketplace →</a></p>
+      <p style="margin-top:28px"><a href="{P['approach']['en']}">The method in detail →</a> &nbsp; <a href="{P['aws']['en']}">AWS Marketplace →</a></p>
     </div>
   </div>
 </section>
@@ -356,7 +356,97 @@ def pages(P):
   </div>
 </section>"""
 
+    approach = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">How we work</p>
+    <h1>A method you can check <span class="accent">week by week</span>.</h1>
+    <p class="lead">Every engagement follows the same structure: a fixed-scope start, written deliverables at set points, and sign-off before the next stage. Below is what you receive, when, and what it looks like.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Strategic diagnostic: five weeks</h2>
+      <p>Built on your own numbers, under a non-disclosure agreement signed before any data is shared.</p>
+    </div>
+    <div class="steps light">
+      <div><b>Week 1</b><span>Kick-off with management, data request, interviews with the people who run sales, purchasing, warehouse and finance.</span></div>
+      <div><b>Week 2</b><span>Performance: margin by product, client and channel; cash tied up in stock and receivables.</span></div>
+      <div><b>Week 3</b><span>Market and channels: where you win, where you lose, and what competitors offer at what level of service.</span></div>
+      <div><b>Week 4</b><span>Operations and opportunities: where time and money are lost, each opportunity sized and ranked.</span></div>
+      <div><b>Week 5</b><span>Key indicators and a 12-month plan with owners, deadlines and budget, presented to management and signed off.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Software and automation: short stages</h2>
+      <p>Nothing goes live without your acceptance. Each stage ends with a handover report you sign.</p>
+    </div>
+    <div class="steps light">
+      <div><b>Scope</b><span>Processes mapped as they work today, a written specification and a stage plan you approve.</span></div>
+      <div><b>Build</b><span>Delivered in stages of two to four weeks, each tested on your own data before acceptance.</span></div>
+      <div><b>Go-live</b><span>Data migration, user training and a parallel-run period, so the business never stops.</span></div>
+      <div><b>Support</b><span>A monthly subscription: fixes, updates, a written monthly report and a timesheet.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What a deliverable looks like</h2>
+      <p>Two excerpts, so you can judge the level of detail before we speak.</p>
+    </div>
+    <p class="ill">Illustrative example. Model company: distributor, 35 employees. The figures are not from a client.</p>
+    <div class="sample-wrap">
+      <table class="sample">
+        <caption>From the 12-month plan</caption>
+        <thead><tr><th>Measure</th><th>Owner</th><th>Deadline</th><th>Indicator</th></tr></thead>
+        <tbody>
+          <tr><td>One system for orders, stock and invoicing; end of double entry</td><td>Operations manager</td><td>Month 3</td><td>Order-to-invoice time</td></tr>
+          <tr><td>Review of the 20 clients with the lowest margin; new payment terms</td><td>Sales director</td><td>Month 2</td><td>Margin by client, days to collect</td></tr>
+          <tr><td>Stock older than 180 days cleared through a dedicated channel</td><td>Purchasing</td><td>Month 4</td><td>Value of slow-moving stock</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sample-wrap">
+      <table class="sample">
+        <caption>From the NIS2 risk register</caption>
+        <thead><tr><th>Risk</th><th>Level</th><th>Measure</th><th>Owner and deadline</th></tr></thead>
+        <tbody>
+          <tr><td>Accounting server without a tested offline backup</td><td>High</td><td>Daily offline backup, restore test every quarter</td><td>IT, 30 days</td></tr>
+          <tr><td>Shared administrator account</td><td>High</td><td>Personal accounts with two-step sign-in</td><td>IT, 14 days</td></tr>
+          <tr><td>Critical supplier without security clauses</td><td>Medium</td><td>Contract annex and annual questionnaire</td><td>Purchasing, 60 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Situations we are asked to solve</h2>
+      <p>The problems that bring companies to us, and how we approach them.</p>
+    </div>
+    <div class="cols3">
+      <div><h3>Growth without margin</h3><p>Turnover rises, cash does not. We show margin by client, product and channel, and which sales cost more than they bring.</p></div>
+      <div><h3>The same order typed three times</h3><p>Excel, warehouse and accounting do not talk to each other. We put orders, stock and invoicing on one system, connected to e-invoicing.</p></div>
+      <div><h3>Marketplace growth, stock errors</h3><p>Sales on several channels, stock updated by hand. We synchronise stock and automate invoicing across shop and marketplaces.</p></div>
+      <div><h3>A security questionnaire from a key client</h3><p>A large client asks for proof of cybersecurity measures. We prepare the answers and the evidence behind them.</p></div>
+      <div><h3>Repetitive work that does not scale</h3><p>Orders, documents and reports processed by hand. We automate the process with the best return first and measure the saving.</p></div>
+      <div><h3>An investment that needs funding</h3><p>A digitalisation project too large to finance alone. We check eligibility and prepare the technical side of the application.</p></div>
+    </div>
+  </div>
+</section>"""
+
     return {
+        "approach": ("How we work", "How LAMS works: the five-week strategic diagnostic, staged software delivery, sample deliverables and the situations we are asked to solve.", approach, True),
         "home": ("LAMS · Strategy, software and automation for growing companies",
                  "Strategic diagnostic, ERP, e-invoicing, e-commerce, automation and AI for small and mid-sized companies in Europe, plus NIS2 compliance and EU funding. Fixed-scope packages, one accountable partner.", home, True),
         "nis2": ("NIS2 compliance for mid-sized companies",

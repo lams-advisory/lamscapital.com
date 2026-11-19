@@ -1,7 +1,7 @@
 # Textul în română al lamscapital.com (/ro/). Prima piață: România; detalii locale (DNSC, e-Factura, granturi regionale).
 
 NAV = {
-    "nis2": "Conformitate NIS2", "packages": "Pachete", "aws": "AWS", "funding": "Granturi",
+    "nis2": "Conformitate NIS2", "packages": "Pachete", "approach": "Cum lucrăm", "aws": "AWS", "funding": "Granturi",
     "privacy": "Confidențialitate", "terms": "Termeni", "contact": "Contact", "switch": "EN",
     "menu": "Meniu", "aria": "Principal", "foot_aria": "Site", "skip": "Sari la conținut",
 }
@@ -115,7 +115,7 @@ def pages(P):
         <div><b>Implementare</b><span>Politici, software și integrări, livrate în etape scurte, cu proces-verbal de predare.</span></div>
         <div><b>Suport</b><span>Un abonament lunar ține la zi conformitatea și sistemele.</span></div>
       </div>
-      <p style="margin-top:28px"><a href="{P['aws']['ro']}">AWS Marketplace →</a></p>
+      <p style="margin-top:28px"><a href="{P['approach']['ro']}">Metoda în detaliu →</a> &nbsp; <a href="{P['aws']['ro']}">AWS Marketplace →</a></p>
     </div>
   </div>
 </section>
@@ -364,7 +364,97 @@ def pages(P):
   </div>
 </section>"""
 
+    approach = f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Cum lucrăm</p>
+    <h1>O metodă pe care o puteți verifica <span class="accent">săptămână de săptămână</span>.</h1>
+    <p class="lead">Fiecare colaborare are aceeași structură: un început cu perimetru fix, livrabile scrise la termene stabilite și aprobare înainte de etapa următoare. Mai jos vedeți ce primiți, când și cum arată.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Diagnosticul strategic: cinci săptămâni</h2>
+      <p>Construit pe cifrele firmei, sub acord de confidențialitate semnat înainte de orice informație.</p>
+    </div>
+    <div class="steps light">
+      <div><b>Săptămâna 1</b><span>Întâlnirea de start cu conducerea, lista de date, interviuri cu cei care conduc vânzările, achizițiile, depozitul și financiarul.</span></div>
+      <div><b>Săptămâna 2</b><span>Performanța: marja pe produs, client și canal; banii blocați în stoc și în creanțe.</span></div>
+      <div><b>Săptămâna 3</b><span>Piața și canalele: unde câștigați, unde pierdeți și ce oferă concurența, la ce nivel de serviciu.</span></div>
+      <div><b>Săptămâna 4</b><span>Operațiunile și oportunitățile: unde se pierd timp și bani, fiecare oportunitate dimensionată și ordonată.</span></div>
+      <div><b>Săptămâna 5</b><span>Indicatorii și planul pe 12 luni, cu responsabili, termene și buget, prezentate conducerii și aprobate.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Software și automatizări: etape scurte</h2>
+      <p>Nimic nu intră în funcțiune fără acceptul dumneavoastră. Fiecare etapă se încheie cu un proces-verbal de predare semnat.</p>
+    </div>
+    <div class="steps light">
+      <div><b>Perimetru</b><span>Procesele descrise așa cum funcționează azi, specificația scrisă și planul de etape, aprobate de dumneavoastră.</span></div>
+      <div><b>Construcție</b><span>Livrare în etape de două până la patru săptămâni, fiecare testată pe datele firmei înainte de acceptare.</span></div>
+      <div><b>Punere în funcțiune</b><span>Migrarea datelor, instruirea utilizatorilor și o perioadă de lucru în paralel, ca activitatea să nu se oprească.</span></div>
+      <div><b>Suport</b><span>Abonament lunar: corecturi, actualizări, raport lunar scris și fișă de ore.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Cum arată un livrabil</h2>
+      <p>Două extrase, ca să judecați nivelul de detaliu înainte să vorbim.</p>
+    </div>
+    <p class="ill">Exemplu ilustrativ. Firmă-model: distribuitor cu 35 de angajați. Cifrele nu provin de la un client.</p>
+    <div class="sample-wrap">
+      <table class="sample">
+        <caption>Din planul pe 12 luni</caption>
+        <thead><tr><th>Măsură</th><th>Responsabil</th><th>Termen</th><th>Indicator</th></tr></thead>
+        <tbody>
+          <tr><td>Un singur sistem pentru comenzi, stoc și facturare; fără dublă introducere</td><td>Directorul operațional</td><td>Luna 3</td><td>Timpul de la comandă la factură</td></tr>
+          <tr><td>Revizuirea celor 20 de clienți cu marja cea mai mică; termene de plată noi</td><td>Directorul de vânzări</td><td>Luna 2</td><td>Marja pe client, zile de încasare</td></tr>
+          <tr><td>Stocul mai vechi de 180 de zile, lichidat printr-un canal dedicat</td><td>Achiziții</td><td>Luna 4</td><td>Valoarea stocului cu mișcare lentă</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sample-wrap">
+      <table class="sample">
+        <caption>Din registrul de riscuri NIS2</caption>
+        <thead><tr><th>Risc</th><th>Nivel</th><th>Măsură</th><th>Responsabil și termen</th></tr></thead>
+        <tbody>
+          <tr><td>Serverul de contabilitate fără copie de rezervă offline testată</td><td>Ridicat</td><td>Copie zilnică offline, test de restaurare trimestrial</td><td>IT, 30 de zile</td></tr>
+          <tr><td>Cont de administrator folosit în comun</td><td>Ridicat</td><td>Conturi personale, cu autentificare în doi pași</td><td>IT, 14 zile</td></tr>
+          <tr><td>Furnizor critic fără clauze de securitate</td><td>Mediu</td><td>Anexă la contract și chestionar anual</td><td>Achiziții, 60 de zile</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Situații pe care ni se cere să le rezolvăm</h2>
+      <p>Problemele care aduc firmele la noi și cum le abordăm.</p>
+    </div>
+    <div class="cols3">
+      <div><h3>Creștere fără marjă</h3><p>Cifra de afaceri crește, banii nu. Arătăm marja pe client, produs și canal și ce vânzări costă mai mult decât aduc.</p></div>
+      <div><h3>Aceeași comandă, tastată de trei ori</h3><p>Excelul, depozitul și contabilitatea nu comunică. Punem comenzile, stocul și facturarea într-un singur sistem, legat de e-Factura.</p></div>
+      <div><h3>Vânzări pe marketplace, erori de stoc</h3><p>Vânzări pe mai multe canale, stoc actualizat de mână. Sincronizăm stocul și automatizăm facturarea între magazin și marketplace-uri.</p></div>
+      <div><h3>Chestionar de securitate de la un client important</h3><p>Un client mare cere dovezi ale măsurilor de securitate cibernetică. Pregătim răspunsurile și dovezile din spatele lor.</p></div>
+      <div><h3>Muncă repetitivă care nu mai ține pasul</h3><p>Comenzi, documente și rapoarte procesate de mână. Automatizăm întâi procesul cu cel mai bun randament și măsurăm economia.</p></div>
+      <div><h3>O investiție care are nevoie de finanțare</h3><p>Un proiect de digitalizare prea mare pentru resursele proprii. Verificăm eligibilitatea și pregătim partea tehnică a cererii.</p></div>
+    </div>
+  </div>
+</section>"""
+
     return {
+        "approach": ("Cum lucrăm", "Cum lucrează LAMS: diagnosticul strategic în cinci săptămâni, livrarea software în etape, exemple de livrabile și situațiile pe care le rezolvăm.", approach, True),
         "home": ("LAMS · Strategie, software și automatizare pentru firme în creștere",
                  "Diagnostic strategic, ERP, e-Factura, e-commerce, automatizare și AI pentru firme mici și mijlocii, plus conformitate NIS2 și granturi. Pachete cu perimetru fix, un singur partener responsabil.", home, True),
         "nis2": ("Conformitate NIS2 pentru firme mijlocii",

@@ -1,12 +1,12 @@
 # English text of lamscapital.com (root of the site). European positioning.
 
 NAV = {
-    "nis2": "NIS2 compliance", "packages": "Packages", "aws": "Buy via AWS", "funding": "EU funding",
+    "nis2": "NIS2 compliance", "packages": "Packages", "aws": "AWS", "funding": "EU funding",
     "privacy": "Privacy", "terms": "Terms", "contact": "Contact", "switch": "RO",
     "menu": "Menu", "aria": "Main", "foot_aria": "Site", "skip": "Skip to content",
 }
 
-FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC."
+FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC. All rights reserved."
 
 FORM = {
     "title": "Start a conversation.",
@@ -115,7 +115,7 @@ def pages(P):
         <div><b>Implement</b><span>Policies, software and integrations, delivered in short stages with sign-off.</span></div>
         <div><b>Support</b><span>A monthly subscription keeps compliance and systems up to date.</span></div>
       </div>
-      <p style="margin-top:28px"><a href="{P['aws']['en']}">You can also buy through AWS Marketplace →</a></p>
+      <p style="margin-top:28px"><a href="{P['aws']['en']}">AWS Marketplace →</a></p>
     </div>
   </div>
 </section>
@@ -246,7 +246,7 @@ def pages(P):
     aws = f"""
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">Buying through AWS Marketplace</p>
+    <p class="kicker">AWS Marketplace</p>
     <h1>Buy our services through <span class="accent">your company's AWS account</span>.</h1>
     <p class="lead">Besides a direct contract, you can buy any LAMS package as a private offer on AWS Marketplace, the Amazon Web Services catalogue for software and services. Amazon Web Services invoices your company and pays us.</p>
   </div>
@@ -318,28 +318,23 @@ def pages(P):
 <section class="section" style="padding-top:56px">
   <div class="wrap legal">
     <h1>Privacy notice</h1>
-    <p class="meta">Last updated: 19 November 2026</p>
-    <h2>Who we are</h2>
-    <p>LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, USA, is the controller of the personal data described here. Contact: <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
-    <h2>What we collect and why</h2>
-    <div class="table-scroll"><table>
-      <tr><th>Data</th><th>Purpose</th><th>Legal basis (GDPR)</th><th>Kept for</th></tr>
-      <tr><td>Name, company, work email, country, company size, interest, message</td><td>Answering your enquiry and preparing an offer</td><td>Steps taken at your request before a contract, Art. 6(1)(b)</td><td>24 months after the last contact, unless a contract follows</td></tr>
-      <tr><td>Your consent to receive emails, with date and time</td><td>Sending occasional information about NIS2, digitalisation and funding</td><td>Consent, Art. 6(1)(a)</td><td>Until you withdraw consent, then as proof for 3 years</td></tr>
-      <tr><td>Technical data (IP address, browser) in the hosting provider's logs</td><td>Security and operation of the website</td><td>Legitimate interest, Art. 6(1)(f)</td><td>As set by the hosting provider</td></tr>
-    </table></div>
-    <p>The site uses no analytics, no advertising cookies and no tracking. Fonts are served from our own site.</p>
-    <h2>Who processes the data for us</h2>
-    <ul>
-      <li>GitHub, Inc. (website hosting, GitHub Pages), USA.</li>
-      <li>FormSubmit (delivery of the contact form to our mailbox).</li>
-      <li>Zoho Corporation (our email service).</li>
-    </ul>
-    <p>Some of these providers process data outside the European Economic Area, including in the USA. Such transfers rely on the safeguards the providers offer, such as the EU–US Data Privacy Framework or the European Commission's standard contractual clauses.</p>
+    <p>LAMS respects the confidentiality of everyone who contacts us. This notice explains how we handle personal data received through this website.</p>
+    <h2>Data we collect</h2>
+    <p>Only what you send us through the contact form or by email: your name, company, work email, country and the content of your message. If you agree, we also record your consent to receive occasional updates.</p>
+    <h2>How we use it</h2>
+    <p>To answer your enquiry and prepare a proposal, as steps taken at your request (Article 6(1)(b) GDPR). Only with your consent, to send occasional updates on NIS2, digitalisation and funding (Article 6(1)(a) GDPR). We never sell your data or share it for third-party marketing.</p>
+    <h2>Cookies and tracking</h2>
+    <p>This website uses no analytics, advertising or tracking cookies.</p>
+    <h2>Service providers</h2>
+    <p>We rely on carefully selected providers for hosting, form delivery and email, bound by data-processing terms. Where data is processed outside the European Economic Area, transfers rely on appropriate safeguards, such as the European Commission's Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
+    <h2>Retention</h2>
+    <p>Enquiry data is kept for up to 24 months after our last contact, unless an engagement follows. Records of consent are kept for as long as we need to demonstrate it.</p>
     <h2>Your rights</h2>
-    <p>You may ask for access to, correction or deletion of your data, restriction of processing, data portability, and object to processing based on legitimate interest. You may withdraw consent at any time by writing to <a href="mailto:info@lamscapital.com">info@lamscapital.com</a> or by using the unsubscribe link in any email; withdrawal does not affect earlier processing. You may also complain to the data protection authority in your country; in Romania, the National Supervisory Authority for Personal Data Processing (ANSPDCP).</p>
-    <h2>Client data</h2>
-    <p>Data you share during an engagement is covered by the non-disclosure agreement and, where personal data is involved, by a separate data processing agreement under Article 28 GDPR.</p>
+    <p>You may request access to your data, its correction or deletion, restriction of processing and data portability, and you may object to processing. You may withdraw consent at any time, without affecting earlier processing. You may also lodge a complaint with the data protection authority in your country.</p>
+    <h2>Client engagements</h2>
+    <p>Information shared during an engagement is protected by a non-disclosure agreement and, where personal data is involved, by a data processing agreement under Article 28 GDPR.</p>
+    <h2>Contact</h2>
+    <p>Data controller: LAMS Capital Invest LLC. For any request: <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
   </div>
 </section>"""
 
@@ -347,17 +342,17 @@ def pages(P):
 <section class="section" style="padding-top:56px">
   <div class="wrap legal">
     <h1>Terms of use</h1>
-    <p class="meta">Last updated: 19 November 2026</p>
-    <h2>Operator</h2>
-    <p>This website is operated by LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, USA, <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
-    <h2>Information only</h2>
-    <p>The content of this site is general information. It is not legal, tax or security advice for your situation, and it does not make LAMS your adviser. Summaries of laws and funding rules reflect our reading on the date shown and may change.</p>
-    <h2>Offers</h2>
-    <p>This site does not make offers. A binding commitment exists only in a signed contract or an accepted private offer on AWS Marketplace, together with its statement of work.</p>
+    <p>These terms apply to the use of lamscapital.com, operated by LAMS Capital Invest LLC (“LAMS”).</p>
+    <h2>Information</h2>
+    <p>The content of this website is general information. It does not constitute legal, tax or security advice for a specific situation. Summaries of laws and funding rules reflect our understanding at the time of publication.</p>
+    <h2>Engagements</h2>
+    <p>Nothing on this website is an offer. Every engagement is governed exclusively by a signed agreement or an accepted private offer, together with its statement of work.</p>
     <h2>Intellectual property</h2>
-    <p>Texts, the LAMS name and logo and the design of this site belong to LAMS Capital Invest LLC. Other names and marks belong to their owners; mentioning them does not imply a partnership or endorsement.</p>
+    <p>The texts, the LAMS name and logo and the design of this website belong to LAMS. Other names and trademarks belong to their respective owners; their mention implies no partnership or endorsement.</p>
     <h2>Liability</h2>
-    <p>We take care to keep the site accurate and available, but we do not guarantee that it is error-free or always online. To the extent the law allows, we are not liable for decisions taken solely on the basis of this site.</p>
+    <p>We take care to keep this website accurate and available. To the extent permitted by law, LAMS is not liable for decisions taken solely on the basis of its content.</p>
+    <h2>Contact</h2>
+    <p><a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
   </div>
 </section>"""
 
@@ -368,7 +363,7 @@ def pages(P):
                  "Does NIS2 apply to your company? Scoping, risk analysis, policies, incident procedure and audit preparation in 6–8 weeks.", nis2, True),
         "packages": ("Packages",
                      "Fixed-scope packages: NIS2 Compliant, Operations & e-invoicing, ERP transformation, Automation & AI, E-commerce integration and the strategic diagnostic.", packages, True),
-        "aws": ("Buy through AWS Marketplace",
+        "aws": ("AWS Marketplace",
                 "Buy LAMS advisory and software as a private offer on AWS Marketplace, invoiced by Amazon Web Services to your company.", aws, True),
         "funding": ("EU funding for digitalisation",
                     "How LAMS helps mid-sized companies use EU cohesion funds for digitalisation: eligibility, technical preparation and implementation.", funding, True),

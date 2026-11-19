@@ -82,7 +82,7 @@ def page(lang, key, title, description, body, C):
 <footer>
   <div class="wrap">
     <div>
-      <p>LAMS Capital Invest LLC · 30 N Gould St, Ste R, Sheridan, WY 82801, USA · <a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
+      <p><a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
       <p>{C.FOOT_LEGAL}</p>
     </div>
     <nav aria-label="{C.NAV['foot_aria']}">{foot_links}</nav>

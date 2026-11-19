@@ -1,12 +1,12 @@
 # Textul în română al lamscapital.com (/ro/). Prima piață: România; detalii locale (DNSC, e-Factura, granturi regionale).
 
 NAV = {
-    "nis2": "Conformitate NIS2", "packages": "Pachete", "aws": "Cumpărare prin AWS", "funding": "Granturi",
+    "nis2": "Conformitate NIS2", "packages": "Pachete", "aws": "AWS", "funding": "Granturi",
     "privacy": "Confidențialitate", "terms": "Termeni", "contact": "Contact", "switch": "EN",
     "menu": "Meniu", "aria": "Principal", "foot_aria": "Site", "skip": "Sari la conținut",
 }
 
-FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC."
+FOOT_LEGAL = "© 2026 LAMS Capital Invest LLC. Toate drepturile rezervate."
 
 FORM = {
     "title": "Să vorbim.",
@@ -115,7 +115,7 @@ def pages(P):
         <div><b>Implementare</b><span>Politici, software și integrări, livrate în etape scurte, cu proces-verbal de predare.</span></div>
         <div><b>Suport</b><span>Un abonament lunar ține la zi conformitatea și sistemele.</span></div>
       </div>
-      <p style="margin-top:28px"><a href="{P['aws']['ro']}">Puteți cumpăra și prin AWS Marketplace →</a></p>
+      <p style="margin-top:28px"><a href="{P['aws']['ro']}">AWS Marketplace →</a></p>
     </div>
   </div>
 </section>
@@ -245,7 +245,7 @@ def pages(P):
     aws = f"""
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">Cumpărare prin AWS Marketplace</p>
+    <p class="kicker">AWS Marketplace</p>
     <h1>Cumpărați serviciile noastre prin <span class="accent">contul AWS al firmei</span>.</h1>
     <p class="lead">Pe lângă contractul direct, orice pachet LAMS se poate cumpăra ca ofertă privată pe AWS Marketplace, catalogul de software și servicii al Amazon Web Services. Amazon Web Services facturează firma dumneavoastră și ne plătește pe noi.</p>
   </div>
@@ -325,28 +325,23 @@ def pages(P):
 <section class="section" style="padding-top:56px">
   <div class="wrap legal">
     <h1>Politica de confidențialitate</h1>
-    <p class="meta">Ultima actualizare: 19 noiembrie 2026</p>
-    <h2>Cine suntem</h2>
-    <p>LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, SUA, este operatorul datelor personale descrise aici. Contact: <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
-    <h2>Ce date colectăm și de ce</h2>
-    <div class="table-scroll"><table>
-      <tr><th>Date</th><th>Scop</th><th>Temei legal (GDPR)</th><th>Cât le păstrăm</th></tr>
-      <tr><td>Nume, firmă, email de serviciu, țară, număr de angajați, interes, mesaj</td><td>Răspunsul la mesaj și pregătirea unei oferte</td><td>Demersuri la cererea dumneavoastră înainte de un contract, art. 6 alin. (1) lit. b)</td><td>24 de luni de la ultimul contact, dacă nu urmează un contract</td></tr>
-      <tr><td>Acordul pentru emailuri, cu data și ora</td><td>Trimiterea ocazională de informări despre NIS2, digitalizare și granturi</td><td>Consimțământ, art. 6 alin. (1) lit. a)</td><td>Până la retragerea acordului, apoi 3 ani, ca dovadă</td></tr>
-      <tr><td>Date tehnice (adresa IP, browserul) din jurnalele furnizorului de găzduire</td><td>Securitatea și funcționarea site-ului</td><td>Interes legitim, art. 6 alin. (1) lit. f)</td><td>Cât stabilește furnizorul de găzduire</td></tr>
-    </table></div>
-    <p>Site-ul nu folosește instrumente de analiză, cookie-uri de publicitate sau urmărire. Fonturile sunt servite de pe site-ul nostru.</p>
-    <h2>Cine prelucrează datele pentru noi</h2>
-    <ul>
-      <li>GitHub, Inc. (găzduirea site-ului, GitHub Pages), SUA.</li>
-      <li>FormSubmit (livrarea formularului de contact în căsuța noastră de email).</li>
-      <li>Zoho Corporation (serviciul nostru de email).</li>
-    </ul>
-    <p>Unii dintre acești furnizori prelucrează date în afara Spațiului Economic European, inclusiv în SUA. Transferurile se bazează pe garanțiile oferite de furnizori, cum ar fi Cadrul UE–SUA privind protecția datelor sau clauzele contractuale standard ale Comisiei Europene.</p>
+    <p>LAMS respectă confidențialitatea tuturor celor care ne contactează. Această politică arată cum tratăm datele personale primite prin acest site.</p>
+    <h2>Ce date colectăm</h2>
+    <p>Doar ce ne trimiteți prin formularul de contact sau pe email: numele, firma, emailul de serviciu, țara și conținutul mesajului. Dacă sunteți de acord, înregistrăm și acordul pentru informări ocazionale.</p>
+    <h2>Cum le folosim</h2>
+    <p>Ca să răspundem solicitării și să pregătim o propunere, ca demersuri făcute la cererea dumneavoastră (art. 6 alin. (1) lit. b) GDPR). Doar cu acordul dumneavoastră, ca să trimitem informări ocazionale despre NIS2, digitalizare și granturi (art. 6 alin. (1) lit. a) GDPR). Nu vindem datele și nu le transmitem în scop de marketing terților.</p>
+    <h2>Cookie-uri și urmărire</h2>
+    <p>Site-ul nu folosește cookie-uri de analiză, de publicitate sau de urmărire.</p>
+    <h2>Furnizori de servicii</h2>
+    <p>Folosim furnizori selectați pentru găzduire, livrarea formularelor și email, obligați prin clauze de prelucrare a datelor. Când datele sunt prelucrate în afara Spațiului Economic European, transferul se bazează pe garanții adecvate, precum clauzele contractuale standard ale Comisiei Europene sau Cadrul UE–SUA privind protecția datelor.</p>
+    <h2>Păstrare</h2>
+    <p>Datele unei solicitări se păstrează cel mult 24 de luni de la ultimul contact, dacă nu urmează o colaborare. Dovada acordului se păstrează cât timp trebuie să o putem demonstra.</p>
     <h2>Drepturile dumneavoastră</h2>
-    <p>Puteți cere accesul la date, rectificarea sau ștergerea lor, restricționarea prelucrării, portabilitatea și vă puteți opune prelucrării bazate pe interes legitim. Puteți retrage oricând acordul pentru emailuri, scriind la <a href="mailto:info@lamscapital.com">info@lamscapital.com</a> sau folosind linkul de dezabonare din orice email; retragerea nu afectează prelucrarea anterioară. Puteți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) sau la autoritatea din țara dumneavoastră.</p>
-    <h2>Datele clienților</h2>
-    <p>Datele primite în timpul unui mandat sunt protejate prin acordul de confidențialitate și, când includ date personale, printr-un acord separat de prelucrare a datelor, conform art. 28 GDPR.</p>
+    <p>Puteți cere accesul la date, rectificarea sau ștergerea lor, restricționarea prelucrării și portabilitatea, și vă puteți opune prelucrării. Puteți retrage oricând acordul, fără efect asupra prelucrării anterioare. Puteți depune plângere la autoritatea de protecție a datelor din țara dumneavoastră; în România, ANSPDCP.</p>
+    <h2>Colaborări cu clienții</h2>
+    <p>Informațiile primite într-o colaborare sunt protejate prin acord de confidențialitate și, când includ date personale, prin acord de prelucrare a datelor conform art. 28 GDPR.</p>
+    <h2>Contact</h2>
+    <p>Operator de date: LAMS Capital Invest LLC. Pentru orice solicitare: <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
   </div>
 </section>"""
 
@@ -354,17 +349,17 @@ def pages(P):
 <section class="section" style="padding-top:56px">
   <div class="wrap legal">
     <h1>Termeni de utilizare</h1>
-    <p class="meta">Ultima actualizare: 19 noiembrie 2026</p>
-    <h2>Operatorul site-ului</h2>
-    <p>Site-ul este operat de LAMS Capital Invest LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, SUA, <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>.</p>
-    <h2>Doar informare</h2>
-    <p>Conținutul site-ului are caracter general. Nu este consultanță juridică, fiscală sau de securitate pentru situația dumneavoastră și nu face din LAMS consultantul dumneavoastră. Rezumatele legilor și regulilor de finanțare reflectă interpretarea noastră la data afișată și se pot schimba.</p>
-    <h2>Oferte</h2>
-    <p>Site-ul nu conține oferte. Un angajament ferm există doar printr-un contract semnat sau printr-o ofertă privată acceptată pe AWS Marketplace, împreună cu descrierea lucrării.</p>
+    <p>Acești termeni se aplică utilizării lamscapital.com, operat de LAMS Capital Invest LLC („LAMS”).</p>
+    <h2>Informare</h2>
+    <p>Conținutul site-ului are caracter general. Nu constituie consultanță juridică, fiscală sau de securitate pentru o situație anume. Rezumatele legilor și regulilor de finanțare reflectă interpretarea noastră la data publicării.</p>
+    <h2>Colaborări</h2>
+    <p>Nimic de pe site nu reprezintă o ofertă. Orice colaborare este guvernată exclusiv de un contract semnat sau de o ofertă privată acceptată, împreună cu descrierea lucrării.</p>
     <h2>Proprietate intelectuală</h2>
-    <p>Textele, numele și logo-ul LAMS și designul site-ului aparțin LAMS Capital Invest LLC. Celelalte nume și mărci aparțin proprietarilor lor; menționarea lor nu înseamnă parteneriat sau susținere.</p>
+    <p>Textele, numele și logo-ul LAMS și designul site-ului aparțin LAMS. Celelalte nume și mărci aparțin proprietarilor lor; menționarea lor nu înseamnă parteneriat sau susținere.</p>
     <h2>Răspundere</h2>
-    <p>Avem grijă ca site-ul să fie corect și disponibil, dar nu garantăm că este lipsit de erori sau mereu online. În limita permisă de lege, nu răspundem pentru decizii luate doar pe baza informațiilor de pe site.</p>
+    <p>Avem grijă ca site-ul să fie corect și disponibil. În limita permisă de lege, LAMS nu răspunde pentru decizii luate doar pe baza conținutului său.</p>
+    <h2>Contact</h2>
+    <p><a href="mailto:info@lamscapital.com">info@lamscapital.com</a></p>
   </div>
 </section>"""
 
@@ -375,7 +370,7 @@ def pages(P):
                  "Intră firma sub NIS2? Încadrare, analiză de risc, politici, procedură de incident și pregătirea auditului DNSC în 6–8 săptămâni.", nis2, True),
         "packages": ("Pachete",
                      "Pachete cu perimetru fix: NIS2 Conform, Gestiune & e-Factura, ERP, Automatizare & AI, Integrare e-commerce și diagnosticul strategic.", packages, True),
-        "aws": ("Cumpărare prin AWS Marketplace",
+        "aws": ("AWS Marketplace",
                 "Cumpărați consultanța și software-ul LAMS ca ofertă privată pe AWS Marketplace, facturată firmei de Amazon Web Services.", aws, True),
         "funding": ("Granturi pentru digitalizare",
                     "Cum ajută LAMS firmele mijlocii să folosească fondurile europene pentru digitalizare: eligibilitate, pregătire tehnică și implementare.", funding, True),

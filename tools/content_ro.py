@@ -16,7 +16,7 @@ FORM = {
     "size": "Număr de angajați", "size_opts": ["10–49", "50–249", "Sub 10", "250 sau mai mulți"],
     "topic": "Ce vă interesează", "topic_opts": ["Diagnostic strategic", "Gestiune și e-Factura", "Automatizare și AI", "Integrare e-commerce", "Conformitate NIS2", "Granturi", "Altceva"],
     "message": "Despre ce doriți să discutăm?",
-    "consent": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre NIS2, digitalizare și granturi. Pot retrage acordul oricând.",
+    "consent": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre creștere, digitalizare, conformitate și granturi. Pot retrage acordul oricând.",
     "privacy": 'Folosim datele doar ca să vă răspundem. Detalii în <a href="/ro/confidentialitate/">politica de confidențialitate</a>.',
     "send": "Trimite mesajul",
     "alt": 'Sau scrieți-ne la <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>',

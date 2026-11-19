@@ -16,7 +16,7 @@ FORM = {
     "size": "Employees", "size_opts": ["10–49", "50–249", "Fewer than 10", "250 or more"],
     "topic": "Main interest", "topic_opts": ["Strategic diagnostic", "ERP and e-invoicing", "Automation and AI", "E-commerce integration", "NIS2 compliance", "EU funding", "Something else"],
     "message": "What would you like to discuss?",
-    "consent": "I agree to receive occasional emails from LAMS about NIS2, digitalisation and funding. I can withdraw this consent at any time.",
+    "consent": "I agree to receive occasional emails from LAMS about growth, digitalisation, compliance and funding. I can withdraw this consent at any time.",
     "privacy": 'We use your details only to answer this enquiry. See our <a href="/privacy/">privacy notice</a>.',
     "send": "Send message",
     "alt": 'Or write to <a href="mailto:info@lamscapital.com">info@lamscapital.com</a>',

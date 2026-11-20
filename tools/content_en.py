@@ -2,7 +2,7 @@
 
 NAV = {
     "nis2": "NIS2 compliance", "packages": "Packages", "approach": "How we work", "aws": "AWS", "funding": "EU funding",
-    "privacy": "Privacy", "terms": "Terms", "contact": "Contact", "switch": "RO",
+    "prediag": "Pre-diagnostic", "privacy": "Privacy", "terms": "Terms", "contact": "Contact", "switch": "RO",
     "menu": "Menu", "aria": "Main", "foot_aria": "Site", "skip": "Skip to content",
 }
 
@@ -137,7 +137,7 @@ def pages(P):
     <p class="kicker">Package C · NIS2 Compliant</p>
     <h1>Know where you stand under NIS2, and be <span class="accent">ready for an audit</span>.</h1>
     <p class="lead">The EU NIS2 Directive brings thousands of mid-sized companies under cybersecurity law for the first time. We establish whether it applies to you, prepare what the authority requires, and keep it current every month.</p>
-    <div class="btn-row"><a class="btn primary" href="#check">Check in 1 minute</a><a class="btn" href="{P['packages']['en']}">All packages</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Check in 2 minutes</a><a class="btn" href="{P['packages']['en']}">All packages</a></div>
   </div>
 </section>
 
@@ -320,13 +320,13 @@ def pages(P):
     <h1>Privacy notice</h1>
     <p>LAMS respects the confidentiality of everyone who contacts us. This notice explains how we handle personal data received through this website.</p>
     <h2>Data we collect</h2>
-    <p>Only what you send us through the contact form or by email: your name, company, work email, country and the content of your message. If you agree, we also record your consent to receive occasional updates.</p>
+    <p>Only what you send us: through the contact form, the pre-diagnostic form, a request for the NIS2 self-check report, or by email. This means your name, company, role, work email and country, the content of your message, and the answers you give about your company (sector, size, systems used, problems to solve, and the NIS2 self-check answers). The NIS2 self-check runs in your browser: your answers reach us only if you ask for the report by email. If you agree, we also record your consent to receive occasional updates.</p>
     <h2>How we use it</h2>
-    <p>To answer your enquiry and prepare a proposal, as steps taken at your request (Article 6(1)(b) GDPR). Only with your consent, to send occasional updates on growth, digitalisation, compliance and funding (Article 6(1)(a) GDPR). We never sell your data or share it for third-party marketing.</p>
+    <p>To answer your enquiry, send the report you request, prepare the call you ask for and prepare a proposal, as steps taken at your request (Article 6(1)(b) GDPR). Only with your consent, to send occasional updates on growth, digitalisation, compliance and funding (Article 6(1)(a) GDPR). We never sell your data or share it for third-party marketing.</p>
     <h2>Cookies and tracking</h2>
     <p>This website uses no analytics, advertising or tracking cookies.</p>
     <h2>Service providers</h2>
-    <p>We rely on carefully selected providers for hosting, form delivery and email, bound by data-processing terms. Where data is processed outside the European Economic Area, transfers rely on appropriate safeguards, such as the European Commission's Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
+    <p>We rely on carefully selected providers for hosting (GitHub Pages), form delivery (FormSubmit) and email (Zoho), bound by data-processing terms. Where data is processed outside the European Economic Area, transfers rely on appropriate safeguards, such as the European Commission's Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
     <h2>Retention</h2>
     <p>Enquiry data is kept for up to 24 months after our last contact, unless an engagement follows. Records of consent are kept for as long as we need to demonstrate it.</p>
     <h2>Your rights</h2>
@@ -473,37 +473,95 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
 
 CHECK = {
     "label": "NIS2 self-check",
-    "title": "Does NIS2 apply to you? Five questions, one minute.",
-    "intro": "An indicative answer based on the directive's size and sector rules. Nothing you select is sent or stored.",
+    "title": "Does NIS2 apply to you? Ten questions, two minutes.",
+    "intro": "An indicative answer based on the size and sector rules of the directive and of the Romanian law. Your answers stay in your browser; they are sent only if you ask for the report by email.",
     "q": [
         ("sector", "Which best describes your main activity?", [
-            ("a1", "Energy, transport, banking, health, water or digital infrastructure"),
-            ("a2", "Food, manufacturing, chemicals, postal and courier, waste, or digital services"),
+            ("a1", "Energy, transport, banking or financial markets, health (including pharmaceutical wholesale and pharmacies in Romania), drinking or waste water, digital infrastructure, managed IT services for businesses, or space"),
+            ("a2", "Food production, processing or distribution; manufacturing of medical devices, electronics, electrical equipment, machinery, vehicles or other transport equipment; chemicals; postal and courier; waste management; research; online marketplaces, search engines or social networks"),
+            ("a4", "Domain name (DNS) services, top-level domain registry, trust services, or public electronic communications"),
             ("a3", "None of these"),
         ]),
-        ("size", "How large is the company, including its group?", [
-            ("s1", "Fewer than 50 employees and under €10 million turnover"),
-            ("s2", "50–249 employees, or €10–50 million turnover"),
-            ("s3", "250 or more employees, or over €50 million turnover"),
+        ("emp", "How many employees, counting the companies in your group?", [
+            ("e1", "Fewer than 50"), ("e2", "50–249"), ("e3", "250 or more"),
+        ]),
+        ("turn", "Annual turnover, including the group?", [
+            ("t1", "Up to €10 million"), ("t2", "€10–50 million"), ("t3", "Over €50 million"),
+        ]),
+        ("bal", "Balance sheet total, including the group?", [
+            ("b1", "Up to €10 million"), ("b2", "€10–43 million"), ("b3", "Over €43 million"),
+        ]),
+        ("where", "Where is the company established?", [
+            ("ro", "Romania"), ("eu", "Another EU country"), ("non", "Outside the EU, with clients in the EU"),
         ]),
         ("chain", "Do large clients send you security questionnaires or contract clauses?", [("yes", "Yes"), ("no", "No")]),
         ("reg", "Is the company registered with the national cybersecurity authority?", [("yes", "Yes"), ("no", "No"), ("unsure", "Not sure")]),
+        ("risk", "Have you completed a written cybersecurity risk assessment in the last 12 months?", [("yes", "Yes"), ("no", "No")]),
         ("inc", "Do you have a written incident procedure that has been tested?", [("yes", "Yes"), ("no", "No")]),
+        ("base", "Do you use multi-factor authentication for remote access and tested backups?", [("yes", "Yes, both"), ("part", "Only one of them"), ("no", "Neither")]),
     ],
     "submit": "See the result",
-    "missing": "Answer all five questions to see the result.",
+    "missing": "Answer all ten questions to see the result.",
     "out_t": "NIS2 probably does not apply to you directly.",
     "out_b": "The exception is a company the authority designates as critical, regardless of size.",
+    "small_t": "Your sector is covered, but your size probably keeps you outside NIS2.",
+    "small_b": "Small companies in these sectors are not covered, unless the authority designates them. Your clients may still ask you to meet their security requirements.",
     "ess_t": "You are probably an essential entity.",
     "ess_b": "The strictest regime: proactive supervision and fines of up to €10 million or 2% of worldwide turnover.",
     "imp_t": "You are probably an important entity.",
     "imp_b": "The same security measures apply, with supervision after incidents or complaints and fines of up to €7 million or 1.4% of worldwide turnover.",
+    "spec_t": "You are probably covered regardless of size.",
+    "spec_b": "Domain name services, top-level domain registries, trust services and public electronic communications fall under NIS2 whatever their size; most of these are essential entities.",
     "gap_reg_no": "Registration with the authority appears to be overdue. It is the first thing an inspection checks.",
-    "gap_reg_unsure": "Check whether the company is registered with the authority; the deadline usually runs from when the law first applies to you.",
+    "gap_reg_unsure": "Check whether the company is registered with the authority; in Romania the deadline is 30 days from falling under the law.",
+    "gap_risk": "Without a written risk assessment, the security measures cannot be shown to fit your risk, which is what the law asks for.",
     "gap_inc": "An untested incident procedure is a gap: the 24-hour early warning runs from when the incident is detected.",
+    "gap_base": "Multi-factor authentication and tested backups are among the minimum measures the law lists; gaps here are the most common cause of serious incidents.",
     "gap_chain": "Your clients already apply NIS2 to their suppliers. Clear answers to their questionnaires protect those contracts.",
+    "gap_non": "A company outside the EU that serves EU clients may need a representative in an EU country.",
     "gaps": "What to look at first",
     "cta": "Request the full check",
     "note": "Indicative result, not legal advice. The exact answer depends on activity codes, group structure and national law.",
     "msg": "NIS2 self-check result: ",
+    "rep_h": "Get the report by email",
+    "rep_p": "We send you the result, your answers and the points to look at first, so you can share them internally.",
+    "rep_name": "Name", "rep_company": "Company", "rep_email": "Work email",
+    "rep_ok": "I want to receive this report by email. My answers and contact details are sent to LAMS for this purpose.",
+    "rep_mkt": "I agree to receive occasional emails from LAMS about growth, digitalisation, compliance and funding. I can withdraw this consent at any time.",
+    "rep_send": "Send me the report",
+    "rep_fill": "Fill in your name, company and a valid work email, and tick the first box.",
+    "rep_wait": "Sending…",
+    "rep_done": "Done. The report is on its way to your inbox; if you do not see it within a few minutes, check the spam folder.",
+    "rep_fail": "The report could not be sent. Please try again, or write to info@lamscapital.com.",
+    "rep_subject": "Your NIS2 self-check report from LAMS",
+    "rep_intro": "Thank you for using the LAMS NIS2 self-check. Here is your indicative result.",
+    "rep_answers": "Your answers",
+    "rep_outro": "This is an indicative result, not legal advice. For an exact answer, reply to this email with your company name and registration number: we confirm whether NIS2 applies, the category and the deadlines within two business days, free of charge.\n\nLAMS · lamscapital.com",
+    "rep_lead": "NIS2 self-check: report requested (EN)",
+}
+
+PRE = {
+    "kicker": "Pre-diagnostic",
+    "h1": 'Five minutes about your company, <span class="accent">thirty minutes on what matters</span>.',
+    "lead": "Tell us where the company stands before we talk. We read your answers in advance, so the first call is spent on your situation, not on questions. Within two business days we reply with two time slots for a 30-minute call.",
+    "title": "Pre-diagnostic",
+    "desc": "Five minutes about your company before a free 30-minute call with LAMS: sector, size, systems and the problems to solve first.",
+    "subject": "Pre-diagnostic from lamscapital.com (EN)",
+    "s1": "About you", "s2": "About the company", "s3": "What to solve", "s4": "The call",
+    "name": "Name", "role": "Role in the company", "company": "Company", "email": "Work email", "country": "Country",
+    "emp": "Employees", "emp_opts": ["10–49", "50–249", "Fewer than 10", "250 or more"],
+    "sector": "Main activity", "sector_opts": ["Manufacturing", "Wholesale and distribution", "Retail and e-commerce", "Food and drink", "Transport and logistics", "Construction", "Services", "Something else"],
+    "channels": "How do you sell?", "channels_opts": ["Direct to businesses", "Through distributors", "Own shops", "Own online store", "Marketplaces", "Export"],
+    "systems": "What do you use today?", "systems_opts": ["Spreadsheets", "Accounting software", "ERP", "CRM", "Online store platform", "Warehouse system", "None of these"],
+    "problems": "The main problems (up to three)", "problems_opts": ["Margin by client or product is unclear", "Cash tied up in stock or receivables", "The same data typed several times", "Stock errors", "Growth has stalled", "E-invoicing", "Security questionnaires or NIS2", "Funding for an investment"],
+    "goal": "What would a good result look like in 12 months?",
+    "when": "When would you like to start?", "when_opts": ["In the next month", "In one to three months", "Later; we are exploring"],
+    "slot": "Best time for the call", "slot_opts": ["Weekday morning", "Weekday afternoon", "Either"],
+    "consent": "I agree to receive occasional emails from LAMS about growth, digitalisation, compliance and funding. I can withdraw this consent at any time.",
+    "privacy": 'We use your answers only to prepare the call. See our <a href="/privacy/">privacy notice</a>.',
+    "send": "Send and request a call",
+    "fill": "Fill in your name, company, work email and at least one problem to solve.",
+    "max3": "Choose at most three problems.",
+    "thanks": "Thank you. We have your answers and will reply within two business days with two time slots for the call.",
+    "link": "Prefer to tell us about the company first? Fill in the five-minute <a href=\"/pre-diagnostic/\">pre-diagnostic</a>.",
 }

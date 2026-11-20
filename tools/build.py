@@ -22,6 +22,7 @@ PATHS = {
     "packages": {"en": "/packages/", "ro": "/ro/pachete/"},
     "aws":     {"en": "/aws/",      "ro": "/ro/aws/"},
     "funding": {"en": "/funding/",  "ro": "/ro/granturi/"},
+    "prediag": {"en": "/pre-diagnostic/", "ro": "/ro/pre-diagnostic/"},
     "privacy": {"en": "/privacy/",  "ro": "/ro/confidentialitate/"},
     "terms":   {"en": "/terms/",    "ro": "/ro/termeni/"},
 }
@@ -43,7 +44,7 @@ def page(lang, key, title, description, body, C):
     )
     nav += f'<a href="{PATHS["home"][lang]}#contact">{C.NAV["contact"]}</a>'
     nav += f'<a class="lang" href="{PATHS[key][other]}" hreflang="{other}" lang="{other}">{C.NAV["switch"]}</a>'
-    foot_links = "".join(f'<a href="{PATHS[k][lang]}">{C.NAV[k]}</a>' for k in ("packages", "approach", "nis2", "funding", "aws", "privacy", "terms"))
+    foot_links = "".join(f'<a href="{PATHS[k][lang]}">{C.NAV[k]}</a>' for k in ("packages", "approach", "nis2", "funding", "aws", "prediag", "privacy", "terms"))
     full_title = title if key == "home" else f"{title} | LAMS"
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
@@ -110,6 +111,7 @@ def contact(lang, C):
     <div class="intro">
       <h2 id="contact-h">{K['title']}</h2>
       <p>{K['intro']}</p>
+      <p class="pre-link">{C.PRE['link']}</p>
     </div>
     <div class="form-box">
       <form class="cf" action="https://formsubmit.co/info@lamscapital.com" method="POST" id="cf" novalidate>
@@ -168,7 +170,87 @@ def checker(C):
       <button class="btn primary" type="submit">{K['submit']}</button>
     </form>
     <div class="result" id="nis2-result" hidden tabindex="-1" aria-live="polite"></div>
+    <div class="report-box" id="nis2-report" hidden>
+      <h3>{K['rep_h']}</h3>
+      <p>{K['rep_p']}</p>
+      <form class="cf" id="nis2-rep" novalidate>
+        <p style="display:none"><label for="r-hp">Leave empty</label><input id="r-hp" name="_honey" tabindex="-1" autocomplete="off"></p>
+        <div class="two">
+          <div><label for="r-name">{K['rep_name']}</label><input id="r-name" name="name" autocomplete="name" required></div>
+          <div><label for="r-company">{K['rep_company']}</label><input id="r-company" name="company" autocomplete="organization" required></div>
+        </div>
+        <div><label for="r-email">{K['rep_email']}</label><input id="r-email" name="email" type="email" autocomplete="email" required></div>
+        <label class="check"><input type="checkbox" name="report_consent" value="yes"><span>{K['rep_ok']}</span></label>
+        <label class="check"><input type="checkbox" name="marketing_consent" value="yes"><span>{K['rep_mkt']}</span></label>
+        <p class="err" id="r-err" aria-live="polite"></p>
+        <button class="btn primary" type="submit">{K['rep_send']}</button>
+      </form>
+    </div>
     <script type="application/json" id="nis2-texts">{data}</script>
+  </div>
+</section>"""
+
+
+def prediag(lang, C):
+    K = C.PRE
+    def sel(name, key):
+        return f'<select id="p-{name}" name="{name}">' + "".join(f"<option>{o}</option>" for o in K[key]) + "</select>"
+    def boxes(name, key):
+        return '<div class="boxes">' + "".join(
+            f'<label class="opt"><input type="checkbox" data-group="{name}" value="{o}"><span>{o}</span></label>' for o in K[key]) + f'</div><input type="hidden" name="{name}" value="">'
+    next_url = SITE + PATHS["prediag"][lang] + "#thanks"
+    return f"""
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">{K['kicker']}</p>
+    <h1>{K['h1']}</h1>
+    <p class="lead">{K['lead']}</p>
+  </div>
+</section>
+<section class="section prediag-sec">
+  <div class="wrap">
+    <div class="form-box" id="pd-box">
+      <form class="cf pd" id="pd" action="https://formsubmit.co/info@lamscapital.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="{K['subject']}">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{next_url}">
+        <input type="hidden" name="language" value="{lang}">
+        <input type="hidden" name="consent_text" value="{K['consent']}">
+        <input type="hidden" name="consent_timestamp" value="">
+        <p style="display:none"><label for="p-hp">Leave empty</label><input id="p-hp" name="_honey" tabindex="-1" autocomplete="off"></p>
+        <h2>{K['s1']}</h2>
+        <div class="two">
+          <div><label for="p-name">{K['name']}</label><input id="p-name" name="name" autocomplete="name" required></div>
+          <div><label for="p-role">{K['role']}</label><input id="p-role" name="role" autocomplete="organization-title"></div>
+        </div>
+        <div class="two">
+          <div><label for="p-email">{K['email']}</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="p-country">{K['country']}</label><input id="p-country" name="country" autocomplete="country-name"></div>
+        </div>
+        <h2>{K['s2']}</h2>
+        <div class="two">
+          <div><label for="p-company">{K['company']}</label><input id="p-company" name="company" autocomplete="organization" required></div>
+          <div><label for="p-employees">{K['emp']}</label>{sel('employees', 'emp_opts')}</div>
+        </div>
+        <div><label for="p-sector">{K['sector']}</label>{sel('sector', 'sector_opts')}</div>
+        <fieldset><legend>{K['channels']}</legend>{boxes('channels', 'channels_opts')}</fieldset>
+        <fieldset><legend>{K['systems']}</legend>{boxes('systems', 'systems_opts')}</fieldset>
+        <h2>{K['s3']}</h2>
+        <fieldset><legend>{K['problems']}</legend>{boxes('problems', 'problems_opts')}</fieldset>
+        <div><label for="p-goal">{K['goal']}</label><textarea id="p-goal" name="goal"></textarea></div>
+        <h2>{K['s4']}</h2>
+        <div class="two">
+          <div><label for="p-start">{K['when']}</label>{sel('start', 'when_opts')}</div>
+          <div><label for="p-call_slot">{K['slot']}</label>{sel('call_slot', 'slot_opts')}</div>
+        </div>
+        <label class="check"><input type="checkbox" name="marketing_consent" value="yes"><span>{K['consent']}</span></label>
+        <p class="fine">{K['privacy']}</p>
+        <p class="err" id="p-err" aria-live="polite"></p>
+        <button class="btn primary" type="submit">{K['send']}</button>
+      </form>
+    </div>
+    <script type="application/json" id="pd-texts">{{"fill": "{K['fill']}", "max3": "{K['max3']}", "thanks": "{K['thanks']}"}}</script>
   </div>
 </section>"""
 
@@ -188,6 +270,7 @@ def build():
             if with_contact:
                 body += contact(lang, C)
             write(PATHS[key][lang], page(lang, key, title, desc, body, C))
+        write(PATHS["prediag"][lang], page(lang, "prediag", C.PRE["title"], C.PRE["desc"], prediag(lang, C), C))
     # 404 page (served by GitHub Pages for any missing path)
     body = """
 <section class="hero">

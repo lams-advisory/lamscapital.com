@@ -2,7 +2,7 @@
 
 NAV = {
     "nis2": "Conformitate NIS2", "packages": "Pachete", "approach": "Cum lucrăm", "aws": "AWS", "funding": "Granturi",
-    "privacy": "Confidențialitate", "terms": "Termeni", "contact": "Contact", "switch": "EN",
+    "prediag": "Pre-diagnostic", "privacy": "Confidențialitate", "terms": "Termeni", "contact": "Contact", "switch": "EN",
     "menu": "Meniu", "aria": "Principal", "foot_aria": "Site", "skip": "Sari la conținut",
 }
 
@@ -137,7 +137,7 @@ def pages(P):
     <p class="kicker">Pachetul C · NIS2 Conform</p>
     <h1>Aflați unde sunteți față de NIS2 și fiți <span class="accent">pregătiți pentru control</span>.</h1>
     <p class="lead">NIS2 este directiva europeană de securitate cibernetică. Prin ea, mii de firme mijlocii din România au intrat pentru prima dată sub lege. Stabilim dacă vi se aplică, pregătim ce cere DNSC și vă ajutăm să țineți totul la zi, lunar.</p>
-    <div class="btn-row"><a class="btn primary" href="#check">Verificați în 1 minut</a><a class="btn" href="{P['packages']['ro']}">Toate pachetele</a></div>
+    <div class="btn-row"><a class="btn primary" href="#check">Verificați în 2 minute</a><a class="btn" href="{P['packages']['ro']}">Toate pachetele</a></div>
   </div>
 </section>
 
@@ -328,13 +328,13 @@ def pages(P):
     <h1>Politica de confidențialitate</h1>
     <p>LAMS respectă confidențialitatea tuturor celor care ne contactează. Această politică arată cum tratăm datele personale primite prin acest site.</p>
     <h2>Ce date colectăm</h2>
-    <p>Doar ce ne trimiteți prin formularul de contact sau pe email: numele, firma, emailul de serviciu, țara și conținutul mesajului. Dacă sunteți de acord, înregistrăm și acordul pentru informări ocazionale.</p>
+    <p>Doar ce ne trimiteți: prin formularul de contact, prin formularul de pre-diagnostic, prin cererea raportului de autoverificare NIS2 sau pe email. Adică numele, firma, rolul, emailul de serviciu și țara, conținutul mesajului și răspunsurile despre firmă (sector, mărime, sisteme folosite, probleme de rezolvat și răspunsurile la autoverificarea NIS2). Autoverificarea NIS2 rulează în browserul dumneavoastră: răspunsurile ajung la noi doar dacă cereți raportul pe email. Dacă sunteți de acord, înregistrăm și acordul pentru informări ocazionale.</p>
     <h2>Cum le folosim</h2>
-    <p>Ca să răspundem solicitării și să pregătim o propunere, ca demersuri făcute la cererea dumneavoastră (art. 6 alin. (1) lit. b) GDPR). Doar cu acordul dumneavoastră, ca să trimitem informări ocazionale despre creștere, digitalizare, conformitate și granturi (art. 6 alin. (1) lit. a) GDPR). Nu vindem datele și nu le transmitem în scop de marketing terților.</p>
+    <p>Ca să răspundem solicitării, să trimitem raportul cerut, să pregătim discuția cerută și o propunere, ca demersuri făcute la cererea dumneavoastră (art. 6 alin. (1) lit. b) GDPR). Doar cu acordul dumneavoastră, ca să trimitem informări ocazionale despre creștere, digitalizare, conformitate și granturi (art. 6 alin. (1) lit. a) GDPR). Nu vindem datele și nu le transmitem în scop de marketing terților.</p>
     <h2>Cookie-uri și urmărire</h2>
     <p>Site-ul nu folosește cookie-uri de analiză, de publicitate sau de urmărire.</p>
     <h2>Furnizori de servicii</h2>
-    <p>Folosim furnizori selectați pentru găzduire, livrarea formularelor și email, obligați prin clauze de prelucrare a datelor. Când datele sunt prelucrate în afara Spațiului Economic European, transferul se bazează pe garanții adecvate, precum clauzele contractuale standard ale Comisiei Europene sau Cadrul UE–SUA privind protecția datelor.</p>
+    <p>Folosim furnizori selectați pentru găzduire (GitHub Pages), livrarea formularelor (FormSubmit) și email (Zoho), obligați prin clauze de prelucrare a datelor. Când datele sunt prelucrate în afara Spațiului Economic European, transferul se bazează pe garanții adecvate, precum clauzele contractuale standard ale Comisiei Europene sau Cadrul UE–SUA privind protecția datelor.</p>
     <h2>Păstrare</h2>
     <p>Datele unei solicitări se păstrează cel mult 24 de luni de la ultimul contact, dacă nu urmează o colaborare. Dovada acordului se păstrează cât timp trebuie să o putem demonstra.</p>
     <h2>Drepturile dumneavoastră</h2>
@@ -481,37 +481,95 @@ def pkd(tag, title, who, items, duration, price, note, link, link_label):
 
 CHECK = {
     "label": "Autoverificare NIS2",
-    "title": "Intrați sub NIS2? Cinci întrebări, un minut.",
-    "intro": "Un răspuns orientativ, după regulile de mărime și sector ale legii. Nimic din ce bifați nu este trimis sau salvat.",
+    "title": "Intrați sub NIS2? Zece întrebări, două minute.",
+    "intro": "Un răspuns orientativ, după regulile de mărime și sector ale directivei și ale OUG 155/2024. Răspunsurile rămân în browserul dumneavoastră; se trimit doar dacă cereți raportul pe email.",
     "q": [
         ("sector", "Ce descrie cel mai bine activitatea principală?", [
-            ("a1", "Energie, transport, bănci, sănătate, apă sau infrastructură digitală"),
-            ("a2", "Alimentar, industria prelucrătoare, chimice, poștă și curierat, deșeuri sau servicii digitale"),
+            ("a1", "Energie, transport, bănci sau piețe financiare, sănătate (inclusiv distribuția angro de medicamente și farmaciile), apă potabilă sau uzată, infrastructură digitală, servicii IT administrate pentru firme sau spațiu"),
+            ("a2", "Producția, prelucrarea sau distribuția de alimente; fabricarea de dispozitive medicale, electronice, echipamente electrice, mașini și utilaje, autovehicule sau alte mijloace de transport; chimice; poștă și curierat; gestionarea deșeurilor; cercetare; platforme online de vânzare, motoare de căutare sau rețele sociale"),
+            ("a4", "Servicii DNS, registru de domenii de nivel superior, servicii de încredere (de exemplu semnătură electronică) sau comunicații electronice publice"),
             ("a3", "Niciuna dintre acestea"),
         ]),
-        ("size", "Cât de mare este firma, inclusiv grupul din care face parte?", [
-            ("s1", "Sub 50 de angajați și sub 10 mil. EUR cifră de afaceri"),
-            ("s2", "50–249 de angajați sau 10–50 mil. EUR cifră de afaceri"),
-            ("s3", "250 de angajați sau mai mulți, sau peste 50 mil. EUR cifră de afaceri"),
+        ("emp", "Câți angajați aveți, socotind și firmele din grup?", [
+            ("e1", "Sub 50"), ("e2", "50–249"), ("e3", "250 sau mai mulți"),
+        ]),
+        ("turn", "Cifra de afaceri anuală, inclusiv grupul?", [
+            ("t1", "Până la 10 mil. EUR"), ("t2", "10–50 mil. EUR"), ("t3", "Peste 50 mil. EUR"),
+        ]),
+        ("bal", "Totalul activelor din bilanț, inclusiv grupul?", [
+            ("b1", "Până la 10 mil. EUR"), ("b2", "10–43 mil. EUR"), ("b3", "Peste 43 mil. EUR"),
+        ]),
+        ("where", "Unde este înregistrată firma?", [
+            ("ro", "În România"), ("eu", "În altă țară din UE"), ("non", "În afara UE, cu clienți în UE"),
         ]),
         ("chain", "Vă trimit clienții mari chestionare de securitate sau clauze contractuale?", [("yes", "Da"), ("no", "Nu")]),
-        ("reg", "Este firma înregistrată la DNSC?", [("yes", "Da"), ("no", "Nu"), ("unsure", "Nu știu")]),
+        ("reg", "Este firma înregistrată la DNSC (sau la autoritatea din țara ei)?", [("yes", "Da"), ("no", "Nu"), ("unsure", "Nu știu")]),
+        ("risk", "Ați făcut în ultimele 12 luni o evaluare scrisă a riscurilor de securitate cibernetică?", [("yes", "Da"), ("no", "Nu")]),
         ("inc", "Aveți o procedură scrisă de incident, testată?", [("yes", "Da"), ("no", "Nu")]),
+        ("base", "Folosiți autentificare în doi pași pentru accesul de la distanță și copii de siguranță testate?", [("yes", "Da, pe amândouă"), ("part", "Doar una dintre ele"), ("no", "Niciuna")]),
     ],
     "submit": "Vedeți rezultatul",
-    "missing": "Răspundeți la toate cele cinci întrebări ca să vedeți rezultatul.",
+    "missing": "Răspundeți la toate cele zece întrebări ca să vedeți rezultatul.",
     "out_t": "Probabil NIS2 nu vi se aplică direct.",
     "out_b": "Excepția: firmele desemnate de DNSC drept critice, indiferent de mărime.",
+    "small_t": "Sectorul este acoperit, dar mărimea vă ține probabil în afara NIS2.",
+    "small_b": "Firmele mici din aceste sectoare nu intră sub lege, cu excepția celor desemnate de DNSC. Clienții mari vă pot cere totuși să respectați cerințele lor de securitate.",
     "ess_t": "Probabil sunteți entitate esențială.",
     "ess_b": "Regimul cel mai strict: control proactiv al DNSC și amenzi de până la 10 mil. EUR sau 2% din cifra de afaceri mondială.",
     "imp_t": "Probabil sunteți entitate importantă.",
     "imp_b": "Aceleași măsuri de securitate, control după incidente sau sesizări și amenzi de până la 7 mil. EUR sau 1,4% din cifra de afaceri mondială.",
-    "gap_reg_no": "Înregistrarea la DNSC pare restantă. Este primul lucru pe care îl verifică un control; DNSC amendează întâi firmele neînregistrate.",
+    "spec_t": "Probabil intrați sub lege indiferent de mărime.",
+    "spec_b": "Serviciile DNS, registrele de domenii de nivel superior, serviciile de încredere și comunicațiile electronice publice intră sub NIS2 oricare ar fi mărimea firmei; cele mai multe sunt entități esențiale.",
+    "gap_reg_no": "Înregistrarea la DNSC pare restantă. Este primul lucru pe care îl verifică un control.",
     "gap_reg_unsure": "Verificați dacă firma este înregistrată la DNSC; termenul este de 30 de zile de la intrarea sub incidența legii.",
+    "gap_risk": "Fără o evaluare scrisă a riscurilor, nu puteți arăta că măsurile de securitate se potrivesc riscului, așa cum cere legea.",
     "gap_inc": "Procedura de incident netestată este o lipsă: avertizarea timpurie de 24 de ore curge de la descoperirea incidentului.",
+    "gap_base": "Autentificarea în doi pași și copiile de siguranță testate sunt printre măsurile minime cerute de lege; lipsurile de aici sunt cea mai frecventă cauză a incidentelor grave.",
     "gap_chain": "Clienții dumneavoastră aplică deja NIS2 furnizorilor. Răspunsuri clare la chestionare protejează aceste contracte.",
+    "gap_non": "O firmă din afara UE care servește clienți din UE poate avea nevoie de un reprezentant într-o țară din UE.",
     "gaps": "Ce verificați întâi",
     "cta": "Cereți verificarea completă",
     "note": "Rezultat orientativ, nu opinie juridică. Răspunsul exact depinde de codurile CAEN, de grupul de firme și de lege.",
     "msg": "Rezultatul autoverificării NIS2: ",
+    "rep_h": "Primiți raportul pe email",
+    "rep_p": "Vă trimitem rezultatul, răspunsurile și punctele de verificat întâi, ca să le puteți discuta în firmă.",
+    "rep_name": "Nume", "rep_company": "Firmă", "rep_email": "Email de serviciu",
+    "rep_ok": "Vreau să primesc acest raport pe email. Răspunsurile și datele de contact se trimit către LAMS în acest scop.",
+    "rep_mkt": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre creștere, digitalizare, conformitate și granturi. Pot retrage acordul oricând.",
+    "rep_send": "Trimiteți-mi raportul",
+    "rep_fill": "Completați numele, firma și un email valid, și bifați prima căsuță.",
+    "rep_wait": "Se trimite…",
+    "rep_done": "Gata. Raportul e pe drum; dacă nu îl vedeți în câteva minute, verificați dosarul de spam.",
+    "rep_fail": "Raportul nu a putut fi trimis. Încercați din nou sau scrieți-ne la info@lamscapital.com.",
+    "rep_subject": "Raportul autoverificării NIS2 de la LAMS",
+    "rep_intro": "Vă mulțumim că ați folosit autoverificarea NIS2 LAMS. Acesta este rezultatul orientativ.",
+    "rep_answers": "Răspunsurile dumneavoastră",
+    "rep_outro": "Rezultatul este orientativ și nu reprezintă o opinie juridică. Pentru un răspuns exact, răspundeți la acest email cu numele firmei și CUI-ul: în cel mult două zile lucrătoare confirmăm gratuit dacă NIS2 vi se aplică, categoria și termenele.\n\nLAMS · lamscapital.com",
+    "rep_lead": "Autoverificare NIS2: raport cerut (RO)",
+}
+
+PRE = {
+    "kicker": "Pre-diagnostic",
+    "h1": 'Cinci minute despre firmă, <span class="accent">treizeci de minute pe ce contează</span>.',
+    "lead": "Spuneți-ne unde se află firma înainte să vorbim. Citim răspunsurile dinainte, așa că prima discuție e despre situația dumneavoastră, nu despre întrebări. În cel mult două zile lucrătoare vă propunem două intervale pentru o discuție de 30 de minute.",
+    "title": "Pre-diagnostic",
+    "desc": "Cinci minute despre firmă înainte de o discuție gratuită de 30 de minute cu LAMS: sector, mărime, sisteme și problemele de rezolvat întâi.",
+    "subject": "Pre-diagnostic de pe lamscapital.com (RO)",
+    "s1": "Despre dumneavoastră", "s2": "Despre firmă", "s3": "Ce e de rezolvat", "s4": "Discuția",
+    "name": "Nume", "role": "Rolul în firmă", "company": "Firmă", "email": "Email de serviciu", "country": "Țară",
+    "emp": "Număr de angajați", "emp_opts": ["10–49", "50–249", "Sub 10", "250 sau mai mulți"],
+    "sector": "Activitatea principală", "sector_opts": ["Producție", "Comerț angro și distribuție", "Retail și e-commerce", "Alimentar și băuturi", "Transport și logistică", "Construcții", "Servicii", "Altceva"],
+    "channels": "Cum vindeți?", "channels_opts": ["Direct către firme", "Prin distribuitori", "Magazine proprii", "Magazin online propriu", "Platforme de tip marketplace", "Export"],
+    "systems": "Ce folosiți acum?", "systems_opts": ["Excel sau alte foi de calcul", "Program de contabilitate", "ERP", "CRM", "Platformă de magazin online", "Program de gestiune a depozitului", "Niciuna dintre acestea"],
+    "problems": "Problemele principale (cel mult trei)", "problems_opts": ["Marja pe client sau produs nu e clară", "Bani blocați în stoc sau în creanțe", "Aceleași date introduse de mai multe ori", "Erori de stoc", "Creșterea s-a oprit", "e-Factura", "Chestionare de securitate sau NIS2", "Finanțare pentru o investiție"],
+    "goal": "Cum ar arăta un rezultat bun peste 12 luni?",
+    "when": "Când ați vrea să începeți?", "when_opts": ["În luna următoare", "În una până la trei luni", "Mai târziu; ne informăm"],
+    "slot": "Când vă convine discuția", "slot_opts": ["Dimineața, în zilele lucrătoare", "După-amiaza, în zilele lucrătoare", "Oricând"],
+    "consent": "Sunt de acord să primesc ocazional pe email informări de la LAMS despre creștere, digitalizare, conformitate și granturi. Pot retrage acordul oricând.",
+    "privacy": 'Folosim răspunsurile doar ca să pregătim discuția. Detalii în <a href="/ro/confidentialitate/">politica de confidențialitate</a>.',
+    "send": "Trimite și cere o discuție",
+    "fill": "Completați numele, firma, emailul de serviciu și cel puțin o problemă de rezolvat.",
+    "max3": "Alegeți cel mult trei probleme.",
+    "thanks": "Mulțumim. Am primit răspunsurile și vă propunem, în cel mult două zile lucrătoare, două intervale pentru discuție.",
+    "link": "Preferați să ne spuneți întâi despre firmă? Completați <a href=\"/ro/pre-diagnostic/\">pre-diagnosticul</a> de cinci minute.",
 }
